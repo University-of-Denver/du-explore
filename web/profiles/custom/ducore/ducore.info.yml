@@ -51,6 +51,7 @@ install:
   - node_revision_delete
   - allowed_formats
   - du_paragraphs
+  - options
 
 # Required modules. These cannot be uninstalled.
 # Note that any dependencies of the modules listed here will be installed automatically.
