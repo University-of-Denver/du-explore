@@ -84,7 +84,7 @@ $config = [
      * When specified as a relative path, this is relative to the SimpleSAMLphp
      * root directory.
      */
-    'cachedir' => '/var/cache/simplesamlphp',
+    'cachedir' => $_ENV['HOME'] . '/tmp/simplesaml/cache',
     'logging.handler' => 'errorlog',
      'datadir' => 'data/',
     'tempdir' => $_ENV['HOME'] . '/tmp/simplesaml',
@@ -206,7 +206,7 @@ $config = [
      * A possible way to generate a random salt is by running the following command from a unix shell:
      * LC_ALL=C tr -c -d '0123456789abcdefghijklmnopqrstuvwxyz' </dev/urandom | dd bs=32 count=1 2>/dev/null;echo
      */
-    'secretsalt' => 'defaultsecretsalt',
+    'secretsalt' => 'dev123',
 
     /*
      * This password must be kept secret, and modified from the default value 123.
