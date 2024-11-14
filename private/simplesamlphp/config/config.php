@@ -9,13 +9,24 @@ if (!ini_get('session.save_handler')) {
 }
 
 $host = $_SERVER['HTTP_HOST'];
-$db = array(
-    'host'      => $_ENV['DB_HOST'],
-    'database'  => $_ENV['DB_NAME'],
-    'username'  => $_ENV['DB_USER'],
-    'password'  => $_ENV['DB_PASSWORD'],
-    'port'      => $_ENV['DB_PORT'],
-);
+if(isset($_ENV['PANTHEON_ENVIRONMENT'])){
+    $db = array(
+        'host'      => $_ENV['DB_HOST'],
+        'database'  => $_ENV['DB_NAME'],
+        'username'  => $_ENV['DB_USER'],
+        'password'  => $_ENV['DB_PASSWORD'],
+        'port'      => $_ENV['DB_PORT'],
+    );
+} else {
+    $db = array(
+        'host'      => 'db',
+        'database'  => 'db',
+        'username'  => 'db',
+        'password'  => 'db',
+        'port'      => '3306',
+    );
+}
+
 
 /**
  * The configuration of SimpleSAMLphp
@@ -84,7 +95,7 @@ $config = [
      * When specified as a relative path, this is relative to the SimpleSAMLphp
      * root directory.
      */
-    'cachedir' => '/var/cache/simplesamlphp',
+    'cachedir' => $_ENV['HOME'] . '/tmp/simplesaml/cache',
     'logging.handler' => 'errorlog',
      'datadir' => 'data/',
     'tempdir' => $_ENV['HOME'] . '/tmp/simplesaml',
@@ -206,7 +217,7 @@ $config = [
      * A possible way to generate a random salt is by running the following command from a unix shell:
      * LC_ALL=C tr -c -d '0123456789abcdefghijklmnopqrstuvwxyz' </dev/urandom | dd bs=32 count=1 2>/dev/null;echo
      */
-    'secretsalt' => 'defaultsecretsalt',
+    'secretsalt' => 'dev123',
 
     /*
      * This password must be kept secret, and modified from the default value 123.
