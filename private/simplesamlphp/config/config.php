@@ -9,13 +9,24 @@ if (!ini_get('session.save_handler')) {
 }
 
 $host = $_SERVER['HTTP_HOST'];
-$db = array(
-    'host'      => $_ENV['DB_HOST'],
-    'database'  => $_ENV['DB_NAME'],
-    'username'  => $_ENV['DB_USER'],
-    'password'  => $_ENV['DB_PASSWORD'],
-    'port'      => $_ENV['DB_PORT'],
-);
+if(isset($_ENV['PANTHEON_ENVIRONMENT'])){
+    $db = array(
+        'host'      => $_ENV['DB_HOST'],
+        'database'  => $_ENV['DB_NAME'],
+        'username'  => $_ENV['DB_USER'],
+        'password'  => $_ENV['DB_PASSWORD'],
+        'port'      => $_ENV['DB_PORT'],
+    );
+} else {
+    $db = array(
+        'host'      => 'db',
+        'database'  => 'db',
+        'username'  => 'db',
+        'password'  => 'db',
+        'port'      => '3306',
+    );
+}
+
 
 /**
  * The configuration of SimpleSAMLphp

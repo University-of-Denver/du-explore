@@ -21,25 +21,27 @@ cloneable_entities:
   - node
   - file
   - editor
+  - workflow
+  - content_moderation_state
   - taxonomy_term
   - taxonomy_vocabulary
   - image_style
   - view
   - menu_link_content
   - responsive_image_style
-  - simple_sitemap_type
-  - simple_sitemap
-  - embed_button
-  - entity_browser
-  - entity_embed_fake_entity
-  - linkit_profile
-  - metatag_defaults
   - paragraph
   - paragraphs_type
+  - entity_browser
+  - embed_button
+  - entity_embed_fake_entity
+  - webform_options
+  - webform
+  - webform_submission
+  - simple_sitemap_type
+  - simple_sitemap
+  - linkit_profile
+  - metatag_defaults
   - pathauto_pattern
   - behavior_settings
   - redirect
   - url_redirect
-  - webform_options
-  - webform
-  - webform_submission

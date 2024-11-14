@@ -1,11 +1,11 @@
 langcode: en
 status: true
 dependencies: {  }
-_core:
 name: copy_image_884_x_564
 label: 'Copy image 884 x 564'
 effects:
   b19dd2c4-f784-4a39-9801-46e4b8948e4a:
+    uuid: ''
     id: image_scale_and_crop
     weight: 1
     data:
