@@ -1,0 +1,4 @@
+role_expire_default_roles: '{"edit_own":"0","content_editor":"0","site_admin":"0","administrator":"0"}'
+role_expire_disabled_roles: '{"edit_own":1,"content_editor":0,"site_admin":1,"administrator":1}'
+role_expire_default_duration_roles: {  }
+role_expire_expiration_details_expanded: false
