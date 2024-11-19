@@ -22,39 +22,8 @@ settings:
   handler_settings:
     target_bundles:
       hero_media: hero_media
-      experiential_story: experiential_story
     negate: 0
     target_bundles_drag_drop:
-      academic_programs:
-        weight: 101
-        enabled: false
-      academic_programs_filter:
-        weight: 102
-        enabled: false
-      academic_programs_legend_def:
-        weight: 103
-        enabled: false
-      admission_steps:
-        weight: 31
-        enabled: false
-      admission_steps_in_content:
-        weight: 32
-        enabled: false
-      application_card:
-        weight: 106
-        enabled: false
-      application_information:
-        weight: 107
-        enabled: false
-      article_list:
-        weight: 108
-        enabled: false
-      big_button:
-        weight: 109
-        enabled: false
-      block:
-        weight: 110
-        enabled: false
       body_copy:
         weight: 33
         enabled: false
@@ -64,17 +33,11 @@ settings:
       button:
         weight: 113
         enabled: false
-      button_with_image:
-        weight: 114
-        enabled: false
       card:
         weight: 35
         enabled: false
       cards:
         weight: 36
-        enabled: false
-      carousel:
-        weight: 117
         enabled: false
       category_link:
         weight: 118
@@ -82,32 +45,11 @@ settings:
       category_menu:
         weight: 119
         enabled: false
-      contact_single:
-        weight: 120
-        enabled: false
-      contacts:
-        weight: 121
-        enabled: false
-      content_gallery:
-        weight: 122
-        enabled: false
-      counselor_and_staff_directory:
-        weight: 123
-        enabled: false
-      counselor_profile_search:
-        weight: 124
-        enabled: false
       cta:
         weight: 37
         enabled: false
-      cta_group:
-        weight: 126
-        enabled: false
       cta_inline:
         weight: 127
-        enabled: false
-      du_in_the_news_list:
-        weight: 128
         enabled: false
       embed_code:
         weight: 38
@@ -121,155 +63,32 @@ settings:
       event_list:
         weight: 59
         enabled: false
-      event_time_place:
-        weight: 39
-        enabled: false
       expanding_list:
         weight: 40
-        enabled: false
-      experiential_story:
-        weight: 135
-        enabled: true
-      experiential_story_slide:
-        weight: 136
-        enabled: false
-      feature_media:
-        weight: 137
         enabled: false
       feature_media_image:
         weight: 138
         enabled: false
-      feature_media_video:
-        weight: 139
-        enabled: false
-      featured_article:
-        weight: 140
-        enabled: false
-      featured_articles:
-        weight: 141
-        enabled: false
-      featured_courses:
-        weight: 142
-        enabled: false
-      featured_curricula:
-        weight: 143
-        enabled: false
-      featured_event:
-        weight: 144
-        enabled: false
-      featured_event_slide:
-        weight: 145
-        enabled: false
-      featured_video_component:
-        weight: 146
-        enabled: false
-      heading:
-        weight: 147
-        enabled: false
       hero_media:
         weight: 41
         enabled: true
-      homepage_facts:
-        weight: 42
-        enabled: false
-      homepage_programs_search:
-        weight: 43
-        enabled: false
-      homepage_quote:
-        weight: 44
-        enabled: false
-      homepage_quotes:
-        weight: 45
-        enabled: false
-      homepage_section_copy:
-        weight: 46
-        enabled: false
-      homepage_swapping_image_feature:
-        weight: 60
-        enabled: false
-      homepage_video_carousel:
-        weight: 47
-        enabled: false
-      hvc_slide:
-        weight: 48
-        enabled: false
       icon_link:
         weight: 157
         enabled: false
       icon_list:
         weight: 158
         enabled: false
-      icon_list_item:
-        weight: 159
-        enabled: false
       image_with_caption:
         weight: 160
-        enabled: false
-      immersive_story:
-        weight: 161
         enabled: false
       inset_video:
         weight: 162
         enabled: false
-      key_faculty_and_students:
-        weight: 163
-        enabled: false
       list_of_links:
         weight: 164
         enabled: false
-      mini_calendar:
-        weight: 165
-        enabled: false
       named_anchor:
         weight: 166
-        enabled: false
-      news_find_stories_by_category:
-        weight: 167
-        enabled: false
-      news_find_stories_search:
-        weight: 168
-        enabled: false
-      news_stories:
-        weight: 169
-        enabled: false
-      profile_list:
-        weight: 170
-        enabled: false
-      profile_performances:
-        weight: 171
-        enabled: false
-      pull_quote:
-        weight: 172
-        enabled: false
-      quick_facts:
-        weight: 49
-        enabled: false
-      quick_facts_feature_fact:
-        weight: 50
-        enabled: false
-      quick_facts_list_item_simple:
-        weight: 51
-        enabled: false
-      quick_facts_list_of_facts:
-        weight: 52
-        enabled: false
-      quick_stat:
-        weight: 177
-        enabled: false
-      quick_stats:
-        weight: 178
-        enabled: false
-      related_stories:
-        weight: 53
-        enabled: false
-      related_stories_2:
-        weight: 180
-        enabled: false
-      research_project_list:
-        weight: 181
-        enabled: false
-      resource_list:
-        weight: 182
         enabled: false
       reusable_content:
         weight: 183
@@ -277,50 +96,29 @@ settings:
       show_hide_toggle:
         weight: 54
         enabled: false
-      slide:
-        weight: 185
-        enabled: false
-      slide_media:
-        weight: 186
-        enabled: false
       social_media_bar:
         weight: 187
         enabled: false
       stories:
         weight: 55
         enabled: false
-      story_slide_media:
-        weight: 189
-        enabled: false
       subhead:
         weight: 56
         enabled: false
-      tab_menu:
-        weight: 191
-        enabled: false
-      testimonial_spotlight_curated:
-        weight: 192
+      temporary:
+        weight: 61
         enabled: false
       testimonials_spotlight:
         weight: 193
         enabled: false
-      top_news_story:
-        weight: 194
-        enabled: false
       two_col_copy:
         weight: 57
-        enabled: false
-      two_col_news:
-        weight: 196
         enabled: false
       two_value_text:
         weight: 58
         enabled: false
       unit_carousel:
         weight: 198
-        enabled: false
-      unit_slide:
-        weight: 199
         enabled: false
       webform:
         weight: 200
