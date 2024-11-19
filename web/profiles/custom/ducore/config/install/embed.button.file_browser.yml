@@ -1,10 +1,13 @@
 langcode: en
 status: true
 dependencies:
+  config:
+    - entity_browser.browser.browse_files
   module:
     - entity_embed
     - file
     - image
+    - svg_image
 label: 'File Browser'
 id: file_browser
 type_id: entity

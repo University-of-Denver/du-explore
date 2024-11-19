@@ -40,6 +40,7 @@ install:
   - simple_sitemap
   - svg_image
   - twig_field_value
+  - twig_tweak
   - url_redirect
   - webform
   - webform_ui
@@ -103,5 +104,7 @@ dependencies:
   - role_expire
 
 themes:
-  - claro
-  - olivero
+  - pl_drupal
+  - seven
+  - adminimal_theme
+  - du_adminimal_theme
