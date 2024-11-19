@@ -104,4 +104,6 @@ dependencies:
 
 themes:
   - pl_drupal
+  - seven
+  - adminimal_theme
   - du_adminimal_theme
