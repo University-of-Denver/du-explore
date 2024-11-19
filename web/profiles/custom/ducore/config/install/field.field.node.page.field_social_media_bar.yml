@@ -24,12 +24,6 @@ settings:
       social_media_bar: social_media_bar
     negate: 0
     target_bundles_drag_drop:
-      admission_steps:
-        weight: 49
-        enabled: false
-      admission_steps_in_content:
-        weight: 50
-        enabled: false
       body_copy:
         weight: 51
         enabled: false
@@ -45,74 +39,38 @@ settings:
       cards:
         weight: 55
         enabled: false
-      carousel:
-        weight: 56
-        enabled: false
       category_link:
         weight: 57
         enabled: false
       category_menu:
         weight: 58
         enabled: false
-      contact:
-        weight: 59
-        enabled: false
-      contact_single:
-        weight: 61
-        enabled: false
-      contacts:
-        weight: 60
-        enabled: false
       cta:
         weight: 62
+        enabled: false
+      cta_inline:
+        weight: 42
         enabled: false
       embed_code:
         weight: 63
         enabled: false
+      enhanced_expanding_list:
+        weight: 44
+        enabled: false
+      enhanced_list_item:
+        weight: 45
+        enabled: false
       event_list:
         weight: 64
-        enabled: false
-      event_time_place:
-        weight: 65
         enabled: false
       expanding_list:
         weight: 66
         enabled: false
-      featured_event:
-        weight: 67
-        enabled: false
-      featured_event_slide:
-        weight: 68
-        enabled: false
-      featured_video_component:
-        weight: 69
+      feature_media_image:
+        weight: 48
         enabled: false
       hero_media:
         weight: 70
-        enabled: false
-      homepage_facts:
-        weight: 71
-        enabled: false
-      homepage_programs_search:
-        weight: 72
-        enabled: false
-      homepage_quote:
-        weight: 73
-        enabled: false
-      homepage_quotes:
-        weight: 74
-        enabled: false
-      homepage_section_copy:
-        weight: 75
-        enabled: false
-      homepage_swapping_image_feature:
-        weight: 76
-        enabled: false
-      homepage_video_carousel:
-        weight: 77
-        enabled: false
-      hvc_slide:
-        weight: 78
         enabled: false
       icon_link:
         weight: 79
@@ -120,8 +78,8 @@ settings:
       icon_list:
         weight: 80
         enabled: false
-      icon_list_item:
-        weight: 81
+      image_with_caption:
+        weight: 52
         enabled: false
       inset_video:
         weight: 82
@@ -129,26 +87,14 @@ settings:
       list_of_links:
         weight: 83
         enabled: false
-      quick_facts:
-        weight: 84
+      named_anchor:
+        weight: 55
         enabled: false
-      quick_facts_feature_fact:
-        weight: 85
-        enabled: false
-      quick_facts_list_item_simple:
-        weight: 86
-        enabled: false
-      quick_facts_list_of_facts:
-        weight: 87
-        enabled: false
-      related_stories:
-        weight: 88
+      reusable_content:
+        weight: 56
         enabled: false
       show_hide_toggle:
         weight: 89
-        enabled: false
-      slide:
-        weight: 90
         enabled: false
       social_media_bar:
         weight: 91
@@ -159,11 +105,20 @@ settings:
       subhead:
         weight: 93
         enabled: false
+      temporary:
+        weight: 61
+        enabled: false
+      testimonials_spotlight:
+        weight: 62
+        enabled: false
       two_col_copy:
         weight: 94
         enabled: false
       two_value_text:
         weight: 95
+        enabled: false
+      unit_carousel:
+        weight: 65
         enabled: false
       webform:
         weight: 96
