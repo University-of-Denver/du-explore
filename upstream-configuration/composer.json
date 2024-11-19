@@ -58,7 +58,7 @@
         "drupal/ebrsww": "^2.3",
         "drupal/ds": "^3.16",
         "drupal/node_revision_delete": "^1.0@RC",
-        "drupal/allowed_formats": "^2.0",
+        "drupal/allowed_formats": "^3.0",
         "drupal/twig_tweak": "^3.4",
         "university-of-denver/pl_drupal": "^3.0.0-alpha1",
         "drupal/adminimal_theme": "^1.7"
