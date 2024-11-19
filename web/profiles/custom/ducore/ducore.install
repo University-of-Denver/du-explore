@@ -8,6 +8,7 @@
 use Drupal\user\Entity\User;
 use Drupal\user\RoleInterface;
 use Drupal\user\UserInterface;
+use Drupal\taxonomy\Entity\Term;
 
 /**
  * Implements hook_install().
@@ -20,8 +21,8 @@ function ducore_install() {
   // Set the default and admin themes.
   \Drupal::configFactory()
     ->getEditable('system.theme')
-    ->set('default', 'olivero')
-    ->set('admin', 'claro')
+    ->set('default', 'pl_drupal')
+    ->set('admin', 'du_adminimal_theme')
     ->save(TRUE);
 
   // Set the front page to "/node".
@@ -55,3 +56,47 @@ function ducore_install() {
     ->set('use_admin_theme', TRUE)
     ->save(TRUE);
 }
+
+/**
+ * Implements hook_install_tasks_alter().
+ */
+function ducore_install_tasks_alter(array &$tasks, array $install_state) {
+  $tasks['install_finished']['function'] = 'ducore_after_install_finished';
+}
+
+/**
+ * DU Core tasks to do after install finished.
+ *
+ * Add term for protected page permission.
+ *
+ * @param array $install_state
+ *   The current install state.
+ *
+ * @return array
+ *   A renderable array with a redirect header.
+ */
+function ducore_after_install_finished(array &$install_state) {
+  $new_term = Term::create([
+    'vid' => 'permissions',
+    'name' => 'DU Faculty, Staff and Students using SSO',
+  ]);
+  
+  $new_term->enforceIsNew();
+  $new_term->save();
+
+  node_access_rebuild(TRUE);
+
+  \Drupal::messenger()->deleteAll();
+
+  // @TODO - Add default content during install using
+  // https://www.drupal.org/project/default_content
+
+  // Set front page and 404 defaults to default_content.
+  // \Drupal::configFactory()
+  //  ->getEditable('system.site')
+  //  ->set('page.front', '/home')
+  //  ->set('page.404', '/404')
+  //  ->set('page.403', '/403')
+  //  ->save(TRUE);
+}
+
