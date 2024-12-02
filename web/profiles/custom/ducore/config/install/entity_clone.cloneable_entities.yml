@@ -45,3 +45,5 @@ cloneable_entities:
   - behavior_settings
   - redirect
   - url_redirect
+  - key_config_override
+  - key
