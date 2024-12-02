@@ -3,14 +3,10 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_embed_code
+    - filter.format.embed_code
     - paragraphs.paragraphs_type.embed_code
   module:
-    - allowed_formats
     - text
-third_party_settings:
-  allowed_formats:
-    allowed_formats:
-      - embed_code
 id: paragraph.embed_code.field_embed_code
 field_name: field_embed_code
 entity_type: paragraph
@@ -22,5 +18,6 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  allowed_formats: {  }
+  allowed_formats:
+    - embed_code
 field_type: text_long

@@ -100,3 +100,14 @@ function ducore_after_install_finished(array &$install_state) {
   //  ->save(TRUE);
 }
 
+/**
+ * Enable Key and Pantheon Secrets modules on existing installs
+ */
+function ducore_update_9001() {
+  $modules = array(
+    'key',
+    'pantheon_secrets'
+  );
+  \Drupal::service('module_installer')->install($modules, TRUE);
+}
+

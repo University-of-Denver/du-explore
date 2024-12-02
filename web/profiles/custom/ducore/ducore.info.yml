@@ -53,6 +53,8 @@ install:
   - allowed_formats
   - du_paragraphs
   - options
+  - key
+  - pantheon_secrets
 
 # Required modules. These cannot be uninstalled.
 # Note that any dependencies of the modules listed here will be installed automatically.
