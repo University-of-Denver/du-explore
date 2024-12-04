@@ -43,4 +43,9 @@ content:
     third_party_settings: {  }
     weight: 5
     region: content
+  role_expire:
+    weight: 1000
+    settings: {  }
+    third_party_settings: {  }
+    region: content
 hidden: {  }
