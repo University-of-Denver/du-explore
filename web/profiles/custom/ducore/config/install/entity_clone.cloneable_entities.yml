@@ -6,17 +6,17 @@ cloneable_entities:
   - user
   - user_role
   - date_format
+  - entity_form_mode
   - entity_view_mode
   - entity_view_display
   - entity_form_display
-  - entity_form_mode
   - base_field_override
   - block
-  - field_config
   - field_storage_config
+  - field_config
   - filter_format
-  - block_content_type
   - block_content
+  - block_content_type
   - node_type
   - node
   - file
@@ -29,13 +29,13 @@ cloneable_entities:
   - view
   - menu_link_content
   - responsive_image_style
-  - paragraph
   - paragraphs_type
+  - paragraph
   - entity_browser
   - embed_button
   - entity_embed_fake_entity
-  - webform_options
   - webform
+  - webform_options
   - webform_submission
   - simple_sitemap_type
   - simple_sitemap
@@ -45,5 +45,3 @@ cloneable_entities:
   - behavior_settings
   - redirect
   - url_redirect
-  - key_config_override
-  - key
