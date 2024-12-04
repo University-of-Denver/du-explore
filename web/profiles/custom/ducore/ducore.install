@@ -111,3 +111,12 @@ function ducore_update_9001() {
   \Drupal::service('module_installer')->install($modules, TRUE);
 }
 
+/**
+ * Update Site Admin Permissions
+ */
+function ducore_update_9002() {
+  $config_id = 'user.role.site_admin';
+  $config_path = \Drupal::service('extension.list.module')->getPath('ducore') . '/config/install/' . $config_id .'.yml';
+  $data = \Symfony\Component\Yaml\Yaml::parseFile($config_path);
+  \Drupal::configFactory()->getEditable($config_id)->setData($data)->save(TRUE);
+}
