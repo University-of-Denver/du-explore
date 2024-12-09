@@ -55,6 +55,11 @@ install:
   - options
   - key
   - pantheon_secrets
+  - ckeditor5
+  - blazy
+  - media
+  - slick
+  - token_filter
 
 # Required modules. These cannot be uninstalled.
 # Note that any dependencies of the modules listed here will be installed automatically.
@@ -104,6 +109,11 @@ dependencies:
   - node_revision_delete
   - allowed_formats
   - role_expire
+  - ckeditor5
+  - blazy
+  - media
+  - slick
+  - token_filter
 
 themes:
   - pl_drupal
