@@ -141,10 +141,10 @@ function ducore_update_9003() {
 function ducore_update_9004() {
   // While Rich Text is new we made some updates to the existing file / entity browser.
   $config_ids = array(
-    'filter.format.rich_text.yml',
-    'editor.editor.rich_text.yml',
-    'embed.button.file_browser.yml',
-    'entity_browser.browser.browse_files.yml'
+    'filter.format.rich_text',
+    'editor.editor.rich_text',
+    'embed.button.file_browser',
+    'entity_browser.browser.browse_files'
   );
 
   // Loop through each configuration and, even if it exists, overwrite it.
