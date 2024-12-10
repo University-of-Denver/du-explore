@@ -80,7 +80,7 @@ function ducore_after_install_finished(array &$install_state) {
     'vid' => 'permissions',
     'name' => 'DU Faculty, Staff and Students using SSO',
   ]);
-  
+
   $new_term->enforceIsNew();
   $new_term->save();
 
@@ -119,4 +119,38 @@ function ducore_update_9002() {
   $config_path = \Drupal::service('extension.list.module')->getPath('ducore') . '/config/install/' . $config_id .'.yml';
   $data = \Symfony\Component\Yaml\Yaml::parseFile($config_path);
   \Drupal::configFactory()->getEditable($config_id)->setData($data)->save(TRUE);
+}
+
+/**
+ * Enable CKEditor5 modules on existing installs
+ */
+function ducore_update_9003() {
+  $modules = array(
+    'ckeditor5',
+    'blazy',
+    'media',
+    'slick',
+    'token_filter'
+  );
+  \Drupal::service('module_installer')->install($modules, TRUE);
+}
+
+/**
+ * Configuration for CKEditor5 and Text Format (Rich Text) for existing installs
+ */
+function ducore_update_9004() {
+  // While Rich Text is new we made some updates to the existing file / entity browser.
+  $config_ids = array(
+    'filter.format.rich_text',
+    'editor.editor.rich_text',
+    'embed.button.file_browser',
+    'entity_browser.browser.browse_files'
+  );
+
+  // Loop through each configuration and, even if it exists, overwrite it.
+  foreach ($config_ids as $config_id) {
+    $config_path = \Drupal::service('extension.list.module')->getPath('ducore') . '/config/install/' . $config_id . '.yml';
+    $data = \Symfony\Component\Yaml\Yaml::parseFile($config_path);
+    \Drupal::configFactory()->getEditable($config_id)->setData($data)->save(TRUE);
+  }
 }
