@@ -158,8 +158,8 @@ class WidenService implements WidenServiceInterface {
    *   Returns the URL.
    */
   protected function getUrl() {
-    $config = \Drupal::config('du_widen.settings');
-    return $config->get('url');
+    // was $config->get('url') in D9
+    return "https://api.widencollective.com/v2";
   }
 
   /**
@@ -169,10 +169,10 @@ class WidenService implements WidenServiceInterface {
    *   Returns the request headers needed to make a request.
    */
   protected function getRequestHeaders() {
-    $config = \Drupal::config('du_widen.settings');
-
+ 
     $headers = [
-      'Authorization: Bearer ' . $config->get('key'),
+      // was loaded from $config->get('key') in D9
+      'Authorization: Bearer ' . Drupal::service('key.repository')->getKey('widen-key')->getKeyValue(),
       'Accept: application/json',
     ];
 
