@@ -26,6 +26,7 @@ dependencies:
     - image
     - metatag
     - node
+    - pantheon_autopilot_toolbar
     - paragraphs
     - path
     - pathauto
@@ -185,6 +186,7 @@ permissions:
   - 'edit users role expire'
   - 'edit webform assets'
   - 'notify of path changes'
+  - 'pantheon autopilot access'
   - 'revert all revisions'
   - 'revert all taxonomy revisions'
   - 'revert page revisions'
