@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+  enforced:
+    module:
+      - slick
+id: media.slick
+label: 'Slick carousel'
+description: ''
+targetEntityType: media
+cache: true
