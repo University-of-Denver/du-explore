@@ -160,7 +160,6 @@ function ducore_update_9004() {
  */
 function ducore_update_9005() {
   $modules = array(
-    'claro',
     'environment_indicator',
     'pantheon_autopilot_toolbar'
   );
