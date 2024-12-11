@@ -6,7 +6,6 @@ core_version_requirement: ^10
 # Modules to be installed on profile installation.
 install:
   - admin_toolbar
-  - adminimal_admin_toolbar
   - components
   - config_filter
   - config_ignore
@@ -33,6 +32,7 @@ install:
   - linkit
   - metatag
   - pantheon_advanced_page_cache
+  - pantheon_autopilot_toolbar
   - paragraphs
   - pathauto
   - rabbit_hole
@@ -81,7 +81,6 @@ dependencies:
   - views
   - dblog
   - admin_toolbar
-  - adminimal_admin_toolbar
   - components
   - ctools
   - entity
@@ -91,6 +90,7 @@ dependencies:
   - link_attributes
   - linkit
   - pantheon_advanced_page_cache
+  - pantheon_autopilot_toolbar
   - paragraphs
   - pathauto
   - redirect
@@ -117,6 +117,4 @@ dependencies:
 
 themes:
   - pl_drupal
-  - seven
-  - adminimal_theme
-  - du_adminimal_theme
+  - claro
