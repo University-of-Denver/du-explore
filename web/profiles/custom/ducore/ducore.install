@@ -22,7 +22,7 @@ function ducore_install() {
   \Drupal::configFactory()
     ->getEditable('system.theme')
     ->set('default', 'pl_drupal')
-    ->set('admin', 'du_adminimal_theme')
+    ->set('admin', 'claro')
     ->save(TRUE);
 
   // Set the front page to "/node".
@@ -153,4 +153,22 @@ function ducore_update_9004() {
     $data = \Symfony\Component\Yaml\Yaml::parseFile($config_path);
     \Drupal::configFactory()->getEditable($config_id)->setData($data)->save(TRUE);
   }
+}
+
+/**
+ * Enable CKEditor5 modules on existing installs
+ */
+function ducore_update_9005() {
+  $modules = array(
+    'claro',
+    'environment_indicator',
+    'pantheon_autopilot_toolbar'
+  );
+  \Drupal::service('module_installer')->install($modules, TRUE);
+
+  // Set the default and admin themes.
+  \Drupal::configFactory()
+    ->getEditable('system.theme')
+    ->set('admin', 'claro')
+    ->save(TRUE);
 }
