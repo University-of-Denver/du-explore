@@ -101,6 +101,7 @@
 !.ddev/config.yml
 /web/sites/default/settings.ddev.php
 .lando.yml
+secrets.json
 
 # Ignore .env files as they are personal
 #/.env
