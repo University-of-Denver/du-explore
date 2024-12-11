@@ -156,7 +156,7 @@ function ducore_update_9004() {
 }
 
 /**
- * Enable CKEditor5 modules on existing installs
+ * Change admin theme, enable toolbar improvements, fix qa_account logins
  */
 function ducore_update_9005() {
   $modules = array(
@@ -166,9 +166,22 @@ function ducore_update_9005() {
   );
   \Drupal::service('module_installer')->install($modules, TRUE);
 
+
   // Set the default and admin themes.
   \Drupal::configFactory()
     ->getEditable('system.theme')
     ->set('admin', 'claro')
     ->save(TRUE);
+
+  $config_ids = array(
+    'key.key.widen_key',
+    'simplesamlphp_auth.settings'
+  );
+
+  // Loop through each configuration and, even if it exists, overwrite it.
+  foreach ($config_ids as $config_id) {
+    $config_path = \Drupal::service('extension.list.module')->getPath('ducore') . '/config/install/' . $config_id . '.yml';
+    $data = \Symfony\Component\Yaml\Yaml::parseFile($config_path);
+    \Drupal::configFactory()->getEditable($config_id)->setData($data)->save(TRUE);
+  }
 }
