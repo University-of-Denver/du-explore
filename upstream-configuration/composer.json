@@ -64,9 +64,9 @@
         "drupal/adminimal_theme": "^1.7",
         "drupal/role_expire": "^4.1",
         "drupal/pantheon_secrets": "^1.0",
-        "drupal/blazy": "2.14.0",
+        "drupal/blazy": "^3.0",
         "drupal/token_filter": "^2.1",
-        "drupal/slick": "2.7.0",
+        "drupal/slick": "^3.0",
         "drupal/environment_indicator": "^4.0",
         "drupal/pantheon_autopilot_toolbar": "^1.0@beta",
         "drupal/devel": "^5.3"
