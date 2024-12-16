@@ -24,6 +24,7 @@ install:
   - entity_clone
   - entity_embed
   - entity_reference_revisions
+  - environment_indicator
   - field_group
   - field_ui
   - honeypot
