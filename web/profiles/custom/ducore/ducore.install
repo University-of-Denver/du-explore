@@ -164,7 +164,7 @@ function ducore_update_9005() {
     'pantheon_autopilot_toolbar'
   );
   \Drupal::service('module_installer')->install($modules, TRUE);
-
+  \Drupal::service('theme_installer')->install(['claro']);
 
   // Set the default and admin themes.
   \Drupal::configFactory()
