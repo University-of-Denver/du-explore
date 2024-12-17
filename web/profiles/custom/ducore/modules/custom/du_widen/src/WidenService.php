@@ -169,10 +169,10 @@ class WidenService implements WidenServiceInterface {
    *   Returns the request headers needed to make a request.
    */
   protected function getRequestHeaders() {
- 
+
     $headers = [
       // was loaded from $config->get('key') in D9
-      'Authorization: Bearer ' . \Drupal::service('key.repository')->getKey('widen-key')->getKeyValue(),
+      'Authorization: Bearer ' . \Drupal::service('key.repository')->getKey('widen_key')->getKeyValue(),
       'Accept: application/json',
     ];
 
