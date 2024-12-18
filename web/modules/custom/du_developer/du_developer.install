@@ -1,0 +1,12 @@
+<?php
+ 
+function du_developer_uninstall() {
+  \Drupal::keyValue('development_settings')->setMultiple([
+    'disable_rendered_output_cache_bins' => FALSE,
+    'twig_debug' => FALSE,
+    'twig_cache_disable' => FALSE,
+  ]);
+ 
+   drupal_flush_all_caches();
+}
+
