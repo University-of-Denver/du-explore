@@ -1,12 +1,38 @@
 <?php
- 
+
 function du_developer_uninstall() {
-  \Drupal::keyValue('development_settings')->setMultiple([
-    'disable_rendered_output_cache_bins' => FALSE,
-    'twig_debug' => FALSE,
-    'twig_cache_disable' => FALSE,
-  ]);
- 
-   drupal_flush_all_caches();
+  du_developer_turn_off_twig_debugging();
+  du_developer_uninstall_devel();
 }
 
+function du_developer_turn_off_twig_debugging() {
+    \Drupal::keyValue('development_settings')->setMultiple([
+        'disable_rendered_output_cache_bins' => FALSE,
+        'twig_debug' => FALSE,
+        'twig_cache_disable' => FALSE,
+    ]);
+}
+
+function du_developer_uninstall_devel() {
+  $configFactory = \Drupal::service('config.factory');
+  $config = $configFactory->getEditable('core.extension');
+  $module_data = $config->get('module');
+
+  if (isset($module_data['devel'])) {
+    unset($module_data['devel']);
+    $config->set('module', $module_data)->save();
+  }
+
+  $configs_to_delete = [
+    'devel.settings',
+    'devel.toolbar.settings',
+    'system.menu.devel',
+  ];
+
+  foreach ($configs_to_delete as $config_name) {
+    $config = $configFactory->getEditable($config_name);
+    if ($config->isNew() === FALSE) {
+      $config->delete();
+    }
+  }
+}
