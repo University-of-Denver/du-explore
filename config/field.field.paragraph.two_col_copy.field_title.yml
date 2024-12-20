@@ -1,0 +1,21 @@
+uuid: 1b95dc36-d96a-47ca-8121-49d1b02b8eca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.two_col_copy
+_core:
+  default_config_hash: AExoEJZ7hAdlFEdZycxZoRDzAe_GKdN_ItkHZNTKFJU
+id: paragraph.two_col_copy.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: two_col_copy
+label: 'Column 1 Heading'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

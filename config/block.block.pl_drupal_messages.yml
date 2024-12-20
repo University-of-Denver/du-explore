@@ -1,0 +1,22 @@
+uuid: 22d393f9-5208-4a19-9d64-f1e66da9069e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - pl_drupal
+_core:
+  default_config_hash: kvxt4VcLjxejOUzHUZPJAOYBIGHDWvwc0xbxVn8UZQU
+id: pl_drupal_messages
+theme: pl_drupal
+region: header
+weight: -5
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

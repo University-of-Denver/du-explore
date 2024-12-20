@@ -1,0 +1,22 @@
+uuid: 795266dc-a94d-4a7a-8e31-51f03968de01
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - pl_drupal
+_core:
+  default_config_hash: rQnIAZ_PMdZZFDQIfvodYMLfAH9LJVd42y1ZGkYMcck
+id: pl_drupal_content
+theme: pl_drupal
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,21 @@
+uuid: 617cf8df-883e-42f4-8ce7-3a27168e5fff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_summary
+    - paragraphs.paragraphs_type.enhanced_list_item
+_core:
+  default_config_hash: KrEbaZNWfCx_eacSVouzTExK_QK0cazZrha4o7tj7NY
+id: paragraph.enhanced_list_item.field_summary
+field_name: field_summary
+entity_type: paragraph
+bundle: enhanced_list_item
+label: Summary
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,23 @@
+uuid: fc10cd9a-80bb-4588-a655-3dd009bc1666
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+  theme:
+    - pl_drupal
+_core:
+  default_config_hash: fgEjP1FQdt0yZPnnsQNSqh1FrnCxBl01NXLTNb__l1Y
+id: pl_drupal_syndicate
+theme: pl_drupal
+region: header
+weight: 0
+provider: null
+plugin: node_syndicate_block
+settings:
+  id: node_syndicate_block
+  label: 'RSS feed'
+  label_display: '0'
+  provider: node
+  block_count: 10
+visibility: {  }

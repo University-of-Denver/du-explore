@@ -1,0 +1,23 @@
+uuid: aa765ec2-7301-4c21-bb78-0b2e3fb8bec9
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: ZEedh1RjW8WnraHwScxBRDW3yvqO7eJbFC1D6MG7QTA
+id: paragraph.field_toggler_text
+field_name: field_toggler_text
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

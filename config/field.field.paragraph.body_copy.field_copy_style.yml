@@ -1,0 +1,23 @@
+uuid: d4c10a55-a84f-4168-bd5b-fb62afa5b7b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_copy_style
+    - paragraphs.paragraphs_type.body_copy
+  module:
+    - options
+_core:
+  default_config_hash: KTCptKAQ1QOlAVdwDKvzVeBfHOzk6NjOZBtLG_XsKZw
+id: paragraph.body_copy.field_copy_style
+field_name: field_copy_style
+entity_type: paragraph
+bundle: body_copy
+label: 'Column Width'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

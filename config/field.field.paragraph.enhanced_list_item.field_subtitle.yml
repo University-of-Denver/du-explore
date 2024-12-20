@@ -1,0 +1,21 @@
+uuid: d1b4e5af-6adf-4779-98d8-ae23ab00385b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subtitle
+    - paragraphs.paragraphs_type.enhanced_list_item
+_core:
+  default_config_hash: mp8fEELLXxPxaY1e7FVqq2VZSylO47e_lz3QNrlORTg
+id: paragraph.enhanced_list_item.field_subtitle
+field_name: field_subtitle
+entity_type: paragraph
+bundle: enhanced_list_item
+label: Subtitle
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

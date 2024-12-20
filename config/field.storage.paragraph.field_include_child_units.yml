@@ -1,0 +1,20 @@
+uuid: 217a5116-dfd4-4ebc-9f92-b7aeb00be795
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: BGdCynMwUWD8WCD2k9oxe5hghHS02fvA11fUqIMJAYw
+id: paragraph.field_include_child_units
+field_name: field_include_child_units
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

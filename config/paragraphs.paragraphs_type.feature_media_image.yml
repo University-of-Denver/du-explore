@@ -1,0 +1,12 @@
+uuid: 0f42c03a-abca-4d4f-a716-39a18c613415
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: hLNX3MSHNFU1q9ocU73JUT5sh8JOy4ZysX9xaUQbZcw
+id: feature_media_image
+label: 'Feature Media Image'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

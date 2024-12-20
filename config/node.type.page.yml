@@ -1,0 +1,25 @@
+uuid: ed289b6b-b76b-4900-bf9c-770dcbcb08be
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - node_revision_delete
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  node_revision_delete:
+    minimum_revisions_to_keep: 4
+    minimum_age_to_delete: 12
+    when_to_delete: 0
+_core:
+  default_config_hash: 28w_cM7AqA_JylfpsXr34P0qISxmUmIA2RIa8rKmLO0
+name: 'Basic page'
+type: page
+description: "Use <em>basic pages</em> for your static content, such as an 'About us' page."
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

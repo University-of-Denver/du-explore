@@ -1,0 +1,12 @@
+uuid: 345e8b12-dcb6-470d-977f-5c4eb343ce03
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: fbVNiBriZ1ePRri7-Y2DnIh-mshdwkFGsHEsrZl7_FE
+id: subhead
+label: 'Subhead (H2)'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

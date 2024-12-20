@@ -1,0 +1,25 @@
+uuid: 4bec2931-a386-48b0-8045-c8b70b6dadc4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.temporary.field_temporary
+    - paragraphs.paragraphs_type.temporary
+_core:
+  default_config_hash: jsGiC1sP0xBTtxkKcmQEi_bzwlMQ_CjTE3CrT-SEjcY
+id: paragraph.temporary.default
+targetEntityType: paragraph
+bundle: temporary
+mode: default
+content:
+  field_temporary:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,25 @@
+uuid: 6ff4c385-d68d-498a-bf33-5970b0e0204c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hide_subnav_block
+    - node.type.page
+_core:
+  default_config_hash: 2Ear--Bk9fk_Qz1stozRwc2l5DQsHgBDoFiEFfKk0oE
+id: node.page.field_hide_subnav_block
+field_name: field_hide_subnav_block
+entity_type: node
+bundle: page
+label: 'Hide Subnav Block'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

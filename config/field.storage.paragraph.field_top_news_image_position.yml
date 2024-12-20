@@ -1,0 +1,29 @@
+uuid: 52c31fe4-1ff3-44c8-b5ca-2fe64bf04be3
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: 4tE26VrM1Svt5mL7mUfoy3_S_cXjEkelmZ8JUcmOxLE
+id: paragraph.field_top_news_image_position
+field_name: field_top_news_image_position
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: left
+      label: left
+    -
+      value: top
+      label: top
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

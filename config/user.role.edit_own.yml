@@ -1,0 +1,18 @@
+uuid: f501aaf5-6a25-4957-a225-9744153b2a05
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.rich_text
+  module:
+    - file
+    - filter
+_core:
+  default_config_hash: IiFex2s6Qkhc8X3KZoXRCX4nS6HgdJaWGFTW9UDjIA8
+id: edit_own
+label: 'Edit Own'
+weight: -8
+is_admin: null
+permissions:
+  - 'delete own files'
+  - 'use text format rich_text'

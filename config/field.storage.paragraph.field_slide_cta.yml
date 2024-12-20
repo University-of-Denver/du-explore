@@ -1,0 +1,21 @@
+uuid: d6eec114-94b3-404c-bb70-19454b26193d
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+_core:
+  default_config_hash: XhiAI5DeX5hjZIqOD0bo8Cy_u4z-kseaBpjrwP-ufyk
+id: paragraph.field_slide_cta
+field_name: field_slide_cta
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

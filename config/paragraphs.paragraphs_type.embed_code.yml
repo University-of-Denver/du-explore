@@ -1,0 +1,12 @@
+uuid: 4d68263c-e23a-48a0-95dc-e23e7cf8f2c9
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ueO8u4CMQ5VQl4S3v3OjSJReg7DYUPiFL-1So4X4b2k
+id: embed_code
+label: 'Embed Code'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

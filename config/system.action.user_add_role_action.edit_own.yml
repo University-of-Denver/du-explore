@@ -1,0 +1,14 @@
+uuid: b4e6d385-a170-4404-933b-9946bde1174c
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.edit_own
+  module:
+    - user
+id: user_add_role_action.edit_own
+label: 'Add the Edit Own role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: edit_own

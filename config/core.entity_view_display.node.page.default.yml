@@ -1,0 +1,89 @@
+uuid: de2b8161-7982-4f8c-afbd-b063297280f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.page.body
+    - field.field.node.page.field_alternative_h1
+    - field.field.node.page.field_footer_ctas
+    - field.field.node.page.field_hero_media_header
+    - field.field.node.page.field_hide_footer_cta_region
+    - field.field.node.page.field_hide_subnav_block
+    - field.field.node.page.field_meta_tags
+    - field.field.node.page.field_page_content
+    - field.field.node.page.field_page_overview
+    - field.field.node.page.field_social_media_bar
+    - field.field.node.page.field_unit
+    - node.type.page
+  module:
+    - entity_reference_revisions
+    - metatag
+    - user
+_core:
+  default_config_hash: skypuQ_3hq-bMjcmWQDPb0D20H35LwJHQQtRN830oow
+id: node.page.default
+targetEntityType: node
+bundle: page
+mode: default
+content:
+  field_alternative_h1:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_hide_subnav_block:
+    type: boolean
+    label: hidden
+    settings:
+      format: custom
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_meta_tags:
+    type: metatag_empty_formatter
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_page_content:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_page_overview:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  workbench_moderation_control:
+    weight: -20
+    region: content
+hidden:
+  body: true
+  content_moderation_control: true
+  field_footer_ctas: true
+  field_hero_media_header: true
+  field_hide_footer_cta_region: true
+  field_social_media_bar: true
+  field_unit: true
+  scheduled_update: true
+  search_api_excerpt: true

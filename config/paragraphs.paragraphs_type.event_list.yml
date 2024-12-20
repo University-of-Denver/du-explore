@@ -1,0 +1,12 @@
+uuid: fadcf79f-07a7-4ae5-ab4e-371d7f933942
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vN24vz0SWR5e2X_m9p9c9dt3lGNVA_DXJThLRmGG518
+id: event_list
+label: 'Event List'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

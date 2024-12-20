@@ -1,0 +1,27 @@
+uuid: 039d07b5-8f74-4b9e-9717-084d7a9c7787
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - pl_drupal
+_core:
+  default_config_hash: 9XA_VHx0JtRrVjAzOBqIfmo7GLAKK4DsoydhD7Nyuho
+id: pl_drupal_main_menu
+theme: pl_drupal
+region: header
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 2
+  expand_all_items: true
+visibility: {  }

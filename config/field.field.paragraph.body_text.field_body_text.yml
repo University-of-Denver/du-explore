@@ -1,0 +1,24 @@
+uuid: 302119ad-b16d-4fea-8dec-a1f425aa0aaf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body_text
+    - paragraphs.paragraphs_type.body_text
+  module:
+    - text
+_core:
+  default_config_hash: Hk6N3aABcbKNQhhiwl_UoIw7l_JdLvzoyTkSZR45HXs
+id: paragraph.body_text.field_body_text
+field_name: field_body_text
+entity_type: paragraph
+bundle: body_text
+label: 'Body Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

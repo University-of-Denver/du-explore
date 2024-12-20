@@ -1,0 +1,32 @@
+uuid: 01e250b0-c603-4f31-aebd-eaa0e3d20298
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - paragraphs
+_core:
+  default_config_hash: W3kuVErLo48_vFPJ2fAQu0IxOFg0ofD_DJ-u_Z9l88s
+id: paragraph.field_card_image
+field_name: field_card_image
+entity_type: paragraph
+type: image
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

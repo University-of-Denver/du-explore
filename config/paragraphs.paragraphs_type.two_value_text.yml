@@ -1,0 +1,12 @@
+uuid: cae4dca7-1616-4da6-abea-51958e7ffbc0
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: j2ag-MXbA3aJx6enG8xF7r2JPOqwR3CR3uGwtwfzqXc
+id: two_value_text
+label: Title/Text
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,23 @@
+uuid: af716ccb-756a-4edb-939e-bac443e50d42
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_card_type
+    - paragraphs.paragraphs_type.card
+  module:
+    - options
+_core:
+  default_config_hash: nhDQzcZrzxicUaT5CE11uKVtivtGbNCzrl5tF43ZEJE
+id: paragraph.card.field_card_type
+field_name: field_card_type
+entity_type: paragraph
+bundle: card
+label: 'Card Type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

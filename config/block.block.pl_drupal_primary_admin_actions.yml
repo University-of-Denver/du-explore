@@ -1,0 +1,20 @@
+uuid: 978fa9ac-883a-4f54-b049-9a12431375fe
+langcode: en
+status: true
+dependencies:
+  theme:
+    - pl_drupal
+_core:
+  default_config_hash: w0cMllfsAF-nHMb9oj5W2FPNftU3IM5pgO6h2a63JTo
+id: pl_drupal_primary_admin_actions
+theme: pl_drupal
+region: header
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

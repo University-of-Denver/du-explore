@@ -1,0 +1,12 @@
+uuid: fa36345a-8515-4c3f-aa4e-24e22f488437
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: _D0wS2IfpHtCoidxA4LgJfxn4oGlxLRFo6MZvWbGFqg
+id: show_hide_toggle
+label: 'Show/Hide Toggle'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

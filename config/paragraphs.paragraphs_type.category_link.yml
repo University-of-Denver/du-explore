@@ -1,0 +1,12 @@
+uuid: b10e53d7-b0ed-406f-b4ad-f29195d5d460
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 037GiL0mV2ixiB7DHQMOWedRO9izgDF_Hw_BKax12d0
+id: category_link
+label: 'Category Link'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

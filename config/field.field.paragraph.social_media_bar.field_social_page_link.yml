@@ -1,0 +1,25 @@
+uuid: 6086952f-8d43-4cd2-bcaf-f4f2f58c376d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_social_page_link
+    - paragraphs.paragraphs_type.social_media_bar
+  module:
+    - link
+_core:
+  default_config_hash: Vv7U2n89rkLCKblJ2-QPvQTZr_SySLYrljkm6p2V_gE
+id: paragraph.social_media_bar.field_social_page_link
+field_name: field_social_page_link
+entity_type: paragraph
+bundle: social_media_bar
+label: 'Social Page Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

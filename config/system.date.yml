@@ -1,0 +1,11 @@
+_core:
+  default_config_hash: gHj_-bIuRy3A85tO4xnl5Ac1P7AVr8SLyLt7twDsiIE
+first_day: 0
+country:
+  default: null
+timezone:
+  default: America/Denver
+  user:
+    configurable: true
+    default: 0
+    warn: false

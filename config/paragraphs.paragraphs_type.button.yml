@@ -1,0 +1,12 @@
+uuid: 149ab6ee-1d04-45fa-ae1b-3bacf7829f4d
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 8ZZMATQwgKPjXFKsYpLN_h_rskuC6TdHx6bCbHQpV-g
+id: button
+label: Button
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

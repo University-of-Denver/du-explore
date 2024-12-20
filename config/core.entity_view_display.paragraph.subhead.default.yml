@@ -1,0 +1,24 @@
+uuid: f38f5a10-0222-4643-a3ff-0dd3b0fee9fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.subhead.field_title
+    - paragraphs.paragraphs_type.subhead
+_core:
+  default_config_hash: PvoOryi60txdcBELbMcQJDpW3NB_gu620LJFSPC2TI0
+id: paragraph.subhead.default
+targetEntityType: paragraph
+bundle: subhead
+mode: default
+content:
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  scheduled_publication: true

@@ -1,0 +1,29 @@
+uuid: c94f9869-efd3-4ac6-b34e-0009086b258b
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: oR_OamHCIRWbj2hh3UejEmeKEsmgew66kSyUEJ--c-U
+id: paragraph.field_copy_image_placement
+field_name: field_copy_image_placement
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: image-left
+      label: 'Image left side'
+    -
+      value: image-right
+      label: 'Image right side'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

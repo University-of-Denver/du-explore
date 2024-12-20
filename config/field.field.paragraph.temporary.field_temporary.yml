@@ -1,0 +1,21 @@
+uuid: 3f37a559-a3d6-44bf-8436-c7e451e58e62
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_temporary
+    - paragraphs.paragraphs_type.temporary
+_core:
+  default_config_hash: W-jZUPKFkmMLJovying4qya4QQvGeAseeg0iAXCbDZg
+id: paragraph.temporary.field_temporary
+field_name: field_temporary
+entity_type: paragraph
+bundle: temporary
+label: Temporary
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

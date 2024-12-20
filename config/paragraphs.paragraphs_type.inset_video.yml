@@ -1,0 +1,12 @@
+uuid: 8a510046-fd90-42c7-addb-b763dd614dfe
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: axKX1pTrCCQlBiW8gmJICVCxsMphCuZP2yMpTwWjahk
+id: inset_video
+label: 'Inset Video'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

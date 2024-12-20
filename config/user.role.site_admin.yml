@@ -1,0 +1,225 @@
+uuid: c7e8ce57-0566-4359-a91f-6aa8cfd9235a
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.browse_files
+    - entity_browser.browser.browse_files_modal
+    - filter.format.rich_text
+    - node.type.page
+    - taxonomy.vocabulary.event_audiences
+    - taxonomy.vocabulary.event_types
+    - taxonomy.vocabulary.unit
+  module:
+    - block
+    - block_content
+    - content_lock
+    - content_moderation
+    - ds
+    - du_paragraphs
+    - editoria11y
+    - embed
+    - entity_browser
+    - entity_clone
+    - entity_reference_revisions
+    - externalauth
+    - field_ui
+    - file
+    - filter
+    - image
+    - metatag
+    - node
+    - pantheon_autopilot_toolbar
+    - paragraphs
+    - path
+    - pathauto
+    - redirect
+    - responsive_image
+    - role_expire
+    - simple_sitemap
+    - system
+    - taxonomy
+    - toolbar
+    - url_redirect
+    - webform
+_core:
+  default_config_hash: DnLa8S2DEUsUuzK2jI1ZPVpdV6c2rwpmLkmGO3qcnJw
+id: site_admin
+label: 'Site Admin'
+weight: -6
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access block library'
+  - 'access browse_files entity browser pages'
+  - 'access browse_files_modal entity browser pages'
+  - 'access content overview'
+  - 'access du_paragraphs'
+  - 'access files overview'
+  - 'access own webform configuration'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'access url redirect delete page'
+  - 'access url redirect edit page'
+  - 'access url redirect settings page'
+  - 'access user profiles'
+  - 'access webform help'
+  - 'access webform overview'
+  - 'access webform submission user'
+  - 'admin classes'
+  - 'administer block content'
+  - 'administer block types'
+  - 'administer block_content display'
+  - 'administer block_content fields'
+  - 'administer block_content form display'
+  - 'administer blocks'
+  - 'administer content types'
+  - 'administer display modes'
+  - 'administer editoria11y checker'
+  - 'administer embed buttons'
+  - 'administer entity clone'
+  - 'administer filters'
+  - 'administer image styles'
+  - 'administer menu'
+  - 'administer meta tags'
+  - 'administer node display'
+  - 'administer node fields'
+  - 'administer node form display'
+  - 'administer nodes'
+  - 'administer paragraph display'
+  - 'administer paragraph fields'
+  - 'administer paragraph form display'
+  - 'administer paragraphs settings'
+  - 'administer paragraphs types'
+  - 'administer redirect settings'
+  - 'administer redirects'
+  - 'administer responsive images'
+  - 'administer role expire'
+  - 'administer site configuration'
+  - 'administer sitemap settings'
+  - 'administer taxonomy'
+  - 'administer taxonomy_term display'
+  - 'administer taxonomy_term fields'
+  - 'administer taxonomy_term form display'
+  - 'administer url aliases'
+  - 'administer user display'
+  - 'administer user fields'
+  - 'administer user form display'
+  - 'administer webform element access'
+  - 'administer webform submission'
+  - 'break content lock'
+  - 'bulk delete aliases'
+  - 'bulk update aliases'
+  - 'clone action entity'
+  - 'clone base_field_override entity'
+  - 'clone behavior_settings entity'
+  - 'clone block entity'
+  - 'clone block_content entity'
+  - 'clone block_content_type entity'
+  - 'clone content_moderation_state entity'
+  - 'clone date_format entity'
+  - 'clone editor entity'
+  - 'clone embed_button entity'
+  - 'clone entity_browser entity'
+  - 'clone entity_embed_fake_entity entity'
+  - 'clone entity_form_display entity'
+  - 'clone entity_form_mode entity'
+  - 'clone entity_view_display entity'
+  - 'clone entity_view_mode entity'
+  - 'clone field_config entity'
+  - 'clone field_storage_config entity'
+  - 'clone file entity'
+  - 'clone filter_format entity'
+  - 'clone image_style entity'
+  - 'clone linkit_profile entity'
+  - 'clone menu entity'
+  - 'clone menu_link_content entity'
+  - 'clone metatag_defaults entity'
+  - 'clone node entity'
+  - 'clone node_type entity'
+  - 'clone paragraph entity'
+  - 'clone paragraphs_type entity'
+  - 'clone path_alias entity'
+  - 'clone pathauto_pattern entity'
+  - 'clone redirect entity'
+  - 'clone responsive_image_style entity'
+  - 'clone simple_sitemap entity'
+  - 'clone simple_sitemap_type entity'
+  - 'clone taxonomy_term entity'
+  - 'clone taxonomy_vocabulary entity'
+  - 'clone url_redirect entity'
+  - 'clone user entity'
+  - 'clone user_role entity'
+  - 'clone view entity'
+  - 'clone webform entity'
+  - 'clone webform_options entity'
+  - 'clone webform_submission entity'
+  - 'clone workflow entity'
+  - 'create page content'
+  - 'create terms in event_audiences'
+  - 'create terms in event_types'
+  - 'create terms in unit'
+  - 'create url aliases'
+  - 'create webform'
+  - 'delete all taxonomy revisions'
+  - 'delete any file'
+  - 'delete any page content'
+  - 'delete any webform'
+  - 'delete any webform submission'
+  - 'delete orphan revisions'
+  - 'delete own files'
+  - 'delete own page content'
+  - 'delete own webform'
+  - 'delete own webform submission'
+  - 'delete page revisions'
+  - 'delete term revisions in event_audiences'
+  - 'delete term revisions in event_types'
+  - 'delete term revisions in unit'
+  - 'delete terms in event_audiences'
+  - 'delete terms in event_types'
+  - 'delete terms in unit'
+  - 'edit any page content'
+  - 'edit any webform'
+  - 'edit any webform submission'
+  - 'edit behavior plugin settings'
+  - 'edit own page content'
+  - 'edit own webform'
+  - 'edit own webform submission'
+  - 'edit role expire default duration'
+  - 'edit terms in event_audiences'
+  - 'edit terms in event_types'
+  - 'edit terms in unit'
+  - 'edit users role expire'
+  - 'edit webform assets'
+  - 'manage editoria11y results'
+  - 'mark as hidden in editoria11y'
+  - 'mark as ok in editoria11y'
+  - 'notify of path changes'
+  - 'pantheon autopilot access'
+  - 'revert all revisions'
+  - 'revert all taxonomy revisions'
+  - 'revert page revisions'
+  - 'revert term revisions in event_audiences'
+  - 'revert term revisions in event_types'
+  - 'revert term revisions in unit'
+  - 'take_ownership_on_clone content_moderation_state entity'
+  - 'take_ownership_on_clone file entity'
+  - 'take_ownership_on_clone node entity'
+  - 'use text format rich_text'
+  - 'view all revisions'
+  - 'view all taxonomy revisions'
+  - 'view any unpublished content'
+  - 'view any webform submission'
+  - 'view authmap'
+  - 'view editoria11y checker'
+  - 'view latest version'
+  - 'view own unpublished content'
+  - 'view own webform submission'
+  - 'view page revisions'
+  - 'view term revisions in event_audiences'
+  - 'view term revisions in event_types'
+  - 'view term revisions in unit'
+  - 'view the administration theme'
+  - 'view unpublished paragraphs'
+  - 'view user email addresses'
+  - 'view vocabulary labels'

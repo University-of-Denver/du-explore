@@ -1,0 +1,12 @@
+uuid: d83193bd-1094-4556-9160-6d6a1678d3bd
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: rBb5TTNuVqoF5-WZ23klyUZt26PR6RK11bSGu1I7rv0
+id: testimonials_spotlight
+label: 'Testimonials / Spotlight'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

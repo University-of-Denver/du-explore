@@ -1,0 +1,12 @@
+uuid: 6152836b-fb75-4c5c-aba1-df7d4a403d55
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: VpQ0gnFFw34hW_soiPRgrbNPtBG_48oXxPIF1fW_jSA
+id: body_text
+label: 'Body Text'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

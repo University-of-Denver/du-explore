@@ -1,0 +1,9 @@
+_core:
+  default_config_hash: BtZvGzilrEQIIlXowYOJj6kxtygZLOMLolhcAZgXooo
+mappings:
+  -
+    attribute_name: first_name
+    field_name: field_first_name
+  -
+    attribute_name: last_name
+    field_name: field_last_name

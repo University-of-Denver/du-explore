@@ -1,0 +1,145 @@
+uuid: e5d2b791-fed7-4a8c-833a-c042b0f85590
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_overview
+    - node.type.page
+    - paragraphs.paragraphs_type.body_text
+    - paragraphs.paragraphs_type.cta_inline
+    - paragraphs.paragraphs_type.expanding_list
+    - paragraphs.paragraphs_type.icon_list
+    - paragraphs.paragraphs_type.image_with_caption
+    - paragraphs.paragraphs_type.list_of_links
+    - paragraphs.paragraphs_type.show_hide_toggle
+    - paragraphs.paragraphs_type.subhead
+    - paragraphs.paragraphs_type.two_col_copy
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: SH-vwpQo5G7OrzURbLWppxrhdKLbLPu1u7ttdM_mbCU
+id: node.page.field_page_overview
+field_name: field_page_overview
+entity_type: node
+bundle: page
+label: 'Page Overview'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      body_text: body_text
+      two_col_copy: two_col_copy
+      cta_inline: cta_inline
+      expanding_list: expanding_list
+      icon_list: icon_list
+      image_with_caption: image_with_caption
+      list_of_links: list_of_links
+      show_hide_toggle: show_hide_toggle
+      subhead: subhead
+    negate: 0
+    target_bundles_drag_drop:
+      body_copy:
+        weight: 11
+        enabled: false
+      body_text:
+        weight: 5
+        enabled: true
+      button:
+        weight: 6
+        enabled: false
+      card:
+        weight: 8
+        enabled: false
+      cards:
+        weight: 9
+        enabled: false
+      category_link:
+        weight: 13
+        enabled: false
+      category_menu:
+        weight: 14
+        enabled: false
+      cta:
+        weight: 20
+        enabled: false
+      cta_inline:
+        weight: 22
+        enabled: true
+      embed_code:
+        weight: 26
+        enabled: false
+      enhanced_expanding_list:
+        weight: 27
+        enabled: false
+      enhanced_list_item:
+        weight: 28
+        enabled: false
+      event_list:
+        weight: 29
+        enabled: false
+      expanding_list:
+        weight: 31
+        enabled: true
+      feature_media_image:
+        weight: 36
+        enabled: false
+      hero_media:
+        weight: 46
+        enabled: false
+      icon_link:
+        weight: 53
+        enabled: false
+      icon_list:
+        weight: 54
+        enabled: true
+      image_with_caption:
+        weight: 56
+        enabled: true
+      inset_video:
+        weight: 58
+        enabled: false
+      list_of_links:
+        weight: 62
+        enabled: true
+      named_anchor:
+        weight: 64
+        enabled: false
+      reusable_content:
+        weight: 79
+        enabled: false
+      show_hide_toggle:
+        weight: 80
+        enabled: true
+      social_media_bar:
+        weight: 83
+        enabled: false
+      stories:
+        weight: 23
+        enabled: false
+      subhead:
+        weight: 85
+        enabled: true
+      temporary:
+        weight: 61
+        enabled: false
+      testimonials_spotlight:
+        weight: 87
+        enabled: false
+      two_col_copy:
+        weight: 12
+        enabled: true
+      two_value_text:
+        weight: 89
+        enabled: false
+      unit_carousel:
+        weight: 91
+        enabled: false
+      webform:
+        weight: 94
+        enabled: false
+field_type: entity_reference_revisions

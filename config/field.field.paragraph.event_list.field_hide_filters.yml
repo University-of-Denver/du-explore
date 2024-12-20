@@ -1,0 +1,25 @@
+uuid: ae35a4e2-43c5-4ff1-8353-bfa2d790923b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hide_filters
+    - paragraphs.paragraphs_type.event_list
+_core:
+  default_config_hash: 0maMFarPBUfejxHtjMYR8w_BvY0yzS3c3WTcUhgaz7o
+id: paragraph.event_list.field_hide_filters
+field_name: field_hide_filters
+entity_type: paragraph
+bundle: event_list
+label: 'Hide filters'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

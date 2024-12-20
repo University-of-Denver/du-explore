@@ -1,0 +1,20 @@
+uuid: 8457809c-8a7b-45b7-b0fc-a31c34210208
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.rich_text
+  module:
+    - editoria11y
+    - filter
+_core:
+  default_config_hash: lqLC4xOH2kC-W7-CMOiuDkprHn7k3Qhtmbc4ldavurU
+id: content_editor
+label: 'Content Editor'
+weight: -7
+is_admin: null
+permissions:
+  - 'mark as hidden in editoria11y'
+  - 'mark as ok in editoria11y'
+  - 'use text format rich_text'
+  - 'view editoria11y checker'

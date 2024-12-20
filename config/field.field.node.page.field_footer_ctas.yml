@@ -1,0 +1,27 @@
+uuid: 774e6e05-c4f9-4945-88ea-930ad7aff57c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_footer_ctas
+    - node.type.page
+_core:
+  default_config_hash: jSC4IXq7UbUwxi0ka5n1phQ8-qc4LkjmMwCpLnUD6Ew
+id: node.page.field_footer_ctas
+field_name: field_footer_ctas
+entity_type: node
+bundle: page
+label: 'Footer CTAs'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: custom_block_reference
+      display_name: cta_blocks
+      arguments: {  }
+field_type: entity_reference

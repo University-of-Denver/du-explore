@@ -1,0 +1,129 @@
+uuid: 66faf60f-7757-4d6f-880f-45b788f78bd9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hero_media_header
+    - node.type.page
+    - paragraphs.paragraphs_type.hero_media
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: IwSHxunJlmBxRQ8uo7M1tXD_-1ZytJoxqLHA8IQlZqw
+id: node.page.field_hero_media_header
+field_name: field_hero_media_header
+entity_type: node
+bundle: page
+label: 'Hero Media Header'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      hero_media: hero_media
+    negate: 0
+    target_bundles_drag_drop:
+      body_copy:
+        weight: 33
+        enabled: false
+      body_text:
+        weight: 34
+        enabled: false
+      button:
+        weight: 113
+        enabled: false
+      card:
+        weight: 35
+        enabled: false
+      cards:
+        weight: 36
+        enabled: false
+      category_link:
+        weight: 118
+        enabled: false
+      category_menu:
+        weight: 119
+        enabled: false
+      cta:
+        weight: 37
+        enabled: false
+      cta_inline:
+        weight: 127
+        enabled: false
+      embed_code:
+        weight: 38
+        enabled: false
+      enhanced_expanding_list:
+        weight: 130
+        enabled: false
+      enhanced_list_item:
+        weight: 131
+        enabled: false
+      event_list:
+        weight: 59
+        enabled: false
+      expanding_list:
+        weight: 40
+        enabled: false
+      feature_media_image:
+        weight: 138
+        enabled: false
+      hero_media:
+        weight: 41
+        enabled: true
+      icon_link:
+        weight: 157
+        enabled: false
+      icon_list:
+        weight: 158
+        enabled: false
+      image_with_caption:
+        weight: 160
+        enabled: false
+      inset_video:
+        weight: 162
+        enabled: false
+      list_of_links:
+        weight: 164
+        enabled: false
+      named_anchor:
+        weight: 166
+        enabled: false
+      reusable_content:
+        weight: 183
+        enabled: false
+      show_hide_toggle:
+        weight: 54
+        enabled: false
+      social_media_bar:
+        weight: 187
+        enabled: false
+      stories:
+        weight: 55
+        enabled: false
+      subhead:
+        weight: 56
+        enabled: false
+      temporary:
+        weight: 61
+        enabled: false
+      testimonials_spotlight:
+        weight: 193
+        enabled: false
+      two_col_copy:
+        weight: 57
+        enabled: false
+      two_value_text:
+        weight: 58
+        enabled: false
+      unit_carousel:
+        weight: 198
+        enabled: false
+      webform:
+        weight: 200
+        enabled: false
+field_type: entity_reference_revisions

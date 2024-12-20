@@ -1,0 +1,21 @@
+uuid: 409f5fec-4572-44c3-aafe-3f723fbf21f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_alternative_h1
+    - node.type.page
+_core:
+  default_config_hash: MnTzYTonoGNnT6O1jUqpz2WtHG3RjSFGx7YuNt1xVsQ
+id: node.page.field_alternative_h1
+field_name: field_alternative_h1
+entity_type: node
+bundle: page
+label: 'Alternative H1'
+description: "Above is an optional field that will display as the page's largest header (H1)"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

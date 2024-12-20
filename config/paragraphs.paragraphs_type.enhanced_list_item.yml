@@ -1,0 +1,12 @@
+uuid: a8933853-a8e6-461d-9a0b-34b5f323ed30
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: FUchzRZc1D2BPRyuB6ZeKWUnbbF6Dh3j266c760xUXA
+id: enhanced_list_item
+label: 'Enhanced List Item'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

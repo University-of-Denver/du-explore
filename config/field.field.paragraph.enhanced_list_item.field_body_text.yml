@@ -1,0 +1,31 @@
+uuid: 127e7f32-11db-4474-b603-479d51d92c4b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body_text
+    - paragraphs.paragraphs_type.enhanced_list_item
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    rich_text: rich_text
+    embed_code: '0'
+    inline_formatting: '0'
+    plain_text: '0'
+_core:
+  default_config_hash: zAcCZq_ZGHkNlCFL6EhmGpDON5-Qk-fKY_azyk-y7Ns
+id: paragraph.enhanced_list_item.field_body_text
+field_name: field_body_text
+entity_type: paragraph
+bundle: enhanced_list_item
+label: 'Body Text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

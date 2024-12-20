@@ -1,0 +1,12 @@
+uuid: 5f6dbe5d-e2f2-497c-abd7-ebba32480720
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: YzwvtmJ-xmcT7frxjMRPrJVeUVlNXL4H-tB_nof_WHo
+id: two_col_copy
+label: 'Copy (Two Col)'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

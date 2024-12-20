@@ -1,0 +1,34 @@
+_core:
+  default_config_hash: jz2aLbg92zHmtyYXez2AxPLVIFvhryXbrw_iOu9mt9k
+langcode: en
+activate: true
+auth_source: default-sp
+login_link_display_name: 'DU SSO'
+login_link_show: true
+user_name: uid
+unique_id: EmployeeID
+mail_attr: mail
+header_no_cache: true
+role:
+  population: ''
+  eval_every_time: false
+register_users: true
+allow:
+  set_drupal_pwd: false
+  default_login: true
+  default_login_roles:
+    authenticated: authenticated
+    edit_own: edit_own
+    content_editor: content_editor
+    site_admin: site_admin
+    administrator: administrator
+  default_login_users: '1'
+logout_goto_url: ''
+user_register_original: visitors
+sync:
+  mail: true
+  user_name: true
+autoenablesaml: true
+debug: false
+secure: false
+httponly: false

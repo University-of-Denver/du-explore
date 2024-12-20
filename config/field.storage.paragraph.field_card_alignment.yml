@@ -1,0 +1,32 @@
+uuid: 709d5bb5-5f2e-4894-90f5-47708afc4b01
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: G6ruTXmaKZIPJTvoUU1htRZJz8lqMhFnCqBo1Czusbw
+id: paragraph.field_card_alignment
+field_name: field_card_alignment
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: left
+      label: Left
+    -
+      value: right
+      label: Right
+    -
+      value: center
+      label: Center
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

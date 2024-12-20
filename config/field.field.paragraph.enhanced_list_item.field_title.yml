@@ -1,0 +1,21 @@
+uuid: c50b08ef-fdaf-409c-9f76-df14716efba9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.enhanced_list_item
+_core:
+  default_config_hash: B6Gb5C2qV8Fue_Nr6XzzQpPc2qN6tAlxE7pPAH4wHNE
+id: paragraph.enhanced_list_item.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: enhanced_list_item
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

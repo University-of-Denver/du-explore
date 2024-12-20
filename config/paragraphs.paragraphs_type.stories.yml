@@ -1,0 +1,12 @@
+uuid: 70a9f3db-6e2a-483d-9543-3a4d37808d35
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: IQtHyZhGqJ9llX_mC-KSrAp_aOvmxbfcgC80pWAe8d0
+id: stories
+label: 'Curated Snippets'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

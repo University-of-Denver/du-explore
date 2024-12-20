@@ -1,0 +1,23 @@
+uuid: 7e3199ec-6697-4ff2-9f4b-531c23a375a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.temporary.field_temporary
+    - paragraphs.paragraphs_type.temporary
+_core:
+  default_config_hash: stMHpT1X9TVv4y4Vme4pmrZdWj5_-tQMNocfhjLYSr8
+id: paragraph.temporary.default
+targetEntityType: paragraph
+bundle: temporary
+mode: default
+content:
+  field_temporary:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

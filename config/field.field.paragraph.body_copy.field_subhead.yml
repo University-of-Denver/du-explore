@@ -1,0 +1,21 @@
+uuid: 88379317-1d0d-47cb-b303-bc3def10298b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subhead
+    - paragraphs.paragraphs_type.body_copy
+_core:
+  default_config_hash: c0lhGINaaMBtV6RlfQFlyMzF27cbAr6uapCXNB5DRMI
+id: paragraph.body_copy.field_subhead
+field_name: field_subhead
+entity_type: paragraph
+bundle: body_copy
+label: 'Subhead (h4)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

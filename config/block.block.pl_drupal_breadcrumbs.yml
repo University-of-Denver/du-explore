@@ -1,0 +1,22 @@
+uuid: 18fd2019-450c-4069-a449-9abab62b895a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - pl_drupal
+_core:
+  default_config_hash: iRcHZEurkXpplyh0_PKdM47OfadhioV5pCEnSQ7tLwA
+id: pl_drupal_breadcrumbs
+theme: pl_drupal
+region: header
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

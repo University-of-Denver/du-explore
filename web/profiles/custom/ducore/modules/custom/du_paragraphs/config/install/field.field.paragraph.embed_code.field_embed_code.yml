@@ -3,9 +3,9 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_embed_code
+    - filter.format.embed_code
     - paragraphs.paragraphs_type.embed_code
   module:
-    - allowed_formats
     - text
 id: paragraph.embed_code.field_embed_code
 field_name: field_embed_code

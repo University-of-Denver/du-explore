@@ -1,0 +1,27 @@
+uuid: 3a6eeba7-cd73-42ab-a91e-ffbf6d41d340
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - pl_drupal
+_core:
+  default_config_hash: ex9XfpYbP7VwsvtIlUC1q9qQv1THBMvdEZRQ2b_fO0Q
+id: pl_drupal_account_menu
+theme: pl_drupal
+region: header
+weight: -4
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

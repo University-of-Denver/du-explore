@@ -24,6 +24,7 @@ filters:
         iframe: iframe
       media_switch: ''
       box_style: ''
+      box_media_style: ''
       hybrid_style: ''
       use_data_uri: '0'
       box_caption: ''

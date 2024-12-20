@@ -1,0 +1,20 @@
+uuid: 6dfddf0c-c2a8-4ac9-b4af-1a8ff8d3be09
+langcode: en
+status: true
+dependencies:
+  theme:
+    - pl_drupal
+_core:
+  default_config_hash: 8iRFM3iFtFvL6seA2vIkAPALBNP-0TisdtWyTdUhmvY
+id: pl_drupal_page_title
+theme: pl_drupal
+region: header
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

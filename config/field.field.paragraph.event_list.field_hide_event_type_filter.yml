@@ -1,0 +1,25 @@
+uuid: f106f689-f335-4996-a8f0-c9e2a9b4258f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hide_event_type_filter
+    - paragraphs.paragraphs_type.event_list
+_core:
+  default_config_hash: Z0_TtXdUXhgrbFSmNOLDcls2kOWNzPjK4Jmwm4Hf4fA
+id: paragraph.event_list.field_hide_event_type_filter
+field_name: field_hide_event_type_filter
+entity_type: paragraph
+bundle: event_list
+label: 'Hide Type Filter'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
