@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function du_developer_install() {
+  du_developer_twig_debugging(TRUE);
+  \Drupal::service('module_installer')->install(['devel']);
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function du_developer_uninstall() {
+  du_developer_twig_debugging(FALSE);
+  \Drupal::service('module_installer')->uninstall(['devel']);
+}
+
+/**
+ * Helper function for install/uninstall that resets twig values
+ */
+function du_developer_twig_debugging($state) {
+    \Drupal::keyValue('development_settings')->setMultiple([
+        'disable_rendered_output_cache_bins' => $state,
+        'twig_debug' => $state,
+        'twig_cache_disable' => $state,
+    ]);
+}
