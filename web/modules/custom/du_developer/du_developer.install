@@ -1,38 +1,28 @@
 <?php
 
+/**
+ * Implements hook_install().
+ */
+function du_developer_install() {
+  du_developer_twig_debugging(TRUE);
+  \Drupal::service('module_installer')->install(['devel']);
+}
+
+/**
+ * Implements hook_uninstall().
+ */
 function du_developer_uninstall() {
-  du_developer_turn_off_twig_debugging();
-  du_developer_uninstall_devel();
+  du_developer_twig_debugging(FALSE);
+  \Drupal::service('module_installer')->uninstall(['devel']);
 }
 
-function du_developer_turn_off_twig_debugging() {
+/**
+ * Helper function for install/uninstall that resets twig values
+ */
+function du_developer_twig_debugging($state) {
     \Drupal::keyValue('development_settings')->setMultiple([
-        'disable_rendered_output_cache_bins' => FALSE,
-        'twig_debug' => FALSE,
-        'twig_cache_disable' => FALSE,
+        'disable_rendered_output_cache_bins' => $state,
+        'twig_debug' => $state,
+        'twig_cache_disable' => $state,
     ]);
-}
-
-function du_developer_uninstall_devel() {
-  $configFactory = \Drupal::service('config.factory');
-  $config = $configFactory->getEditable('core.extension');
-  $module_data = $config->get('module');
-
-  if (isset($module_data['devel'])) {
-    unset($module_data['devel']);
-    $config->set('module', $module_data)->save();
-  }
-
-  $configs_to_delete = [
-    'devel.settings',
-    'devel.toolbar.settings',
-    'system.menu.devel',
-  ];
-
-  foreach ($configs_to_delete as $config_name) {
-    $config = $configFactory->getEditable($config_name);
-    if ($config->isNew() === FALSE) {
-      $config->delete();
-    }
-  }
 }
