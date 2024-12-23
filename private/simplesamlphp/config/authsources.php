@@ -376,7 +376,7 @@ if (!empty($_ENV['PANTHEON_ENVIRONMENT']) && ($_ENV['PANTHEON_ENVIRONMENT'] === 
 
             // The entity ID of this SP.
             // Can be NULL/unset, in which case an entity ID is generated based on the metadata URL.
-            'entityID' => null,
+            'entityID' => 'du.pantheon',
 
             // Self signed certificate location if the IdP requires the SP to hold a certificate.
             // If you need to generate a SHA256 cert, https://gist.github.com/guitarte/5745b94c6883eaddabfea68887ba6ee6
