@@ -30,6 +30,7 @@ dependencies:
     - paragraphs
     - path
     - pathauto
+    - quick_node_clone
     - redirect
     - responsive_image
     - role_expire
@@ -44,6 +45,7 @@ label: 'Site Admin'
 weight: -6
 is_admin: null
 permissions:
+  - 'Administer Quick Node Clone Settings'
   - 'access administration pages'
   - 'access block library'
   - 'access browse_files entity browser pages'
@@ -131,6 +133,7 @@ permissions:
   - 'clone metatag_defaults entity'
   - 'clone node entity'
   - 'clone node_type entity'
+  - 'clone page content'
   - 'clone paragraph entity'
   - 'clone paragraphs_type entity'
   - 'clone path_alias entity'

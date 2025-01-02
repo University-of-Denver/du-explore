@@ -1,8 +1,11 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - quick_node_clone
 id: content_editor
 label: 'Content Editor'
 weight: -7
 is_admin: null
-permissions: {  }
+permissions:
+  - 'clone page content'
