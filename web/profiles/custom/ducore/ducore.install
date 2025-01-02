@@ -184,3 +184,23 @@ function ducore_update_9005() {
     \Drupal::configFactory()->getEditable($config_id)->setData($data)->save(TRUE);
   }
 }
+
+/**
+ * Permission update for quick_node_clone for existing installs
+ */
+function ducore_update_9006() {
+  // While Rich Text is new we made some updates to the existing file / entity browser.
+  \Drupal::service('module_installer')->install(array('quick_node_clone'), TRUE);
+
+  $config_ids = array(
+    'user.role.content_editor',
+    'user.role.site_admin'
+  );
+
+  // Loop through each configuration and, even if it exists, overwrite it.
+  foreach ($config_ids as $config_id) {
+    $config_path = \Drupal::service('extension.list.module')->getPath('ducore') . '/config/install/' . $config_id . '.yml';
+    $data = \Symfony\Component\Yaml\Yaml::parseFile($config_path);
+    \Drupal::configFactory()->getEditable($config_id)->setData($data)->save(TRUE);
+  }
+}

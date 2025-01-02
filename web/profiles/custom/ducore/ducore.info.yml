@@ -61,6 +61,7 @@ install:
   - media
   - slick
   - token_filter
+  - quick_node_clone
 
 # Required modules. These cannot be uninstalled.
 # Note that any dependencies of the modules listed here will be installed automatically.
@@ -115,6 +116,7 @@ dependencies:
   - media
   - slick
   - token_filter
+  - quick_node_clone
 
 themes:
   - pl_drupal
