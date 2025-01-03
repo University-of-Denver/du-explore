@@ -14,8 +14,8 @@ blacklist:
   - 'core.entity_view_mode.user.*'
   - core.extension
   - core.menu.static_menu_link_overrides
-  - cu_starterkit_theme.settings
   - field_ui.settings
+  - field.field.paragraph.embed_code.field_embed_code
   - field.settings
   - file.settings
   - google_tag.settings
