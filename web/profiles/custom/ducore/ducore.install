@@ -204,3 +204,10 @@ function ducore_update_9006() {
     \Drupal::configFactory()->getEditable($config_id)->setData($data)->save(TRUE);
   }
 }
+
+/**
+ * Enable views_json_source module on existing installs
+ */
+function ducore_update_9007() {
+  \Drupal::service('module_installer')->install(array('views_json_source'), TRUE);
+}
