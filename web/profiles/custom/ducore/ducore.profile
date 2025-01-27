@@ -26,7 +26,7 @@ function ducore_user_presave(UserInterface $user) {
   // IMPRORTANT! Because of change to using CammelCase in usernames at DU wasn't 
   // retoactively applied, we are evaluating the match in lowercase.
   $support_eas = array('kevin.reynen', 'kent.houge', 'charles.r.jones','joshua.mcgehee','alex.martinez', 'chris.hewitt', 'maximilian.fleischer', 'tj.sheu');
-  $support_ur =  array('mac.whitney', 'nathan.boorom', 'staci.striegnitz', 'sherry.liang', 'anastasia.vylegzhanina', 'james.e.thomas', derek.vonschulz');
+  $support_ur =  array('mac.whitney', 'nathan.boorom', 'staci.striegnitz', 'sherry.liang', 'anastasia.vylegzhanina', 'james.e.thomas', 'derek.vonschulz');
   // @TODO - These arrays should be YML files or API endpoint that can be 
   // easily editted outside the PHP
   // Check to see if this user is on the list of campus or system support users
@@ -41,6 +41,7 @@ function ducore_user_presave(UserInterface $user) {
       } else {
         $user->addRole('administrator');
       }
+    }
   }
   // @TODO - Remove user if no longer in original array 
 }
