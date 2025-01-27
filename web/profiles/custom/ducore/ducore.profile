@@ -26,7 +26,7 @@ function ducore_user_presave(UserInterface $user) {
   // IMPRORTANT! Because of change to using CammelCase in usernames at DU wasn't 
   // retoactively applied, we are evaluating the match in lowercase.
   $support_eas = array('kevin.reynen', 'kent.houge', 'charles.r.jones','joshua.mcgehee','alex.martinez', 'chris.hewitt', 'maximilian.fleischer', 'tj.sheu');
-  $support_ur =  array('mac.whitney', 'nathan.boorom', 'staci.striegnitz', 'sherry.liang', 'anastasia.vylegzhanina', 'james.e.thomas');
+  $support_ur =  array('mac.whitney', 'nathan.boorom', 'staci.striegnitz', 'sherry.liang', 'anastasia.vylegzhanina', 'james.e.thomas', derek.vonschulz');
   // @TODO - These arrays should be YML files or API endpoint that can be 
   // easily editted outside the PHP
   // Check to see if this user is on the list of campus or system support users
@@ -34,7 +34,13 @@ function ducore_user_presave(UserInterface $user) {
     $user->addRole('administrator');
   }
   if (in_array(strtolower($user->getAccountName()), $support_ur)) {
-    $user->addRole('site_admin');
+    //check to see if the Pantheon environment is live
+    if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
+      if ($_ENV['PANTHEON_ENVIRONMENT'] != 'live') {
+        $user->addRole('site_admin');
+      } else {
+        $user->addRole('administrator');
+      }
   }
   // @TODO - Remove user if no longer in original array 
 }
