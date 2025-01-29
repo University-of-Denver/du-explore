@@ -204,3 +204,21 @@ function ducore_update_9006() {
     \Drupal::configFactory()->getEditable($config_id)->setData($data)->save(TRUE);
   }
 }
+
+function ducore_update_9007() { 
+  // Adding usage report views to previously installed sites
+  $views = array(
+    'views.view.usage_content_type',
+    'views.view.usage_files',
+    'views.view.usage_media',
+    'views.view.usage_paragraph_type',
+    'views.view.usage_taxonomy',
+    'views.view.usage_user',
+  );
+
+  foreach ($views as $view) {
+    $config_path = \Drupal::service('extension.list.module')->getPath('ducore') . '/config/install/' . $view . '.yml';
+    $data = \Symfony\Component\Yaml\Yaml::parseFile($config_path);
+    \Drupal::configFactory()->getEditable($view)->setData($data)->save(TRUE);
+  }
+}
