@@ -205,7 +205,14 @@ function ducore_update_9006() {
   }
 }
 
-function ducore_update_9007() { 
+/**
+ * Enable views_json_source module on existing installs
+ */
+function ducore_update_9007() {
+  \Drupal::service('module_installer')->install(array('views_json_source'), TRUE);
+}
+
+function ducore_update_9008() { 
   // Adding usage report views to previously installed sites
   $views = array(
     'views.view.usage_content_type',
