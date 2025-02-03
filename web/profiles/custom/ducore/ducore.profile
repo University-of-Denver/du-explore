@@ -37,9 +37,9 @@ function ducore_user_presave(UserInterface $user) {
     //check to see if the Pantheon environment is live
     if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
       if ($_ENV['PANTHEON_ENVIRONMENT'] != 'live') {
-        $user->addRole('site_admin');
-      } else {
         $user->addRole('administrator');
+      } else {
+        $user->addRole('site_admin');
       }
     }
   }
