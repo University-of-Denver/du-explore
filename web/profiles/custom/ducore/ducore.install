@@ -211,9 +211,10 @@ function ducore_update_9006() {
 function ducore_update_9007() {
   \Drupal::service('module_installer')->install(array('views_json_source'), TRUE);
 }
-
-function ducore_update_9008() { 
-  // Adding usage report views to previously installed sites
+/**
+ * Adding usage report views to previously installed sites
+ */
+function ducore_update_9009() { 
   $views = array(
     'views.view.usage_content_type',
     'views.view.usage_files',
