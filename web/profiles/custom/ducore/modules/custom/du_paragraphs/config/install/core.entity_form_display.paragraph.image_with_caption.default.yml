@@ -1,0 +1,65 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.browse_files_modal
+    - field.field.paragraph.image_with_caption.field_image_caption_alignment
+    - field.field.paragraph.image_with_caption.field_image_caption_caption
+    - field.field.paragraph.image_with_caption.field_image_caption_float
+    - field.field.paragraph.image_with_caption.field_image_caption_image
+    - paragraphs.paragraphs_type.image_with_caption
+  module:
+    - content_moderation
+    - entity_browser
+    - text
+_core:
+  default_config_hash: Ww8iJZgdV2sEodqHpm0IBpkIQRzXeKM1AAi1HoIOGY8
+id: paragraph.image_with_caption.default
+targetEntityType: paragraph
+bundle: image_with_caption
+mode: default
+content:
+  field_image_caption_alignment:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_image_caption_caption:
+    type: text_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_image_caption_float:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_image_caption_image:
+    type: entity_browser_file
+    weight: 3
+    region: content
+    settings:
+      entity_browser: browse_files_modal
+      field_widget_edit: true
+      field_widget_remove: true
+      open: false
+      selection_mode: selection_append
+      view_mode: default
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

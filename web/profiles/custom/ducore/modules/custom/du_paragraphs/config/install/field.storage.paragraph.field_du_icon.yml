@@ -1,0 +1,63 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_du_icon
+field_name: field_du_icon
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    attention-circled: 'attention circled'
+    block: 'Block'
+    calendar-empty: 'Calendar empty'
+    calendar-plus-o: 'Calendar plus o'
+    calendar: 'Calendar'
+    check: 'Check'
+    clock: 'Clock'
+    cust-clipboard: 'Cust clipboard'
+    cust-close: 'Cust close'
+    cust-left-arrow: 'Cust left arrow'
+    cust-menu: 'Cust menu'
+    cust-right-arrow: 'Cust right arrow'
+    cust-search: 'Cust search'
+    down-arrow: 'Down arrow'
+    facebook: 'Facebook'
+    fax: 'Fax'
+    globe: 'Globe'
+    gplus: 'Gplus'
+    info-circled: 'Info circled'
+    instagram: 'Instagram'
+    left-arrow: 'Left arrow'
+    link-ext-alt: 'Link ext alt'
+    linkedin: 'Linkedin'
+    location: 'Location'
+    logout: 'Logout'
+    mail-alt: 'Mail alt'
+    mail: 'Mail'
+    minus: 'Minus'
+    newspaper: 'Newspaper'
+    pause-circled: 'Pause circled'
+    phone: 'Phone'
+    play-circled: 'PLAY circled'
+    play-circled2: 'Play circled2'
+    plus: 'Plus'
+    print: 'Print'
+    rebel: 'Rebel'
+    right-arrow: 'Right arrow'
+    snapchat: 'Snapchat'
+    spin3: 'Spin3'
+    tumblr: 'Tumblr'
+    twitter: 'Twitter'
+    up-arrow: 'Up arrow'
+    youtube: 'Youtube'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

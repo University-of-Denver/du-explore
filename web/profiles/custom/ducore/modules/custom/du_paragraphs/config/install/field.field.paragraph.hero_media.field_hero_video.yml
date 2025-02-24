@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hero_video
+    - paragraphs.paragraphs_type.hero_media
+  module:
+    - file
+_core:
+  default_config_hash: wu7wyO1y35ib_i3-e8Yts7UX5kpP27JNQFs-gZWuOsk
+id: paragraph.hero_media.field_hero_video
+field_name: field_hero_video
+entity_type: paragraph
+bundle: hero_media
+label: 'Hero Video'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: mp4
+  max_filesize: ''
+  description_field: false
+field_type: file

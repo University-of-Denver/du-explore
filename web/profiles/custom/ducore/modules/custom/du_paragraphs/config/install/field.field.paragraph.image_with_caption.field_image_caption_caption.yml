@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_caption_caption
+    - paragraphs.paragraphs_type.image_with_caption
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    rich_text: rich_text
+    plain_text: plain_text
+    embed_code: '0'
+    inline_formatting: '0'
+_core:
+  default_config_hash: YlyU8fM4uvBK062TsidNBruUuMnCAbsk_87ztyPjS9I
+id: paragraph.image_with_caption.field_image_caption_caption
+field_name: field_image_caption_caption
+entity_type: paragraph
+bundle: image_with_caption
+label: Caption
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

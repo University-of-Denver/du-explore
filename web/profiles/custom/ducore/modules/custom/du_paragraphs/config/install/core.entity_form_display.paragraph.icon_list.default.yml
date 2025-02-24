@@ -1,0 +1,51 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.icon_list.field_icon_list_items
+    - field.field.paragraph.icon_list.field_icon_list_items_small
+    - paragraphs.paragraphs_type.icon_list
+  module:
+    - paragraphs
+_core:
+  default_config_hash: E7SiXV9CLUmgDQOK64urwq4humupWYEMxsmeb2mIdMA
+id: paragraph.icon_list.default
+targetEntityType: paragraph
+bundle: icon_list
+mode: default
+content:
+  field_icon_list_items:
+    type: entity_reference_paragraphs
+    weight: 1
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+  field_icon_list_items_small:
+    type: boolean_checkbox
+    weight: 0
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduled_publication:
+    type: datetime_default
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.reusable_content.field_reusable_content
+    - paragraphs.paragraphs_type.reusable_content
+id: paragraph.reusable_content.default
+targetEntityType: paragraph
+bundle: reusable_content
+mode: default
+content:
+  field_reusable_content:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true
