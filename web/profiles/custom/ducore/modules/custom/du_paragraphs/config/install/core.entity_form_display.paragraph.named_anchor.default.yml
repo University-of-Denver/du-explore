@@ -1,0 +1,40 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.named_anchor.field_named_anchor_name
+    - paragraphs.paragraphs_type.named_anchor
+  module:
+    - content_moderation
+    - datetime
+_core:
+  default_config_hash: sCidI5GijobDUd17B-I5ChuoF-3KxzJZ1TMxaJO5X4s
+id: paragraph.named_anchor.default
+targetEntityType: paragraph
+bundle: named_anchor
+mode: default
+content:
+  field_named_anchor_name:
+    type: string_textfield
+    weight: 101
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduled_publication:
+    type: datetime_default
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

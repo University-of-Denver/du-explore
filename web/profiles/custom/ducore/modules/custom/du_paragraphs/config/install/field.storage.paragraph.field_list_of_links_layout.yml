@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: YTvRYHVIyjMRfoL_4egPgtTl04DgkdhyzF2a7RCTfSo
+id: paragraph.field_list_of_links_layout
+field_name: field_list_of_links_layout
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    one-col: 'Single Column'
+    two-col: 'Two Column'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

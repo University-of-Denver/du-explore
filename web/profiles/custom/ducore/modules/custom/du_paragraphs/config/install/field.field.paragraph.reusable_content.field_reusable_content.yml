@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_reusable_content
+    - node.type.reusable_content_block
+    - paragraphs.paragraphs_type.reusable_content
+id: paragraph.reusable_content.field_reusable_content
+field_name: field_reusable_content
+entity_type: paragraph
+bundle: reusable_content
+label: 'Reusable content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      reusable_content_block: reusable_content_block
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

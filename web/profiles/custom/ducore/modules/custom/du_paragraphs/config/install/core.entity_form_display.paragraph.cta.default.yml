@@ -1,0 +1,103 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.browse_files_modal
+    - field.field.paragraph.cta.field_cta_bg_image
+    - field.field.paragraph.cta.field_cta_color
+    - field.field.paragraph.cta.field_cta_style
+    - field.field.paragraph.cta.field_headline
+    - field.field.paragraph.cta.field_link
+    - field.field.paragraph.cta.field_subhead_long
+    - paragraphs.paragraphs_type.cta
+  module:
+    - content_moderation
+    - datetime
+    - entity_browser
+    - link_attributes
+    - text
+_core:
+  default_config_hash: '-rwd2ofXI1RvRZiS-rMovUFxb8_5h9ycBYM3Qkyczpo'
+id: paragraph.cta.default
+targetEntityType: paragraph
+bundle: cta
+mode: default
+content:
+  field_cta_bg_image:
+    type: entity_browser_file
+    weight: 4
+    region: content
+    settings:
+      entity_browser: browse_files_modal
+      field_widget_edit: true
+      field_widget_remove: true
+      field_widget_replace: false
+      open: true
+      selection_mode: selection_append
+      view_mode: default
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_cta_color:
+    type: options_select
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_cta_style:
+    type: options_select
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_headline:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_link:
+    type: link_attributes
+    weight: 3
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        onClick: true
+        fragment: true
+        target: true
+        aria-label: true
+        title: false
+        data-toggle: false
+        id: false
+        name: false
+        rel: false
+        class: false
+        accesskey: false
+    third_party_settings: {  }
+  field_subhead_long:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduled_publication:
+    type: datetime_default
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

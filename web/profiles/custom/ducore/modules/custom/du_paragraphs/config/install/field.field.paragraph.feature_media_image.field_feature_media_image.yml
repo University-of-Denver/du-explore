@@ -1,0 +1,39 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_feature_media_image
+    - paragraphs.paragraphs_type.feature_media_image
+  module:
+    - image
+_core:
+  default_config_hash: OtlxrxYxtnKb7Y4Ix3qU8LYBeMMmpc1Uw0eHGmLhtbg
+id: paragraph.feature_media_image.field_feature_media_image
+field_name: field_feature_media_image
+entity_type: paragraph
+bundle: feature_media_image
+label: 'Feature Media Image'
+description: 'Feature Media Image is 1200x801.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: feature-media-image
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image
