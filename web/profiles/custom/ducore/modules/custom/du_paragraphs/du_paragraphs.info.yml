@@ -17,3 +17,4 @@ dependencies:
   - drupal:du_widen
   - drupal:field_group
   - drupal:allowed_formats
+  - drupal:video_embed_field
