@@ -1,0 +1,47 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.browse_files_modal
+    - field.field.paragraph.unit_slide.field_unit_slide_caption
+    - field.field.paragraph.unit_slide.field_unit_slide_image
+    - paragraphs.paragraphs_type.unit_slide
+  module:
+    - allowed_formats
+    - entity_browser
+    - text
+_core:
+  default_config_hash: idXFq2NsD_vW_H_-ZlTJHRka7XrpNFKEr4qkPRZHBp0
+id: paragraph.unit_slide.default
+targetEntityType: paragraph
+bundle: unit_slide
+mode: default
+content:
+  field_unit_slide_caption:
+    type: text_textarea
+    weight: 102
+    region: content
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings:
+      allowed_formats:
+        hide_help: '0'
+        hide_guidelines: '0'
+  field_unit_slide_image:
+    type: entity_browser_file
+    weight: 101
+    region: content
+    settings:
+      entity_browser: browse_files_modal
+      field_widget_edit: true
+      field_widget_remove: true
+      open: false
+      selection_mode: selection_append
+      view_mode: default
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

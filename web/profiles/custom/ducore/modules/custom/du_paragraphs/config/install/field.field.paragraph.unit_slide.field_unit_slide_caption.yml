@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_unit_slide_caption
+    - paragraphs.paragraphs_type.unit_slide
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    rich_text: rich_text
+    plain_text: plain_text
+    embed_code: '0'
+    inline_formatting: '0'
+_core:
+  default_config_hash: pA4xD_5k4CZuq_drzvAZ5bRnV7982FQRCQCmv6nk2WE
+id: paragraph.unit_slide.field_unit_slide_caption
+field_name: field_unit_slide_caption
+entity_type: paragraph
+bundle: unit_slide
+label: Caption
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: hero_image_1125_x_445
+label: 'Hero Image 1125 x 445'
+effects:
+  d55c3d61-ed4d-4cf0-96f0-da5985f9025c:
+    uuid: d55c3d61-ed4d-4cf0-96f0-da5985f9025c
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1125
+      height: 445
+      anchor: center-center

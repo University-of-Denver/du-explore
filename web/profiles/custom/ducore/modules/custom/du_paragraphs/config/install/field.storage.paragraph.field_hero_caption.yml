@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+_core:
+  default_config_hash: kj5gNVAtuoliXR60ayrcJF75v1Xoy_wllA8wsxeR3OI
+id: paragraph.field_hero_caption
+field_name: field_hero_caption
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

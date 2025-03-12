@@ -1,0 +1,74 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.browse_files_modal
+    - field.field.paragraph.icon_list_item.field_icon_list_description
+    - field.field.paragraph.icon_list_item.field_icon_list_heading
+    - field.field.paragraph.icon_list_item.field_icon_list_image
+    - field.field.paragraph.icon_list_item.field_icon_list_link
+    - paragraphs.paragraphs_type.icon_list_item
+  module:
+    - entity_browser
+    - link_attributes
+    - text
+_core:
+  default_config_hash: 4JNS7s_aFEb3-MQTMTvy7a166h0ddTsk37rMGFXdsMI
+id: paragraph.icon_list_item.default
+targetEntityType: paragraph
+bundle: icon_list_item
+mode: default
+content:
+  field_icon_list_description:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_icon_list_heading:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_icon_list_image:
+    type: entity_browser_file
+    weight: 0
+    region: content
+    settings:
+      entity_browser: browse_files_modal
+      field_widget_edit: true
+      field_widget_remove: true
+      open: false
+      selection_mode: selection_append
+      view_mode: default
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_icon_list_link:
+    type: link_attributes
+    weight: 3
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        onClick: true
+        title: true
+        target: true
+        fragment: true
+        id: false
+        name: false
+        rel: false
+        class: false
+        accesskey: false
+    third_party_settings: {  }
+hidden:
+  created: true
+  moderation_state: true
+  scheduled_publication: true
+  status: true
+  uid: true

@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: featured_media_image_1200_x_801
+label: 'Featured media image 1200 x 801'
+effects:
+  dc49ab65-1ac8-4b1f-8532-aebcafece3e1:
+    uuid: dc49ab65-1ac8-4b1f-8532-aebcafece3e1
+    id: image_scale
+    weight: 1
+    data:
+      width: 1200
+      height: null
+      upscale: true

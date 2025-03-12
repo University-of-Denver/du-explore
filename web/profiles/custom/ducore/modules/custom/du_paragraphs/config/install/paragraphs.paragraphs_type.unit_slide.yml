@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: IX3zjfdoXGUcfs2fytJmv8YTXdtPPocqqHx6aX_iVgA
+id: unit_slide
+label: 'Unit Slide'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }
