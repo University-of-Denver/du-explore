@@ -65,7 +65,6 @@ install:
   - quick_node_clone
   - views_json_source
   - video_embed_field
-  - externalauth
 
 # Required modules. These cannot be uninstalled.
 # Note that any dependencies of the modules listed here will be installed automatically.
@@ -123,7 +122,6 @@ dependencies:
   - quick_node_clone
   - views_json_source
   - video_embed_field
-  - externalauth
 
 themes:
   - pl_drupal
