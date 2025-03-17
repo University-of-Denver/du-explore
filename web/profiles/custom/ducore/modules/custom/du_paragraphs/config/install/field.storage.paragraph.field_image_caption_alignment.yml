@@ -12,9 +12,15 @@ entity_type: paragraph
 type: list_string
 settings:
   allowed_values:
-    right: 'Right'
-    left: 'Left'
-    center: 'Center'
+    -
+      value: right
+      label: 'Right'
+    -
+      value: left
+      label: 'Left'
+    -
+      value: center
+      label: 'Center'
   allowed_values_function: ''
 module: options
 locked: false

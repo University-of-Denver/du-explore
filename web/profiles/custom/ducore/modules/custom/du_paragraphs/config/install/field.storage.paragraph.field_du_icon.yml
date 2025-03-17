@@ -10,49 +10,135 @@ entity_type: paragraph
 type: list_string
 settings:
   allowed_values:
-    attention-circled: 'attention circled'
-    block: 'Block'
-    calendar-empty: 'Calendar empty'
-    calendar-plus-o: 'Calendar plus o'
-    calendar: 'Calendar'
-    check: 'Check'
-    clock: 'Clock'
-    cust-clipboard: 'Cust clipboard'
-    cust-close: 'Cust close'
-    cust-left-arrow: 'Cust left arrow'
-    cust-menu: 'Cust menu'
-    cust-right-arrow: 'Cust right arrow'
-    cust-search: 'Cust search'
-    down-arrow: 'Down arrow'
-    facebook: 'Facebook'
-    fax: 'Fax'
-    globe: 'Globe'
-    gplus: 'Gplus'
-    info-circled: 'Info circled'
-    instagram: 'Instagram'
-    left-arrow: 'Left arrow'
-    link-ext-alt: 'Link ext alt'
-    linkedin: 'Linkedin'
-    location: 'Location'
-    logout: 'Logout'
-    mail-alt: 'Mail alt'
-    mail: 'Mail'
-    minus: 'Minus'
-    newspaper: 'Newspaper'
-    pause-circled: 'Pause circled'
-    phone: 'Phone'
-    play-circled: 'PLAY circled'
-    play-circled2: 'Play circled2'
-    plus: 'Plus'
-    print: 'Print'
-    rebel: 'Rebel'
-    right-arrow: 'Right arrow'
-    snapchat: 'Snapchat'
-    spin3: 'Spin3'
-    tumblr: 'Tumblr'
-    twitter: 'Twitter'
-    up-arrow: 'Up arrow'
-    youtube: 'Youtube'
+    -
+      value: attention-circled
+      label: 'attention circled'
+    -
+      value: block
+      label: 'Block'
+    -
+      value: calendar-empty
+      label: 'Calendar empty'
+    -
+      value: calendar-plus-o
+      label: 'Calendar plus o'
+    -
+      value: calendar
+      label: 'Calendar'
+    -
+      value: check
+      label: 'Check'
+    -
+      value: clock
+      label: 'Clock'
+    -
+      value: cust-clipboard
+      label: 'Cust clipboard'
+    -
+      value: cust-close
+      label: 'Cust close'
+    -
+      value: cust-left-arrow
+      label: 'Cust left arrow'
+    -
+      value: cust-menu
+      label: 'Cust menu'
+    -
+      value: cust-right-arrow
+      label: 'Cust right arrow'
+    -
+      value: cust-search
+      label: 'Cust search'
+    -
+      value: down-arrow
+      label: 'Down arrow'
+    -
+      value: facebook
+      label: 'Facebook'
+    -
+      value: fax
+      label: 'Fax'
+    -
+      value: globe
+      label: 'Globe'
+    -
+      value: gplus
+      label: 'Gplus'
+    -
+      value: info-circled
+      label: 'Info circled'
+    -
+      value: instagram
+      label: 'Instagram'
+    -
+      value: left-arrow
+      label: 'Left arrow'
+    -
+      value: link-ext-alt
+      label: 'Link ext alt'
+    -
+      value: linkedin
+      label: 'Linkedin'
+    -
+      value: location
+      label: 'Location'
+    -
+      value: logout
+      label: 'Logout'
+    -
+      value: mail-alt
+      label: 'Mail alt'
+    -
+      value: mail
+      label: 'Mail'
+    -
+      value: minus
+      label: 'Minus'
+    -
+      value: newspaper
+      label: 'Newspaper'
+    -
+      value: pause-circled
+      label: 'Pause circled'
+    -
+      value: phone
+      label: 'Phone'
+    -
+      value: play-circled
+      label: 'PLAY circled'
+    -
+      value: play-circled2
+      label: 'Play circled2'
+    -
+      value: plus
+      label: 'Plus'
+    -
+      value: print
+      label: 'Print'
+    -
+      value: rebel
+      label: 'Rebel'
+    -
+      value: right-arrow
+      label: 'Right arrow'
+    -
+      value: snapchat
+      label: 'Snapchat'
+    -
+      value: spin3
+      label: 'Spin3'
+    -
+      value: tumblr
+      label: 'Tumblr'
+    -
+      value: twitter
+      label: 'Twitter'
+    -
+      value: up-arrow
+      label: 'Up arrow'
+    -
+      value: youtube
+      label: 'Youtube'
   allowed_values_function: ''
 module: options
 locked: false

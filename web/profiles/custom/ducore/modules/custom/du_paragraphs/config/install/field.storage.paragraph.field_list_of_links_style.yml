@@ -12,9 +12,15 @@ entity_type: paragraph
 type: list_string
 settings:
   allowed_values:
-    list-of-links: 'Links'
-    normal: 'Bulleted'
-    list-of-links--alt: 'Buttons'
+    -
+      value: list-of-links
+      label: Links
+    -
+      value: normal
+      label: Bulleted
+    -
+      value: list-of-links--alt
+      label: Buttons
   allowed_values_function: ''
 module: options
 locked: false

@@ -214,3 +214,280 @@ function du_paragraphs_update_9003() {
     }
   }
 }
+
+/**
+ * Add new field storage configurations.
+ */
+function du_paragraphs_update_9004() {
+  $storage_config_ids = array(
+    'field.storage.paragraph.field_cta_bg_image',
+    'field.storage.paragraph.field_hero_caption',
+    'field.storage.paragraph.field_hero_embed',
+    'field.storage.paragraph.field_icon_list_description',
+    'field.storage.paragraph.field_icon_list_heading',
+    'field.storage.paragraph.field_icon_list_image',
+    'field.storage.paragraph.field_icon_list_link',
+    'field.storage.paragraph.field_image_type',
+    'field.storage.paragraph.field_inset_video_youtube_video',
+    'field.storage.paragraph.field_unit_hero_headline',
+    'field.storage.paragraph.field_unit_hero_link',
+    'field.storage.paragraph.field_unit_slide_caption',
+    'field.storage.paragraph.field_unit_slide_image'
+  );
+
+  foreach ($storage_config_ids as $config_id) {
+    try {
+      $config_path = \Drupal::service('extension.list.module')->getPath('du_paragraphs') . '/config/install/' . $config_id . '.yml';
+
+      if (!file_exists($config_path)) {
+        \Drupal::logger('du_paragraphs')->error('Configuration file not found: @path', ['@path' => $config_path]);
+        continue;
+      }
+
+      $data = \Symfony\Component\Yaml\Yaml::parseFile($config_path);
+
+      // Check if the field storage already exists
+      $existing_storage = \Drupal::entityTypeManager()
+        ->getStorage('field_storage_config')
+        ->load($data['id']);
+
+      if ($existing_storage) {
+        \Drupal::logger('du_paragraphs')->notice('Field storage already exists: @id', ['@id' => $data['id']]);
+        continue;
+      }
+
+      // Create a new field storage config entity
+      $field_storage_config = \Drupal::entityTypeManager()
+        ->getStorage('field_storage_config')
+        ->create($data);
+
+      $field_storage_config->save();
+      \Drupal::logger('du_paragraphs')->notice('Created field storage: @id', ['@id' => $data['id']]);
+
+    }
+    catch (\Exception $e) {
+      \Drupal::logger('du_paragraphs')->error('Error creating field storage @id: @error', [
+        '@id' => $config_id,
+        '@error' => $e->getMessage(),
+      ]);
+      continue;
+    }
+  }
+}
+
+/**
+ * Add new field instance configurations.
+ */
+function du_paragraphs_update_9005() {
+  $field_config_ids = array(
+    'field.field.paragraph.cta.field_cta_bg_image',
+    'field.field.paragraph.hero_media.field_headline',
+    'field.field.paragraph.hero_media.field_hero_caption',
+    'field.field.paragraph.hero_media.field_hero_embed',
+    'field.field.paragraph.hero_media.field_image_type',
+    'field.field.paragraph.hero_media.field_subhead',
+    'field.field.paragraph.icon_list_item.field_icon_list_description',
+    'field.field.paragraph.icon_list_item.field_icon_list_heading',
+    'field.field.paragraph.icon_list_item.field_icon_list_image',
+    'field.field.paragraph.icon_list_item.field_icon_list_link',
+    'field.field.paragraph.inset_video.field_inset_video_youtube_video',
+    'field.field.paragraph.unit_hero_media_.field_hero_image',
+    'field.field.paragraph.unit_hero_media_.field_hero_video',
+    'field.field.paragraph.unit_hero_media_.field_unit_hero_headline',
+    'field.field.paragraph.unit_hero_media_.field_unit_hero_link',
+    'field.field.paragraph.unit_slide.field_unit_slide_caption',
+    'field.field.paragraph.unit_slide.field_unit_slide_image'
+  );
+
+  foreach ($field_config_ids as $config_id) {
+    try {
+      $config_path = \Drupal::service('extension.list.module')->getPath('du_paragraphs') . '/config/install/' . $config_id . '.yml';
+
+      if (!file_exists($config_path)) {
+        \Drupal::logger('du_paragraphs')->error('Configuration file not found: @path', ['@path' => $config_path]);
+        continue;
+      }
+
+      $data = \Symfony\Component\Yaml\Yaml::parseFile($config_path);
+
+      // Check if the field already exists
+      $existing_field = \Drupal::entityTypeManager()
+        ->getStorage('field_config')
+        ->load($data['id']);
+
+      if ($existing_field) {
+        \Drupal::logger('du_paragraphs')->notice('Field config already exists: @id', ['@id' => $data['id']]);
+        continue;
+      }
+
+      // Create a new field config entity
+      $field_config = \Drupal::entityTypeManager()
+        ->getStorage('field_config')
+        ->create($data);
+
+      $field_config->save();
+      \Drupal::logger('du_paragraphs')->notice('Created field config: @id', ['@id' => $data['id']]);
+    }
+    catch (\Exception $e) {
+      \Drupal::logger('du_paragraphs')->error('Error creating field config @id: @error', [
+        '@id' => $config_id,
+        '@error' => $e->getMessage(),
+      ]);
+      continue;
+    }
+  }
+}
+
+/**
+ * Add new form and view display configurations.
+ */
+function du_paragraphs_update_9006() {
+  $display_config_ids = array(
+    'core.entity_form_display.paragraph.icon_list_item.default',
+    'core.entity_form_display.paragraph.unit_slide.default',
+    'core.entity_view_display.paragraph.icon_list_item.default',
+    'core.entity_view_display.paragraph.unit_slide.default'
+  );
+
+  foreach ($display_config_ids as $config_id) {
+    try {
+      $config_path = \Drupal::service('extension.list.module')->getPath('du_paragraphs') . '/config/install/' . $config_id . '.yml';
+
+      if (!file_exists($config_path)) {
+        \Drupal::logger('du_paragraphs')->error('Configuration file not found: @path', ['@path' => $config_path]);
+        continue;
+      }
+
+      $data = \Symfony\Component\Yaml\Yaml::parseFile($config_path);
+
+      // Check if the display config already exists
+      $existing_display = \Drupal::configFactory()->get($config_id);
+      if (!$existing_display->isNew()) {
+        \Drupal::logger('du_paragraphs')->notice('Display config already exists: @id', ['@id' => $config_id]);
+        continue;
+      }
+
+      // Create the new display config
+      \Drupal::configFactory()
+        ->getEditable($config_id)
+        ->setData($data)
+        ->save(TRUE);
+
+      \Drupal::logger('du_paragraphs')->notice('Created display config: @id', ['@id' => $config_id]);
+    }
+    catch (\Exception $e) {
+      \Drupal::logger('du_paragraphs')->error('Error creating display config @id: @error', [
+        '@id' => $config_id,
+        '@error' => $e->getMessage(),
+      ]);
+      continue;
+    }
+  }
+}
+
+/**
+ * Add new image and responsive image style configurations.
+ */
+function du_paragraphs_update_9007() {
+  $style_config_ids = array(
+    'image.style.cta_module_narrow_1024_x_281',
+    'image.style.cta_module_narrow_1400_x_281',
+    'image.style.cta_module_narrow_450_x_281',
+    'image.style.cta_module_narrow_767_x_281',
+    'image.style.featured_media_image_1200_x_801',
+    'image.style.featured_media_image_400_x_287',
+    'image.style.featured_media_image_800_x_534',
+    'image.style.hero_image_1024_x_406',
+    'image.style.hero_image_1125_x_445',
+    'image.style.hero_image_1200_x_476',
+    'image.style.hero_image_1356_x_538',
+    'image.style.hero_image_768_x_304',
+    'image.style.icon_list_image',
+    'image.style.unit_slide_plain',
+    'responsive_image.styles.cta_module_narrow',
+    'responsive_image.styles.feature_media_image',
+    'responsive_image.styles.hero_image'
+  );
+
+  foreach ($style_config_ids as $config_id) {
+    try {
+      $config_path = \Drupal::service('extension.list.module')->getPath('du_paragraphs') . '/config/install/' . $config_id . '.yml';
+
+      if (!file_exists($config_path)) {
+        \Drupal::logger('du_paragraphs')->error('Configuration file not found: @path', ['@path' => $config_path]);
+        continue;
+      }
+
+      $data = \Symfony\Component\Yaml\Yaml::parseFile($config_path);
+
+      // Check if the style config already exists
+      $existing_style = \Drupal::configFactory()->get($config_id);
+      if (!$existing_style->isNew()) {
+        \Drupal::logger('du_paragraphs')->notice('Style config already exists: @id', ['@id' => $config_id]);
+        continue;
+      }
+
+      // Create the new style config
+      \Drupal::configFactory()
+        ->getEditable($config_id)
+        ->setData($data)
+        ->save(TRUE);
+
+      \Drupal::logger('du_paragraphs')->notice('Created style config: @id', ['@id' => $config_id]);
+    }
+    catch (\Exception $e) {
+      \Drupal::logger('du_paragraphs')->error('Error creating style config @id: @error', [
+        '@id' => $config_id,
+        '@error' => $e->getMessage(),
+      ]);
+      continue;
+    }
+  }
+}
+
+/**
+ * Add new paragraph type configurations.
+ */
+function du_paragraphs_update_9008() {
+  $paragraph_type_config_ids = array(
+    'paragraphs.paragraphs_type.hero_media',
+    'paragraphs.paragraphs_type.icon_list_item',
+    'paragraphs.paragraphs_type.unit_hero_media_',
+    'paragraphs.paragraphs_type.unit_slide'
+  );
+
+  foreach ($paragraph_type_config_ids as $config_id) {
+    try {
+      $config_path = \Drupal::service('extension.list.module')->getPath('du_paragraphs') . '/config/install/' . $config_id . '.yml';
+
+      if (!file_exists($config_path)) {
+        \Drupal::logger('du_paragraphs')->error('Configuration file not found: @path', ['@path' => $config_path]);
+        continue;
+      }
+
+      $data = \Symfony\Component\Yaml\Yaml::parseFile($config_path);
+
+      // Check if the paragraph type config already exists
+      $existing_type = \Drupal::configFactory()->get($config_id);
+      if (!$existing_type->isNew()) {
+        \Drupal::logger('du_paragraphs')->notice('Paragraph type config already exists: @id', ['@id' => $config_id]);
+        continue;
+      }
+
+      // Create the new paragraph type config
+      \Drupal::configFactory()
+        ->getEditable($config_id)
+        ->setData($data)
+        ->save(TRUE);
+
+      \Drupal::logger('du_paragraphs')->notice('Created paragraph type config: @id', ['@id' => $config_id]);
+    }
+    catch (\Exception $e) {
+      \Drupal::logger('du_paragraphs')->error('Error creating paragraph type config @id: @error', [
+        '@id' => $config_id,
+        '@error' => $e->getMessage(),
+      ]);
+      continue;
+    }
+  }
+}

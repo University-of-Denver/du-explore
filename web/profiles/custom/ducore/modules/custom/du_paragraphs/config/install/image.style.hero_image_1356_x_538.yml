@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: hero_image_1356_x_538
+label: 'Hero Image 1356 x 538'
+effects:
+  c2e3bc93-5665-47d0-bceb-40ea85d2fad2:
+    uuid: c2e3bc93-5665-47d0-bceb-40ea85d2fad2
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1356
+      height: 538
+      anchor: center-center

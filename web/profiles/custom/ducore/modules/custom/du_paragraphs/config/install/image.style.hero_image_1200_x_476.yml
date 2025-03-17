@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: hero_image_1200_x_476
+label: 'Hero Image 1200 x 476'
+effects:
+  0658f398-ea26-4609-abad-0a8258391fda:
+    uuid: 0658f398-ea26-4609-abad-0a8258391fda
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 406
+      anchor: center-center

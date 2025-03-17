@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: cta_module_narrow_1024_x_281
+label: 'CTA module narrow 1024 x 281'
+effects:
+  34220c5f-52fe-436d-bfcc-2a6d695b1596:
+    uuid: 34220c5f-52fe-436d-bfcc-2a6d695b1596
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1024
+      height: 281
+      anchor: center-center

@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subhead
+    - paragraphs.paragraphs_type.hero_media
+id: paragraph.hero_media.field_subhead
+field_name: field_subhead
+entity_type: paragraph
+bundle: hero_media
+label: Subheadline
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

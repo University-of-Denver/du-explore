@@ -12,8 +12,12 @@ entity_type: paragraph
 type: list_string
 settings:
   allowed_values:
-    one-col: 'Single Column'
-    two-col: 'Two Column'
+    -
+      value: one-col
+      label: 'Single Column'
+    -
+      value: two-col
+      label: 'Two Column'
   allowed_values_function: ''
 module: options
 locked: false

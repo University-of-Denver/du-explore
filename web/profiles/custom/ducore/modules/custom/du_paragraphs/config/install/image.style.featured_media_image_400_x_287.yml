@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: featured_media_image_400_x_287
+label: 'Featured media image 400 x 287'
+effects:
+  874ca120-744f-4034-8d2a-7ee7693f548c:
+    uuid: 874ca120-744f-4034-8d2a-7ee7693f548c
+    id: image_scale
+    weight: 1
+    data:
+      width: 400
+      height: null
+      upscale: true

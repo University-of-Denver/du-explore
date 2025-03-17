@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+_core:
+  default_config_hash: qYRVy8F7m2lr-B4Up6Y0BT3zy3MvhOcFzDplmWPMGOQ
+id: paragraph.field_icon_list_heading
+field_name: field_icon_list_heading
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
