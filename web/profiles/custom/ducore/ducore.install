@@ -230,3 +230,12 @@ function ducore_update_9009() {
     \Drupal::configFactory()->getEditable($view)->setData($data)->save(TRUE);
   }
 }
+
+/**
+ * Enable Editoria11y modules on existing installs
+ */
+function ducore_update_9010() {
+  $modules = array(
+    'editoria11y');
+  \Drupal::service('module_installer')->install($modules, TRUE);
+}
