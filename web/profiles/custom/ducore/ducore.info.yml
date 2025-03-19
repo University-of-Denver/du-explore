@@ -64,6 +64,7 @@ install:
   - token_filter
   - quick_node_clone
   - views_json_source
+  - video_embed_field
   - editoria11y
 
 # Required modules. These cannot be uninstalled.
