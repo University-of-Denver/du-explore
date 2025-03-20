@@ -1,5 +1,10 @@
 name: Install and DU Core install
 
+env:
+  DB_DATABASE: test_db
+  DB_USER: root
+  DB_PASSWORD: root
+  
 on:
   pull_request:
     branches: [ master ]
@@ -21,12 +26,11 @@ jobs:
           echo "PATH=$PATH:./vendor/bin"
           echo "PATH"
 
-      - name: Enable MariaDB 
-        uses: shogo82148/actions-setup-mysql@v1
-        with:
-          distribution: "mariadb"
-          mysql-version: "10.4.25"
+      - name: Start MySQL
+        run: |
+        sudo /etc/init.d/mysql start
+        mysql -e "CREATE DATABASE IF NOT EXISTS $DB_DATABASE;" -u$DB_USER -p$DB_PASSWORD
 
       - name: Test DU Core Install
         run: |
-          drush si ducore -y
+          drush si ducore -y --db-url=mysql://$DB_USER:$DB_PASSWORD@localhost:port3306/$DB_DATABASE
