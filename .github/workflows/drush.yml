@@ -1,4 +1,4 @@
-name: Install and Test Drush
+name: Install and DU Core install
 
 on:
   pull_request:
@@ -21,7 +21,6 @@ jobs:
           echo "PATH=$PATH:./vendor/bin"
           echo "PATH"
 
-      - name: Verify Drush installation
+      - name: Test DU Core Install
         run: |
-          drush --version
-          drush status
+          drush si ducore -y
