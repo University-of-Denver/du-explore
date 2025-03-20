@@ -124,5 +124,5 @@ dependencies:
   - video_embed_field
 
 themes:
-  - pl_drupal
+  - du_bootstrap
   - claro

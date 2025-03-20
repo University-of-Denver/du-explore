@@ -21,7 +21,7 @@ function ducore_install() {
   // Set the default and admin themes.
   \Drupal::configFactory()
     ->getEditable('system.theme')
-    ->set('default', 'pl_drupal')
+    ->set('default', 'du_bootstrap')
     ->set('admin', 'claro')
     ->save(TRUE);
 
