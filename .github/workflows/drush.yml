@@ -1,0 +1,26 @@
+name: Install and Test Drush
+
+on:
+  workflow_dispatch:
+
+jobs:
+  install_drush:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install Composer dependencies
+        run: composer install --no-interaction --no-ansi --no-progress --no-suggest
+
+      - name: Add Drush to PATH
+        run: |
+          echo "PATH=$PATH:./vendor/bin" >> $GITHUB_PATH
+          echo "PATH=$PATH:./vendor/bin"
+          echo "PATH"
+
+      - name: Verify Drush installation
+        run: |
+          drush --version
+          drush status
