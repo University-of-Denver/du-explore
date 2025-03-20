@@ -33,4 +33,4 @@ jobs:
 
       - name: Test DU Core Install
         run: |
-          drush si ducore -y --db-url=mysql://$DB_USER:$DB_PASSWORD@localhost:port3306/$DB_DATABASE
+          drush si ducore -y --db-url=mysql://$DB_USER:$DB_PASSWORD@localhost:3306/$DB_DATABASE
