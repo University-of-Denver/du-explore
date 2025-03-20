@@ -124,6 +124,7 @@ dependencies:
   - views_json_source
   - video_embed_field
   - editoria11y
+  - menu_item_extras
 
 themes:
   - du_bootstrap

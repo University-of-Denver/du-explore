@@ -236,6 +236,7 @@ function ducore_update_9009() {
  */
 function ducore_update_9010() {
   $modules = array(
-    'editoria11y');
+    'editoria11y',
+    'menu_item_extras');
   \Drupal::service('module_installer')->install($modules, TRUE);
 }
