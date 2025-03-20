@@ -7,11 +7,9 @@ dependencies:
     - field.field.paragraph.category_link.field_link
     - paragraphs.paragraphs_type.category_link
   module:
-    - image
     - link
     - options
-_core:
-  default_config_hash: ELfmHu2nlOoOPrG4c5u7KbpHsFxtS2nEgQa2ls961ss
+    - svg_image
 id: paragraph.category_link.default
 targetEntityType: paragraph
 bundle: category_link

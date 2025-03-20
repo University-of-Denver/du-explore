@@ -6,10 +6,7 @@ dependencies:
     - field.field.paragraph.unit_carousel.field_unit_carousel_title
     - paragraphs.paragraphs_type.unit_carousel
   module:
-    - content_moderation
     - paragraphs
-_core:
-  default_config_hash: Up3dneCh3RYBRXgaEPXHQ-zv_na-3IP-sAZUlj0H25w
 id: paragraph.unit_carousel.default
 targetEntityType: paragraph
 bundle: unit_carousel

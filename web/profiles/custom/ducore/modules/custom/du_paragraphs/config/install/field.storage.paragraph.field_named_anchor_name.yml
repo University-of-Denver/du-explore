@@ -3,8 +3,6 @@ status: true
 dependencies:
   module:
     - paragraphs
-_core:
-  default_config_hash: CqRjm9GFj06puQMmwgJrH8sRVZkuBQQfmyHCS46Zov0
 id: paragraph.field_named_anchor_name
 field_name: field_named_anchor_name
 entity_type: paragraph

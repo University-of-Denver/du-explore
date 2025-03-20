@@ -44,8 +44,6 @@ third_party_settings:
         open: false
         description: ''
         required_fields: true
-_core:
-  default_config_hash: eBCPWghpbBu2lXVBP3r0hA8utlw2pC5WNRtOIZG0J0E
 id: paragraph.hero_media.default
 targetEntityType: paragraph
 bundle: hero_media

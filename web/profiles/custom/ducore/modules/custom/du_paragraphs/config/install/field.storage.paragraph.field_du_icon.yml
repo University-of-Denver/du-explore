@@ -15,7 +15,7 @@ settings:
       label: 'attention circled'
     -
       value: block
-      label: 'Block'
+      label: Block
     -
       value: calendar-empty
       label: 'Calendar empty'
@@ -24,13 +24,13 @@ settings:
       label: 'Calendar plus o'
     -
       value: calendar
-      label: 'Calendar'
+      label: Calendar
     -
       value: check
-      label: 'Check'
+      label: Check
     -
       value: clock
-      label: 'Clock'
+      label: Clock
     -
       value: cust-clipboard
       label: 'Cust clipboard'
@@ -54,22 +54,22 @@ settings:
       label: 'Down arrow'
     -
       value: facebook
-      label: 'Facebook'
+      label: Facebook
     -
       value: fax
-      label: 'Fax'
+      label: Fax
     -
       value: globe
-      label: 'Globe'
+      label: Globe
     -
       value: gplus
-      label: 'Gplus'
+      label: Gplus
     -
       value: info-circled
       label: 'Info circled'
     -
       value: instagram
-      label: 'Instagram'
+      label: Instagram
     -
       value: left-arrow
       label: 'Left arrow'
@@ -78,31 +78,31 @@ settings:
       label: 'Link ext alt'
     -
       value: linkedin
-      label: 'Linkedin'
+      label: Linkedin
     -
       value: location
-      label: 'Location'
+      label: Location
     -
       value: logout
-      label: 'Logout'
+      label: Logout
     -
       value: mail-alt
       label: 'Mail alt'
     -
       value: mail
-      label: 'Mail'
+      label: Mail
     -
       value: minus
-      label: 'Minus'
+      label: Minus
     -
       value: newspaper
-      label: 'Newspaper'
+      label: Newspaper
     -
       value: pause-circled
       label: 'Pause circled'
     -
       value: phone
-      label: 'Phone'
+      label: Phone
     -
       value: play-circled
       label: 'PLAY circled'
@@ -111,34 +111,34 @@ settings:
       label: 'Play circled2'
     -
       value: plus
-      label: 'Plus'
+      label: Plus
     -
       value: print
-      label: 'Print'
+      label: Print
     -
       value: rebel
-      label: 'Rebel'
+      label: Rebel
     -
       value: right-arrow
       label: 'Right arrow'
     -
       value: snapchat
-      label: 'Snapchat'
+      label: Snapchat
     -
       value: spin3
-      label: 'Spin3'
+      label: Spin3
     -
       value: tumblr
-      label: 'Tumblr'
+      label: Tumblr
     -
       value: twitter
-      label: 'Twitter'
+      label: Twitter
     -
       value: up-arrow
       label: 'Up arrow'
     -
       value: youtube
-      label: 'Youtube'
+      label: Youtube
   allowed_values_function: ''
 module: options
 locked: false

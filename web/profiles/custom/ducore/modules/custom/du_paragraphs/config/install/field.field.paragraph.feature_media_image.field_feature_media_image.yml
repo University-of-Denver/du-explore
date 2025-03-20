@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.feature_media_image
   module:
     - image
-_core:
-  default_config_hash: OtlxrxYxtnKb7Y4Ix3qU8LYBeMMmpc1Uw0eHGmLhtbg
 id: paragraph.feature_media_image.field_feature_media_image
 field_name: field_feature_media_image
 entity_type: paragraph

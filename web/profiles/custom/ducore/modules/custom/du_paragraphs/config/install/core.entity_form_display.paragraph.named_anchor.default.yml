@@ -4,11 +4,6 @@ dependencies:
   config:
     - field.field.paragraph.named_anchor.field_named_anchor_name
     - paragraphs.paragraphs_type.named_anchor
-  module:
-    - content_moderation
-    - datetime
-_core:
-  default_config_hash: sCidI5GijobDUd17B-I5ChuoF-3KxzJZ1TMxaJO5X4s
 id: paragraph.named_anchor.default
 targetEntityType: paragraph
 bundle: named_anchor

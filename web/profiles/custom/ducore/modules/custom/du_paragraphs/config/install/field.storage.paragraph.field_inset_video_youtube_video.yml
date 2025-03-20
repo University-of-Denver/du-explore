@@ -4,8 +4,6 @@ dependencies:
   module:
     - paragraphs
     - video_embed_field
-_core:
-  default_config_hash: S_QxZduPNhBgw3VBwyVKWveSjAlxFDhxgX9M6-Iq_W0
 id: paragraph.field_inset_video_youtube_video
 field_name: field_inset_video_youtube_video
 entity_type: paragraph

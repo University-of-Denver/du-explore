@@ -6,11 +6,7 @@ dependencies:
     - field.field.paragraph.feature_media_image.field_feature_media_image
     - paragraphs.paragraphs_type.feature_media_image
   module:
-    - content_moderation
-    - datetime
     - entity_browser
-_core:
-  default_config_hash: XSo8atxfl5wZLWDcWJ9H8jJwh6v_LEX3Da_bmTrsnJg
 id: paragraph.feature_media_image.default
 targetEntityType: paragraph
 bundle: feature_media_image

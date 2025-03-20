@@ -4,8 +4,6 @@ dependencies:
   module:
     - paragraphs
     - text
-_core:
-  default_config_hash: grupbHwhcV6Ml9DYMfkvJ_Xw297fGbzEPrE9xTvbwGY
 id: paragraph.field_icon_list_description
 field_name: field_icon_list_description
 entity_type: paragraph

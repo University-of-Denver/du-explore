@@ -13,8 +13,6 @@ third_party_settings:
     embed_code: '0'
     inline_formatting: '0'
     plain_text: '0'
-_core:
-  default_config_hash: h_xDCuWz1WVsaOC_G3AnHgBqm38wb96QsIZEpwExrTQ
 id: paragraph.cta.field_subhead_long
 field_name: field_subhead_long
 entity_type: paragraph

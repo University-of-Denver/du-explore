@@ -10,8 +10,6 @@ dependencies:
   module:
     - entity_browser
     - link_attributes
-_core:
-  default_config_hash: W7B6mKuv1QMYJTclso0J0rvNugzH36fUwbVnZ6MLQWU
 id: paragraph.category_link.default
 targetEntityType: paragraph
 bundle: category_link

@@ -4,5 +4,6 @@ dependencies: {  }
 id: unit_hero_media_
 label: 'Unit Hero Media'
 icon_uuid: null
+icon_default: null
 description: ''
 behavior_plugins: {  }

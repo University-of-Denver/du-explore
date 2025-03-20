@@ -8,11 +8,9 @@ dependencies:
     - field.field.paragraph.image_with_caption.field_image_caption_image
     - paragraphs.paragraphs_type.image_with_caption
   module:
-    - image
     - options
+    - svg_image
     - text
-_core:
-  default_config_hash: wNrqP_lU15YtXWO5JND_u_k8xviIpD5MWsfnKkU_9nU
 id: paragraph.image_with_caption.default
 targetEntityType: paragraph
 bundle: image_with_caption

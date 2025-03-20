@@ -7,8 +7,6 @@ dependencies:
     - paragraphs.paragraphs_type.icon_list_item
   module:
     - entity_reference_revisions
-_core:
-  default_config_hash: qxG6iSisyjl1KFFr8bs5mu0Knvg9m3IRD5XGYumbAAU
 id: paragraph.icon_list.field_icon_list_items
 field_name: field_icon_list_items
 entity_type: paragraph

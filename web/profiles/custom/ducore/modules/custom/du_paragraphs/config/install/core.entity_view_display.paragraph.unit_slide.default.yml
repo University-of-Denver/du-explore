@@ -9,8 +9,6 @@ dependencies:
   module:
     - svg_image
     - text
-_core:
-  default_config_hash: 1df88fcw6nD-Vg0VWTklIvgDEc3LGjKAbCoUK3VOqz0
 id: paragraph.unit_slide.default
 targetEntityType: paragraph
 bundle: unit_slide

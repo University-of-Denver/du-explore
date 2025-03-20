@@ -4,8 +4,6 @@ dependencies:
   module:
     - file
     - paragraphs
-_core:
-  default_config_hash: iMLtRuEkA0mppHcYtFXW85VOG_l1Cb36Uo4fL3AwblM
 id: paragraph.field_hero_video
 field_name: field_hero_video
 entity_type: paragraph

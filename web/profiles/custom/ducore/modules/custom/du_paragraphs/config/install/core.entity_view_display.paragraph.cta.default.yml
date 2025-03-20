@@ -15,8 +15,6 @@ dependencies:
     - options
     - responsive_image
     - text
-_core:
-  default_config_hash: 7_YVasdtjETgOeOtj7bL_hIB9cGP_BEnpCiAdhFfnRU
 id: paragraph.cta.default
 targetEntityType: paragraph
 bundle: cta
@@ -28,6 +26,8 @@ content:
     settings:
       responsive_image_style: cta_module_narrow
       image_link: ''
+      image_loading:
+        attribute: eager
     third_party_settings: {  }
     weight: 1
     region: content

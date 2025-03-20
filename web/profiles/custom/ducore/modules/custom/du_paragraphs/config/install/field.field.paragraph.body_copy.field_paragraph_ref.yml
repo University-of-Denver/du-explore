@@ -14,7 +14,6 @@ dependencies:
     - paragraphs.paragraphs_type.inset_video
     - paragraphs.paragraphs_type.list_of_links
     - paragraphs.paragraphs_type.named_anchor
-    - paragraphs.paragraphs_type.reusable_content
     - paragraphs.paragraphs_type.show_hide_toggle
     - paragraphs.paragraphs_type.subhead
     - paragraphs.paragraphs_type.testimonials_spotlight
@@ -50,7 +49,6 @@ settings:
       testimonials_spotlight: testimonials_spotlight
       webform: webform
       image_with_caption: image_with_caption
-      reusable_content: reusable_content
     negate: 0
     target_bundles_drag_drop:
       academic_programs:

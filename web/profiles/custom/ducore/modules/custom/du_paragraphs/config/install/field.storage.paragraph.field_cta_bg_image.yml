@@ -5,8 +5,6 @@ dependencies:
     - file
     - image
     - paragraphs
-_core:
-  default_config_hash: 8s_hJ4KZ7j6i5ovDc7jOztwvLk38kDrIzSjCIM4RlNQ
 id: paragraph.field_cta_bg_image
 field_name: field_cta_bg_image
 entity_type: paragraph

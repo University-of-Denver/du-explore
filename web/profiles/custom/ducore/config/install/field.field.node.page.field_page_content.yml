@@ -11,7 +11,6 @@ dependencies:
     - paragraphs.paragraphs_type.enhanced_expanding_list
     - paragraphs.paragraphs_type.event_list
     - paragraphs.paragraphs_type.named_anchor
-    - paragraphs.paragraphs_type.reusable_content
     - paragraphs.paragraphs_type.stories
     - paragraphs.paragraphs_type.testimonials_spotlight
     - paragraphs.paragraphs_type.two_col_copy
@@ -41,7 +40,6 @@ settings:
       enhanced_expanding_list: enhanced_expanding_list
       event_list: event_list
       named_anchor: named_anchor
-      reusable_content: reusable_content
       testimonials_spotlight: testimonials_spotlight
       unit_carousel: unit_carousel
     negate: 0

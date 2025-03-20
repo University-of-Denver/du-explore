@@ -1,6 +1,8 @@
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.page
   module:
     - quick_node_clone
 id: content_editor

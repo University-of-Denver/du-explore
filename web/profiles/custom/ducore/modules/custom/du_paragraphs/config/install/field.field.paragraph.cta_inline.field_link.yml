@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.cta_inline
   module:
     - link
-_core:
-  default_config_hash: Oa4gPdy8F579liY_LxE2j8V5ImThvR7_0bV_TwUGoqo
 id: paragraph.cta_inline.field_link
 field_name: field_link
 entity_type: paragraph
