@@ -21,6 +21,12 @@ jobs:
           echo "PATH=$PATH:./vendor/bin"
           echo "PATH"
 
+      - name: Enable MariaDB 
+        uses: shogo82148/actions-setup-mysql@v1
+        with:
+          distribution: "mariadb"
+          mysql-version: "10.4.25"
+
       - name: Test DU Core Install
         run: |
           drush si ducore -y
