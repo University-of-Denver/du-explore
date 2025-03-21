@@ -1,7 +1,7 @@
 name: 'University of Denver Core'
 type: profile
 description: 'DU Core Profile for Drupal 10'
-version: 10.8.0
+version: 10.9.0
 core_version_requirement: ^10
 
 # Modules to be installed on profile installation.
@@ -65,6 +65,7 @@ install:
   - quick_node_clone
   - views_json_source
   - video_embed_field
+  - editoria11y
 
 # Required modules. These cannot be uninstalled.
 # Note that any dependencies of the modules listed here will be installed automatically.
@@ -122,7 +123,9 @@ dependencies:
   - quick_node_clone
   - views_json_source
   - video_embed_field
+  - editoria11y
+  - menu_item_extras
 
 themes:
-  - pl_drupal
+  - du_bootstrap
   - claro

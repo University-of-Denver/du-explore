@@ -12,8 +12,6 @@ dependencies:
     - entity_browser
     - link_attributes
     - text
-_core:
-  default_config_hash: 4JNS7s_aFEb3-MQTMTvy7a166h0ddTsk37rMGFXdsMI
 id: paragraph.icon_list_item.default
 targetEntityType: paragraph
 bundle: icon_list_item

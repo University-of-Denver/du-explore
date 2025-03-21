@@ -11,13 +11,9 @@ dependencies:
     - field.field.paragraph.cta.field_subhead_long
     - paragraphs.paragraphs_type.cta
   module:
-    - content_moderation
-    - datetime
     - entity_browser
     - link_attributes
     - text
-_core:
-  default_config_hash: '-rwd2ofXI1RvRZiS-rMovUFxb8_5h9ycBYM3Qkyczpo'
 id: paragraph.cta.default
 targetEntityType: paragraph
 bundle: cta

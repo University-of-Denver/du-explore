@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.hero_media
   module:
     - file
-_core:
-  default_config_hash: wu7wyO1y35ib_i3-e8Yts7UX5kpP27JNQFs-gZWuOsk
 id: paragraph.hero_media.field_hero_video
 field_name: field_hero_video
 entity_type: paragraph

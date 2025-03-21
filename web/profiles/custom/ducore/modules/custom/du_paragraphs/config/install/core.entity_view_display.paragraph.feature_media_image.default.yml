@@ -7,8 +7,6 @@ dependencies:
     - responsive_image.styles.feature_media_image
   module:
     - responsive_image
-_core:
-  default_config_hash: M_0Q5NuOssv5Jibs8ypGHtfRuyoj7_rj0-TpZ3mxpmo
 id: paragraph.feature_media_image.default
 targetEntityType: paragraph
 bundle: feature_media_image
@@ -20,6 +18,8 @@ content:
     settings:
       responsive_image_style: feature_media_image
       image_link: ''
+      image_loading:
+        attribute: eager
     third_party_settings: {  }
     weight: 0
     region: content

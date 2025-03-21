@@ -21,7 +21,7 @@ function ducore_install() {
   // Set the default and admin themes.
   \Drupal::configFactory()
     ->getEditable('system.theme')
-    ->set('default', 'pl_drupal')
+    ->set('default', 'du_bootstrap')
     ->set('admin', 'claro')
     ->save(TRUE);
 
@@ -229,4 +229,14 @@ function ducore_update_9009() {
     $data = \Symfony\Component\Yaml\Yaml::parseFile($config_path);
     \Drupal::configFactory()->getEditable($view)->setData($data)->save(TRUE);
   }
+}
+
+/**
+ * Enable Editoria11y modules on existing installs
+ */
+function ducore_update_9010() {
+  $modules = array(
+    'editoria11y',
+    'menu_item_extras');
+  \Drupal::service('module_installer')->install($modules, TRUE);
 }

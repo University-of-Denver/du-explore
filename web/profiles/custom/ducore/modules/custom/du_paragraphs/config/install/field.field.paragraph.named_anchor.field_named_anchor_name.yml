@@ -4,8 +4,6 @@ dependencies:
   config:
     - field.storage.paragraph.field_named_anchor_name
     - paragraphs.paragraphs_type.named_anchor
-_core:
-  default_config_hash: 3W1YyDHMohdh4iBEyKbGyObs6iSL1zibbhZN0STdOc8
 id: paragraph.named_anchor.field_named_anchor_name
 field_name: field_named_anchor_name
 entity_type: paragraph

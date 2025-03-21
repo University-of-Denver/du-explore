@@ -6,11 +6,7 @@ dependencies:
     - field.field.paragraph.cta_inline.field_link
     - paragraphs.paragraphs_type.cta_inline
   module:
-    - content_moderation
-    - datetime
     - link_attributes
-_core:
-  default_config_hash: GiNtSyqNatONzR3iWRWzU0Rv968bwupC7-Iqf6Yak_w
 id: paragraph.cta_inline.default
 targetEntityType: paragraph
 bundle: cta_inline

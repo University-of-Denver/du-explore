@@ -7,8 +7,6 @@ dependencies:
     - paragraphs.paragraphs_type.unit_slide
   module:
     - entity_reference_revisions
-_core:
-  default_config_hash: pUZKgP63NqfOsZAJD7EY_QPvQH48E3Sz1sKf3hRMjL0
 id: paragraph.unit_carousel.field_unit_carousel_slide
 field_name: field_unit_carousel_slide
 entity_type: paragraph

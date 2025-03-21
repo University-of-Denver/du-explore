@@ -4,8 +4,6 @@ dependencies:
   module:
     - options
     - paragraphs
-_core:
-  default_config_hash: YTOvoivH9nDGHqp1ikK4zCDq94lBmojDq9GczgZYtMA
 id: paragraph.field_list_of_links_style
 field_name: field_list_of_links_style
 entity_type: paragraph

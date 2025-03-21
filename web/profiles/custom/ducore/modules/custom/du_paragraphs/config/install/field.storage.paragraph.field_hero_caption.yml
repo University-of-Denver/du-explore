@@ -4,8 +4,6 @@ dependencies:
   module:
     - paragraphs
     - text
-_core:
-  default_config_hash: kj5gNVAtuoliXR60ayrcJF75v1Xoy_wllA8wsxeR3OI
 id: paragraph.field_hero_caption
 field_name: field_hero_caption
 entity_type: paragraph

@@ -7,8 +7,6 @@ dependencies:
     - paragraphs.paragraphs_type.cta_inline
   module:
     - link
-_core:
-  default_config_hash: B6YewopwfI9ssOUALJDgLj1TfmwoxgmkywmH3Z7ufDw
 id: paragraph.cta_inline.default
 targetEntityType: paragraph
 bundle: cta_inline

@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.unit_slide
   module:
     - image
-_core:
-  default_config_hash: _eR5xOFitgR3GJwuKAaFex-F17TZl4Zqt8pmPh-dis8
 id: paragraph.unit_slide.field_unit_slide_image
 field_name: field_unit_slide_image
 entity_type: paragraph

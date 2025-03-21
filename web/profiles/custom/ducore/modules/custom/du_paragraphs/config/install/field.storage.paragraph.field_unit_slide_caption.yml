@@ -4,8 +4,6 @@ dependencies:
   module:
     - paragraphs
     - text
-_core:
-  default_config_hash: 6Ge_Vq_daBVJaSoZ9admbdubAcAatVR6JZ_WUKhOkJc
 id: paragraph.field_unit_slide_caption
 field_name: field_unit_slide_caption
 entity_type: paragraph

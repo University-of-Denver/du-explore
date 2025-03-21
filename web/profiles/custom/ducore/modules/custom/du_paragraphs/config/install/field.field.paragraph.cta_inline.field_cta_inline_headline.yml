@@ -4,8 +4,6 @@ dependencies:
   config:
     - field.storage.paragraph.field_cta_inline_headline
     - paragraphs.paragraphs_type.cta_inline
-_core:
-  default_config_hash: I5wXSN7PEKcV1Vuuoi_9Gyt9sl72pGU5j5tiHbZuGds
 id: paragraph.cta_inline.field_cta_inline_headline
 field_name: field_cta_inline_headline
 entity_type: paragraph

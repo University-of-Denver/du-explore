@@ -1,4 +1,3 @@
-uuid: 1dac0ba8-0b7f-4e90-8201-e56ecc927c45
 langcode: en
 status: true
 dependencies:
@@ -7,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.inset_video
   module:
     - video_embed_field
-_core:
-  default_config_hash: ciWEnvfXJNd7hVV4KMjGhB3TKkb1zRNRUnibbyNIhHc
 id: paragraph.inset_video.field_inset_video_youtube_video
 field_name: field_inset_video_youtube_video
 entity_type: paragraph
@@ -21,7 +18,7 @@ default_value: {  }
 default_value_callback: ''
 settings:
   allowed_providers:
-    youtube: 'youtube'
-    youtube_playlist: 'youtube_playlist'
-    vimeo: 'vimeo'
+    youtube: youtube
+    youtube_playlist: youtube_playlist
+    vimeo: vimeo
 field_type: video_embed_field

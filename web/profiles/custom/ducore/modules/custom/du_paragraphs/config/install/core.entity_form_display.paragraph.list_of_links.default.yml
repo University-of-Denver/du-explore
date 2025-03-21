@@ -23,8 +23,6 @@ third_party_settings:
         id: ''
         open: false
         required_fields: false
-_core:
-  default_config_hash: fwoE0FzcHkYXf0HDm9Cjc1lA0hc-yf6As_QGcABQ6gs
 id: paragraph.list_of_links.default
 targetEntityType: paragraph
 bundle: list_of_links

@@ -5,8 +5,6 @@ dependencies:
     - file
     - image
     - paragraphs
-_core:
-  default_config_hash: fCkk5-C7S-z962HA94EIhiXs2lv7Mngde-A5KoOJdjo
 id: paragraph.field_unit_slide_image
 field_name: field_unit_slide_image
 entity_type: paragraph

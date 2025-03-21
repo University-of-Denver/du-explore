@@ -6,11 +6,7 @@ dependencies:
     - field.field.paragraph.icon_link.field_icon_link_link
     - paragraphs.paragraphs_type.icon_link
   module:
-    - content_moderation
-    - datetime
     - link_attributes
-_core:
-  default_config_hash: R4RPWAbxTAC9utztqQerSVBR4Q6h3vLHYNjLlEzcc3U
 id: paragraph.icon_link.default
 targetEntityType: paragraph
 bundle: icon_link

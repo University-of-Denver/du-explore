@@ -4,8 +4,6 @@ dependencies:
   config:
     - field.field.paragraph.named_anchor.field_named_anchor_name
     - paragraphs.paragraphs_type.named_anchor
-_core:
-  default_config_hash: hxubJ2mDJFeSFasX1QCJc9C7LQaWhEdVslOKad4hK6o
 id: paragraph.named_anchor.default
 targetEntityType: paragraph
 bundle: named_anchor

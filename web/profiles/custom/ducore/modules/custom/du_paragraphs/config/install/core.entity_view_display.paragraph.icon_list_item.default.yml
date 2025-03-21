@@ -9,11 +9,9 @@ dependencies:
     - image.style.icon_list_image
     - paragraphs.paragraphs_type.icon_list_item
   module:
-    - image
     - link
+    - svg_image
     - text
-_core:
-  default_config_hash: YrR5MpN0z445fzH_Tfhdn4c8KtDKdl4UY3YSn73pkY0
 id: paragraph.icon_list_item.default
 targetEntityType: paragraph
 bundle: icon_list_item

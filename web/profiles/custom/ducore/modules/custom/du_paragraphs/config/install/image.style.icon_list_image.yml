@@ -1,8 +1,6 @@
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: 6B1XcX4GQ0Rp38cvbKQ7F3wxMtO0MgFQcQMxcY1eAU0
 name: icon_list_image
 label: 'Icon List Image'
 effects:

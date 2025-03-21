@@ -8,8 +8,6 @@ dependencies:
   module:
     - link
     - options
-_core:
-  default_config_hash: mnK2DSEE4REUuZPWh59chJFIt0a9cnUfyoHKyXVgeFY
 id: paragraph.icon_link.default
 targetEntityType: paragraph
 bundle: icon_link

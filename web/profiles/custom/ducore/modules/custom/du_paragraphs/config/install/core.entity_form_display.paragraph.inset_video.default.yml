@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.inset_video
   module:
     - video_embed_field
-_core:
-  default_config_hash: G-y359l5Xb7ndUhIedmKsZ0Y2B20Flg8ZwxAmpNOMLc
 id: paragraph.inset_video.default
 targetEntityType: paragraph
 bundle: inset_video

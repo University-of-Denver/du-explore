@@ -13,8 +13,6 @@ third_party_settings:
     embed_code: '0'
     inline_formatting: '0'
     plain_text: '0'
-_core:
-  default_config_hash: Pjl7k4GWET6NeRPDe_MJ_Fv8G3ValYXpEBvWeK5pgvU
 id: paragraph.icon_list_item.field_icon_list_description
 field_name: field_icon_list_description
 entity_type: paragraph

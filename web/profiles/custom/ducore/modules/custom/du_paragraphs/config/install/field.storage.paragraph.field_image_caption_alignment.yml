@@ -4,8 +4,6 @@ dependencies:
   module:
     - options
     - paragraphs
-_core:
-  default_config_hash: d60N1w-DCLXF3RaxSwJZXIN9a1fWxyWZAx5akWBH__Y
 id: paragraph.field_image_caption_alignment
 field_name: field_image_caption_alignment
 entity_type: paragraph
@@ -14,13 +12,13 @@ settings:
   allowed_values:
     -
       value: right
-      label: 'Right'
+      label: Right
     -
       value: left
-      label: 'Left'
+      label: Left
     -
       value: center
-      label: 'Center'
+      label: Center
   allowed_values_function: ''
 module: options
 locked: false

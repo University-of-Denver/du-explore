@@ -10,8 +10,6 @@ dependencies:
     - allowed_formats
     - entity_browser
     - text
-_core:
-  default_config_hash: idXFq2NsD_vW_H_-ZlTJHRka7XrpNFKEr4qkPRZHBp0
 id: paragraph.unit_slide.default
 targetEntityType: paragraph
 bundle: unit_slide

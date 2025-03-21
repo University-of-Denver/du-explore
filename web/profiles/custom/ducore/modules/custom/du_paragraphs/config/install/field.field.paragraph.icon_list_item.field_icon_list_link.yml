@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.icon_list_item
   module:
     - link
-_core:
-  default_config_hash: RuktFTjzzYheMNwbHtEVF3bF0jP_1v8Rk4qgVlHIEU4
 id: paragraph.icon_list_item.field_icon_list_link
 field_name: field_icon_list_link
 entity_type: paragraph

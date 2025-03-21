@@ -2,14 +2,15 @@ langcode: en
 status: true
 dependencies:
   module:
-    - node
-    - paragraphs
-id: paragraph.field_reusable_content
-field_name: field_reusable_content
-entity_type: paragraph
-type: entity_reference
+    - user
+id: user.field_config_pr_auth_token
+field_name: field_config_pr_auth_token
+entity_type: user
+type: string
 settings:
-  target_type: node
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
 module: core
 locked: false
 cardinality: 1

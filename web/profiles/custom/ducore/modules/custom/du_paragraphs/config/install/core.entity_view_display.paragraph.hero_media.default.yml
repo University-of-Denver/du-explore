@@ -15,8 +15,6 @@ dependencies:
     - file
     - responsive_image
     - text
-_core:
-  default_config_hash: '-0rqqRDZEREMG3bWLsy3d0WdGhOLghFB0MG5-XOGVes'
 id: paragraph.hero_media.default
 targetEntityType: paragraph
 bundle: hero_media
@@ -50,6 +48,8 @@ content:
     settings:
       responsive_image_style: hero_image
       image_link: ''
+      image_loading:
+        attribute: eager
     third_party_settings: {  }
     weight: 3
     region: content

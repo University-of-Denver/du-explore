@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.image_with_caption
   module:
     - options
-_core:
-  default_config_hash: Lf7DbL3dTeL3JUYOyW7I9SoRacxEZTWEts5gAkx8_T8
 id: paragraph.image_with_caption.field_image_caption_alignment
 field_name: field_image_caption_alignment
 entity_type: paragraph

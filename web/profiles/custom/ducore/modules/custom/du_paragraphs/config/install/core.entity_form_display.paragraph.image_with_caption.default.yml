@@ -9,11 +9,8 @@ dependencies:
     - field.field.paragraph.image_with_caption.field_image_caption_image
     - paragraphs.paragraphs_type.image_with_caption
   module:
-    - content_moderation
     - entity_browser
     - text
-_core:
-  default_config_hash: Ww8iJZgdV2sEodqHpm0IBpkIQRzXeKM1AAi1HoIOGY8
 id: paragraph.image_with_caption.default
 targetEntityType: paragraph
 bundle: image_with_caption
