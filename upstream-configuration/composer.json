@@ -77,7 +77,7 @@
         "drupal/structure_sync": "^2.0",
         "drupal/charts": "^5.0",
         "drupal/menu_item_extras": "^3.1",
-        "drupal/video_embed_field": "2.5",
+        "drupal/video_embed_field": "^2.5",
         "university-of-denver/du_bootstrap": "^1.0.0",
         "drupal/editoria11y": "^2.2",
         "drupal/crop": "^2.4",
