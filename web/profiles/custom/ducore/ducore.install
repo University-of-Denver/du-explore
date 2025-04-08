@@ -240,3 +240,26 @@ function ducore_update_9010() {
     'menu_item_extras');
   \Drupal::service('module_installer')->install($modules, TRUE);
 }
+
+/**
+ * Permission update for Text Editor roles
+ */
+function ducore_update_9011() {
+  // This gives permissions for auth_user, site editors, owners, site_admins
+  \Drupal::service('module_installer')->install(array('editor'), TRUE);
+
+  $config_ids = array(
+    'user.role.edit_own',
+    'user.role.content_editor',
+    'user.role.site_admin',
+    'filter.format.rich_text',
+    'editor.editor.rich_text'
+  );
+
+  // Loop through each configuration and, even if it exists, overwrite it.
+  foreach ($config_ids as $config_id) {
+    $config_path = \Drupal::service('extension.list.module')->getPath('ducore') . '/config/install/' . $config_id . '.yml';
+    $data = \Symfony\Component\Yaml\Yaml::parseFile($config_path);
+    \Drupal::configFactory()->getEditable($config_id)->setData($data)->save(TRUE);
+  }
+}
