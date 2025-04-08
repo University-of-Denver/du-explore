@@ -242,6 +242,27 @@ function ducore_update_9010() {
 }
 
 /**
+ * Enable Crop and CKEditor Media Embed modules on existing installs
+ */
+function ducore_update_9011() {
+  $modules = array(
+    'crop',
+    'ckeditor_media_embed');
+  \Drupal::service('module_installer')->install($modules, TRUE);
+}
+
+ /** 
+ * Enable Crop and CKEditor Media Embed modules on existing installs
+ */
+function ducore_update_9011() {
+  $modules = array(
+    'crop',
+    'ckeditor_media_embed');
+  \Drupal::service('module_installer')->install($modules, TRUE);
+}
+
+
+/**
  * Permission update for Text Editor roles
  */
 function ducore_update_9012() {
@@ -264,12 +285,3 @@ function ducore_update_9012() {
   }
 }
 
- /** 
- * Enable Crop and CKEditor Media Embed modules on existing installs
- */
-function ducore_update_9011() {
-  $modules = array(
-    'crop',
-    'ckeditor_media_embed');
-  \Drupal::service('module_installer')->install($modules, TRUE);
-}
