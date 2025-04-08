@@ -244,7 +244,7 @@ function ducore_update_9010() {
 /**
  * Permission update for Text Editor roles
  */
-function ducore_update_9011() {
+function ducore_update_9012() {
   // This gives permissions for auth_user, site editors, owners, site_admins
   \Drupal::service('module_installer')->install(array('editor'), TRUE);
 
