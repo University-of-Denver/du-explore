@@ -2,8 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
+    - filter.format.rich_text
     - node.type.page
   module:
+    - filter
     - quick_node_clone
 id: content_editor
 label: 'Content Editor'
@@ -11,3 +13,4 @@ weight: -7
 is_admin: null
 permissions:
   - 'clone page content'
+  - 'use text format rich_text'
