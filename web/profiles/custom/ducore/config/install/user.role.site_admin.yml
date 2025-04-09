@@ -4,6 +4,7 @@ dependencies:
   config:
     - entity_browser.browser.browse_files
     - entity_browser.browser.browse_files_modal
+    - filter.format.rich_text
     - node.type.page
     - taxonomy.vocabulary.event_audiences
     - taxonomy.vocabulary.event_types
@@ -199,6 +200,7 @@ permissions:
   - 'take_ownership_on_clone content_moderation_state entity'
   - 'take_ownership_on_clone file entity'
   - 'take_ownership_on_clone node entity'
+  - 'use text format rich_text'
   - 'view all revisions'
   - 'view all taxonomy revisions'
   - 'view any unpublished content'

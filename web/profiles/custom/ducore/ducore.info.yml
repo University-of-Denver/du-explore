@@ -125,6 +125,8 @@ dependencies:
   - video_embed_field
   - editoria11y
   - menu_item_extras
+  - ckeditor_media_embed
+  - crop
 
 themes:
   - du_bootstrap

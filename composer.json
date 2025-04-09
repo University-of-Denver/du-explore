@@ -300,7 +300,8 @@
         "enyo/dropzone": "^5.9.3",
         "desandro/imagesloaded": "^3.1.8",
         "desandro/masonry": "^3.3.1",
-        "kenwheeler/slick": "^1.7.1"
+        "kenwheeler/slick": "^1.7.1",
+        "drupal/config_pr": "^2.0@beta"
     },
     "require-dev": {
         "drupal/core-dev": "^10.1"

@@ -1,11 +1,15 @@
 langcode: en
 status: true
 dependencies:
+  config:
+    - filter.format.rich_text
   module:
     - file
+    - filter
 id: edit_own
 label: 'Edit Own'
 weight: -8
 is_admin: null
 permissions:
   - 'delete own files'
+  - 'use text format rich_text'
