@@ -1,0 +1,6 @@
+name: DU Menu Blocks
+description: Provides DU Menu Blocks used in outer areas of all (or most) pages.
+core_version_requirement: ^8 || ^9 || ^10
+type: module
+dependencies:
+  - block

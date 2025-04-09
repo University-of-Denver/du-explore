@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Install file for du_menu_blocks.
+ */
+
+/**
+ * Set module weight to be higher than menu_item_extras.
+ */
+function du_menu_blocks_update_8001() {
+  module_set_weight('du_menu_blocks', 1);
+}
