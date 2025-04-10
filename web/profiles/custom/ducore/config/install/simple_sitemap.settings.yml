@@ -1,8 +1,8 @@
-max_links: 2000
+max_links: 7500
 cron_generate: true
 cron_generate_interval: 0
-generate_duration: 10000
-entities_per_queue_item: 50
+generate_duration: 15000
+entities_per_queue_item: 75
 remove_duplicates: true
 skip_untranslated: true
 xsl: true
