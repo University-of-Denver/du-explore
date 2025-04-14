@@ -85,6 +85,7 @@
         "drupal/file_mdm": "^3.1",
         "drupal/inline_entity_form": "^1.0@RC",
         "drupal/profile_switcher": "^1.0@alpha",
+        "drupal/google_cse": "^5.0",
         "drupal/menu_block": "^1.14"
     },
     "extra": {
