@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - toolbar
+id: user_admin
+label: 'User Admin'
+weight: -8
+is_admin: null
+permissions:
+  - 'access site reports'
+  - 'access toolbar'
+  - 'access user profiles'
+  - 'administer users'
+  - 'view the administration theme'
