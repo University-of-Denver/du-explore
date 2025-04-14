@@ -285,3 +285,26 @@ function ducore_update_9013() {
   }
 }
 
+/**
+ * Enable menu_block module on existing installs
+ */
+function ducore_update_9014() {
+  \Drupal::service('module_installer')->install(array('menu_block'), TRUE);
+}
+
+/**
+ * Permission for new user_admin role
+ */
+function ducore_update_9015() {
+
+  $config_ids = array(
+    'user.role.user_admin'
+  );
+
+  // Loop through each configuration and, even if it exists, overwrite it.
+  foreach ($config_ids as $config_id) {
+    $config_path = \Drupal::service('extension.list.module')->getPath('ducore') . '/config/install/' . $config_id . '.yml';
+    $data = \Symfony\Component\Yaml\Yaml::parseFile($config_path);
+    \Drupal::configFactory()->getEditable($config_id)->setData($data)->save(TRUE);
+  }
+}
