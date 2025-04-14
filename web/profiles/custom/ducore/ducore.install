@@ -285,3 +285,9 @@ function ducore_update_9013() {
   }
 }
 
+/**
+ * Enable menu_block module on existing installs
+ */
+function ducore_update_9014() {
+  \Drupal::service('module_installer')->install(array('menu_block'), TRUE);
+}

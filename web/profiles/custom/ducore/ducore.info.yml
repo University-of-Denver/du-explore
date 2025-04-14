@@ -66,6 +66,7 @@ install:
   - views_json_source
   - video_embed_field
   - editoria11y
+  - menu_block
 
 # Required modules. These cannot be uninstalled.
 # Note that any dependencies of the modules listed here will be installed automatically.
