@@ -9,7 +9,7 @@ dependencies:
     - quick_node_clone
 id: content_editor
 label: 'Content Editor'
-weight: -7
+weight: -6
 is_admin: null
 permissions:
   - 'clone page content'
