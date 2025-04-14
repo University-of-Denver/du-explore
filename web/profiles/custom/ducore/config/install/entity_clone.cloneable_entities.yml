@@ -44,6 +44,8 @@ cloneable_entities:
   - key_config_override
   - simple_sitemap
   - simple_sitemap_type
+  - crop
+  - crop_type
   - linkit_profile
   - metatag_defaults
   - pathauto_pattern
