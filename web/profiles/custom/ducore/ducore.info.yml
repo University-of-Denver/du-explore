@@ -1,7 +1,7 @@
 name: 'University of Denver Core'
 type: profile
 description: 'DU Core Profile for Drupal 10'
-version: 10.9.0
+version: 10.11.0
 core_version_requirement: ^10
 
 # Modules to be installed on profile installation.
@@ -66,6 +66,7 @@ install:
   - views_json_source
   - video_embed_field
   - editoria11y
+  - menu_block
 
 # Required modules. These cannot be uninstalled.
 # Note that any dependencies of the modules listed here will be installed automatically.

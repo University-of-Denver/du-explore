@@ -43,7 +43,7 @@ dependencies:
     - webform
 id: site_admin
 label: 'Site Admin'
-weight: -6
+weight: -5
 is_admin: null
 permissions:
   - 'Administer Quick Node Clone Settings'
