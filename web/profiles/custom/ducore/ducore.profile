@@ -25,13 +25,17 @@ function ducore_form_install_configure_form_alter(&$form, FormStateInterface $fo
 function ducore_user_presave(UserInterface $user) {
   // IMPRORTANT! Because of change to using CammelCase in usernames at DU wasn't 
   // retoactively applied, we are evaluating the match in lowercase.
-  $support_eas = array('kevin.reynen', 'kent.hogue', 'charles.r.jones','joshua.mcgehee','alex.martinez', 'chris.hewitt', 'maximilian.fleischer', 'tj.sheu');
-  $support_ur =  array('mac.whitney', 'nathan.boorom', 'staci.striegnitz', 'sherry.liang', 'anastasia.vylegzhanina', 'james.e.thomas', 'derek.vonschulz');
+  $support_eas = array('kevin.reynen','kent.hogue','charles.r.jones','joshua.mcgehee','alex.martinez','chris.hewitt','maximilian.fleischer','tj.sheu');
+  $support_ur =  array('mac.whitney','nathan.boorom','staci.striegnitz','sherry.liang','anastasia.vylegzhanina','james.e.thomas','derek.vonschulz');
+  $support_ba = array('rosi.hull');
   // @TODO - These arrays should be YML files or API endpoint that can be 
   // easily editted outside the PHP
   // Check to see if this user is on the list of campus or system support users
   if (in_array(strtolower($user->getAccountName()), $support_eas)) {
     $user->addRole('administrator');
+  }
+  if (in_array(strtolower($user->getAccountName()), $support_ba)) {
+    $user->addRole('user_admin');
   }
   if (in_array(strtolower($user->getAccountName()), $support_ur)) {
     //check to see if the Pantheon environment is live
