@@ -335,9 +335,9 @@ function ducore_update_9015() {
 /**
  * Install the bootstrap theme on existing sites.
  */
-function ducore_update_9016() {
+function ducore_update_9017() {
   $logger = \Drupal::logger('ducore');
-  $logger->notice('Starting ducore_update_9016 - Theme installation');
+  $logger->notice('Starting ducore_update_9017 - Theme installation');
 
   // Store the original theme before any changes
   $original_theme = \Drupal::config('system.theme')->get('default');
@@ -355,15 +355,15 @@ function ducore_update_9016() {
     $logger->notice('du_bootstrap theme already installed');
   }
 
-  $logger->notice('ducore_update_9016 completed successfully');
+  $logger->notice('ducore_update_9017 completed successfully');
 }
 
 /**
  * Map PL themes to du_bootstrap and copy blocks.
  */
-function ducore_update_9017() {
+function ducore_update_9018() {
   $logger = \Drupal::logger('ducore');
-  $logger->notice('Starting ducore_update_9017 - Theme migration process');
+  $logger->notice('Starting ducore_update_9018 - Theme migration process');
 
   // Define blocks to skip
   $blocks_to_skip = [
@@ -531,5 +531,5 @@ function ducore_update_9017() {
     ->set('default', 'du_bootstrap')
     ->save(TRUE);
 
-  $logger->notice('ducore_update_9017 completed successfully');
+  $logger->notice('ducore_update_9018 completed successfully');
 }
