@@ -308,3 +308,26 @@ function ducore_update_9015() {
     \Drupal::configFactory()->getEditable($config_id)->setData($data)->save(TRUE);
   }
 }
+
+/**
+* Permission update for ckeditor5-anchor-link for existing installs
+*/
+function ducore_update_9016() {
+  // enable the the plugin for creating arnchors
+  \Drupal::service('module_installer')->install(array('anchor_link'), TRUE);
+ 
+ 
+  $config_ids = array(
+    'user.role.edit_own',
+    'user.role.content_editor',
+    'user.role.site_admin'
+  );
+ 
+  // Loop through each configuration and, even if it exists, overwrite it.
+  foreach ($config_ids as $config_id) {
+    $config_path = \Drupal::service('extension.list.module')->getPath('ducore') . '/config/install/' . $config_id . '.yml';
+    $data = \Symfony\Component\Yaml\Yaml::parseFile($config_path);
+    \Drupal::configFactory()->getEditable($config_id)->setData($data)->save(TRUE);
+  }
+ }
+ 

@@ -216,6 +216,19 @@
                 "license": "MIT"
             }
         },
+      {
+           "type": "package",
+           "package": {
+               "name": "northernco/ckeditor5-anchor-drupal",
+               "version": "0.5.0",
+               "type": "drupal-library",
+               "dist": {
+                   "url": "https://github.com/northernco/ckeditor5-anchor-drupal/archive/refs/tags/0.5.0.zip",
+                   "type": "zip"
+               }
+           },
+           "license": "MIT"
+       },
         {
             "type": "package",
             "package": {
@@ -301,7 +314,8 @@
         "desandro/imagesloaded": "^3.1.8",
         "desandro/masonry": "^3.3.1",
         "kenwheeler/slick": "^1.7.1",
-        "drupal/config_pr": "^2.0@beta"
+        "drupal/config_pr": "^2.0@beta",
+        "northernco/ckeditor5-anchor-drupal": "^0.5.0"
     },
     "require-dev": {
         "drupal/core-dev": "^10.1"
