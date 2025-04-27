@@ -223,8 +223,8 @@
                "version": "0.5.0",
                "type": "drupal-library",
                "dist": {
-                   "url": "https://github.com/northernco/ckeditor5-anchor-drupal/archive/refs/tags/0.5.0.zip",
-                   "type": "zip"
+                   "url": "https://registry.npmjs.org/@northernco/ckeditor5-anchor-drupal/-/ckeditor5-anchor-drupal-0.5.0.tgz",
+                   "type": "tar"
                }
            },
            "license": "MIT"
