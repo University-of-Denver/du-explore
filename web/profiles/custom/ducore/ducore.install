@@ -301,3 +301,4 @@ function ducore_update_9015() {
   $config_ids = array(
     'user.role.user_admin'
   );
+}
