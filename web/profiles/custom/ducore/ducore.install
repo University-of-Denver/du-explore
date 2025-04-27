@@ -292,6 +292,7 @@ function ducore_update_9014() {
   \Drupal::service('module_installer')->install(array('menu_block'), TRUE);
 }
 
+
 /**
  * Permission for new user_admin role
  */
@@ -330,4 +331,4 @@ function ducore_update_9016() {
     \Drupal::configFactory()->getEditable($config_id)->setData($data)->save(TRUE);
   }
  }
- 
+}

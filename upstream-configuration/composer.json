@@ -87,6 +87,7 @@
         "drupal/profile_switcher": "^1.0@alpha",
         "drupal/google_cse": "^5.0",
         "drupal/menu_block": "^1.14",
+        "drupal/webp": "^1.0@RC",
         "drupal/anchor_link": "~3.0"
     },
     "extra": {
