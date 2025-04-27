@@ -67,7 +67,6 @@ install:
   - video_embed_field
   - editoria11y
   - menu_block
-  - webp
 
 # Required modules. These cannot be uninstalled.
 # Note that any dependencies of the modules listed here will be installed automatically.
@@ -129,7 +128,6 @@ dependencies:
   - menu_item_extras
   - ckeditor_media_embed
   - crop
-  - webp
 
 themes:
   - du_bootstrap

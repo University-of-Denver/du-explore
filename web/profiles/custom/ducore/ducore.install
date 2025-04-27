@@ -301,19 +301,3 @@ function ducore_update_9015() {
   $config_ids = array(
     'user.role.user_admin'
   );
-
-/**
- * Enable webp module on existing installs
- */
-function ducore_update_9016() {
-  \Drupal::service('module_installer')->install(array('webp'), TRUE);
-}
-
-
-  // Loop through each configuration and, even if it exists, overwrite it.
-  foreach ($config_ids as $config_id) {
-    $config_path = \Drupal::service('extension.list.module')->getPath('ducore') . '/config/install/' . $config_id . '.yml';
-    $data = \Symfony\Component\Yaml\Yaml::parseFile($config_path);
-    \Drupal::configFactory()->getEditable($config_id)->setData($data)->save(TRUE);
-  }
-}
