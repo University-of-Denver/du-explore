@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.unit_block
+    - field.field.block_content.unit_block.body
+    - field.field.block_content.unit_block.field_social_links_title
+    - field.field.block_content.unit_block.field_unit
+id: block_content.unit_block.default
+targetEntityType: block_content
+bundle: unit_block
+mode: default
+content:
+  field_social_links_title:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_unit:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true
