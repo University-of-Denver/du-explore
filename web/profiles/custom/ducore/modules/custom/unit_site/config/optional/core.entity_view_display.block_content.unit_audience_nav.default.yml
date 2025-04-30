@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.unit_audience_nav
+    - field.field.block_content.unit_audience_nav.field_unit_audience_nav_links
+  module:
+    - link
+_core:
+  default_config_hash: JbEvxSeniiKESOREonea_-eBb0qG3G7DQnmHdtDG_qU
+id: block_content.unit_audience_nav.default
+targetEntityType: block_content
+bundle: unit_audience_nav
+mode: default
+content:
+  field_unit_audience_nav_links:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

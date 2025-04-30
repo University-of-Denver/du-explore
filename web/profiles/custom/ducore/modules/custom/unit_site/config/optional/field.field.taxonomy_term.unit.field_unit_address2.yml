@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_unit_address2
+    - taxonomy.vocabulary.unit
+id: taxonomy_term.unit.field_unit_address2
+field_name: field_unit_address2
+entity_type: taxonomy_term
+bundle: unit
+label: Address2
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
