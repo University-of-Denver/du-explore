@@ -1,0 +1,219 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.unit.field_25_live_id
+    - field.field.taxonomy_term.unit.field_banner_shortcode
+    - field.field.taxonomy_term.unit.field_faculty_api_id
+    - field.field.taxonomy_term.unit.field_unit_abbreviation
+    - field.field.taxonomy_term.unit.field_unit_address1
+    - field.field.taxonomy_term.unit.field_unit_address2
+    - field.field.taxonomy_term.unit.field_unit_division
+    - field.field.taxonomy_term.unit.field_unit_email
+    - field.field.taxonomy_term.unit.field_unit_faculty_api_dept
+    - field.field.taxonomy_term.unit.field_unit_fax
+    - field.field.taxonomy_term.unit.field_unit_footer_link
+    - field.field.taxonomy_term.unit.field_unit_logo
+    - field.field.taxonomy_term.unit.field_unit_office
+    - field.field.taxonomy_term.unit.field_unit_phone
+    - field.field.taxonomy_term.unit.field_unit_social_links
+    - field.field.taxonomy_term.unit.field_unit_type
+    - field.field.taxonomy_term.unit.field_unit_university
+    - field.field.taxonomy_term.unit.field_unit_url
+    - image.style.thumbnail
+    - taxonomy.vocabulary.unit
+  module:
+    - link_attributes
+    - paragraphs
+    - svg_image
+id: taxonomy_term.unit.default
+targetEntityType: taxonomy_term
+bundle: unit
+mode: default
+content:
+  field_25_live_id:
+    type: number
+    weight: 2
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_banner_shortcode:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_faculty_api_id:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_unit_abbreviation:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_unit_address1:
+    type: string_textfield
+    weight: 12
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_unit_address2:
+    type: string_textfield
+    weight: 13
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_unit_division:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_unit_email:
+    type: email_default
+    weight: 14
+    region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+  field_unit_faculty_api_dept:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 150
+      placeholder: ''
+    third_party_settings: {  }
+  field_unit_fax:
+    type: string_textfield
+    weight: 16
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_unit_footer_link:
+    type: link_attributes
+    weight: 18
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        id: false
+        name: false
+        target: true
+        rel: true
+        class: true
+        accesskey: false
+    third_party_settings: {  }
+  field_unit_logo:
+    type: image_image
+    weight: 7
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_unit_office:
+    type: string_textfield
+    weight: 9
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_unit_phone:
+    type: string_textfield
+    weight: 15
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_unit_social_links:
+    type: entity_reference_paragraphs
+    weight: 8
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+  field_unit_type:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_unit_university:
+    type: string_textfield
+    weight: 11
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_unit_url:
+    type: link_attributes
+    weight: 17
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        onClick: true
+        title: true
+        target: true
+        fragment: true
+        data-toggle: false
+        id: false
+        name: false
+        rel: false
+        class: false
+        accesskey: false
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 100
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

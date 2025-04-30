@@ -1,0 +1,150 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.unit.field_unit_abbreviation
+    - field.field.taxonomy_term.unit.field_unit_address1
+    - field.field.taxonomy_term.unit.field_unit_address2
+    - field.field.taxonomy_term.unit.field_unit_division
+    - field.field.taxonomy_term.unit.field_unit_email
+    - field.field.taxonomy_term.unit.field_unit_fax
+    - field.field.taxonomy_term.unit.field_unit_logo
+    - field.field.taxonomy_term.unit.field_unit_office
+    - field.field.taxonomy_term.unit.field_unit_phone
+    - field.field.taxonomy_term.unit.field_unit_social_links
+    - field.field.taxonomy_term.unit.field_unit_type
+    - field.field.taxonomy_term.unit.field_unit_university
+    - field.field.taxonomy_term.unit.field_unit_url
+    - taxonomy.vocabulary.unit
+  module:
+    - entity_reference_revisions
+    - image
+    - link
+    - options
+    - text
+id: taxonomy_term.unit.default
+targetEntityType: taxonomy_term
+bundle: unit
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_unit_abbreviation:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_unit_address1:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_unit_address2:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_unit_division:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_unit_email:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_unit_fax:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_unit_logo:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_unit_office:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_unit_phone:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_unit_social_links:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_unit_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_unit_university:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_unit_url:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 11
+    region: content
+hidden:
+  field_25_live_id: true
+  field_banner_shortcode: true
+  field_faculty_api_id: true
+  field_unit_faculty_api_dept: true
+  field_unit_footer_link: true

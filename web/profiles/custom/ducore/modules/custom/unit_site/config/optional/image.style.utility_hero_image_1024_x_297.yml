@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: utility_hero_image_1024_x_297
+label: 'Utility hero image 1024 x 297'
+effects:
+  c128b1d7-df1f-4f95-bf92-1706fab8798b:
+    uuid: c128b1d7-df1f-4f95-bf92-1706fab8798b
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1024
+      height: 297
+      anchor: center-center
