@@ -534,3 +534,24 @@ function ducore_update_9517() {
 
   $logger->notice('ducore_update_9018 completed successfully');
 }
+
+/**
+ * Enables views_data_export and imports view for Users JSON
+ */
+function ducore_update_9518() {
+  \Drupal::service('module_installer')->install('views_data_export');
+
+  $view_name = 'user_json';
+  $view_config = \Drupal::service('config.storage.sync')->read('views.view.' . $view_name);
+
+  // Import View into Site
+  if ($view_config) {
+    \Drupal::configFactory()->getEditable('views.view.' . $view_name)
+      ->setData($view_config)
+      ->save();
+    \Drupal::messenger()->addMessage('User JSON view imported successfully.');
+  }
+  else {
+    \Drupal::messenger()->addMessage('View configuration for user_json not found.');
+  }
+}
