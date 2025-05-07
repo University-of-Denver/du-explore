@@ -1,0 +1,8 @@
+name: DU Styleguide
+type: module
+description: Adds Styleguide Patterns
+package: DU Core
+core_version_requirement: ^10 || ^11
+
+dependencies:
+  - drupal:simple_styleguide

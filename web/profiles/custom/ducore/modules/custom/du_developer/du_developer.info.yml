@@ -2,5 +2,5 @@ name: 'DU Developer'
 type: module
 description: 'DU Developer Tools Correct Version'
 core_version_requirement: ^10
-package: 'DU'
+package: 'DU Core'
 dependencies: 
