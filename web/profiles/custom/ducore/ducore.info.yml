@@ -64,6 +64,8 @@ install:
   - token_filter
   - quick_node_clone
   - views_json_source
+  - rest
+  - serialization
   - video_embed_field
   - editoria11y
   - menu_block
@@ -124,6 +126,8 @@ dependencies:
   - token_filter
   - quick_node_clone
   - views_json_source
+  - rest
+  - serialization
   - video_embed_field
   - editoria11y
   - menu_item_extras
