@@ -5,12 +5,16 @@ dependencies:
   config:
     - field.field.node.landing_page_sdc.field_landing_page_content
     - field.field.node.landing_page_sdc.field_landing_page_header
+    - field.field.node.landing_page_sdc.field_meta_tags
     - field.field.node.landing_page_sdc.field_site_logo
     - field.field.node.landing_page_sdc.field_site_logo_link
     - node.type.landing_page_sdc
   module:
     - entity_reference_revisions
+    - metatag
     - user
+_core:
+  default_config_hash: UvwgPySqED5cVhDAJ-aZglgIqrnl2QeJuOXuaGDtXys
 id: node.landing_page_sdc.default
 targetEntityType: node
 bundle: landing_page_sdc
@@ -31,6 +35,13 @@ content:
     settings:
       view_mode: default
       link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_meta_tags:
+    type: metatag_empty_formatter
+    label: hidden
+    settings: {  }
     third_party_settings: {  }
     weight: 1
     region: content
