@@ -8,19 +8,19 @@
 /**
  * Update hook to apply configuration changes.
  */
-function du_landing_page_sdc_update_8001() {
+function du_landing_page_update_8001() {
   // Get the module path
-  $module_path = drupal_get_path('module', 'du_landing_page_sdc');
+  $module_path = drupal_get_path('module', 'du_landing_page');
   $config_path = $module_path . '/config/optional';
 
   // Debug: Log the paths
-  \Drupal::logger('du_landing_page_sdc')->notice('Module path: @path', ['@path' => $module_path]);
-  \Drupal::logger('du_landing_page_sdc')->notice('Config path: @path', ['@path' => $config_path]);
+  \Drupal::logger('du_landing_page')->notice('Module path: @path', ['@path' => $module_path]);
+  \Drupal::logger('du_landing_page')->notice('Config path: @path', ['@path' => $config_path]);
 
   // Check if config directory exists
   if (!is_dir($config_path)) {
-    \Drupal::logger('du_landing_page_sdc')->error('Config directory does not exist: @path', ['@path' => $config_path]);
-    return t('No configuration directory found for du_landing_page_sdc module.');
+    \Drupal::logger('du_landing_page')->error('Config directory does not exist: @path', ['@path' => $config_path]);
+    return t('No configuration directory found for du_landing_page module.');
   }
 
   // Get all YAML files in the config/optional directory
@@ -28,13 +28,13 @@ function du_landing_page_sdc_update_8001() {
   $imported_count = 0;
 
   // Debug: Log found files
-  \Drupal::logger('du_landing_page_sdc')->notice('Found @count config files', ['@count' => count($config_files)]);
+  \Drupal::logger('du_landing_page')->notice('Found @count config files', ['@count' => count($config_files)]);
 
   foreach ($config_files as $config_file) {
     $config_name = basename($config_file, '.yml');
 
     // Debug: Log each file being processed
-    \Drupal::logger('du_landing_page_sdc')->notice('Processing config file: @file', ['@file' => $config_name]);
+    \Drupal::logger('du_landing_page')->notice('Processing config file: @file', ['@file' => $config_name]);
 
     // Read the configuration file
     $config_data = \Drupal::service('file_system')->read($config_file);
@@ -48,23 +48,23 @@ function du_landing_page_sdc_update_8001() {
         $imported_count++;
 
         // Debug: Log successful import
-        \Drupal::logger('du_landing_page_sdc')->notice('Successfully imported: @config', ['@config' => $config_name]);
+        \Drupal::logger('du_landing_page')->notice('Successfully imported: @config', ['@config' => $config_name]);
       }
       catch (\Exception $e) {
         // Debug: Log any errors
-        \Drupal::logger('du_landing_page_sdc')->error('Error importing @config: @error', [
+        \Drupal::logger('du_landing_page')->error('Error importing @config: @error', [
           '@config' => $config_name,
           '@error' => $e->getMessage()
         ]);
       }
     } else {
       // Debug: Log if file couldn't be read
-      \Drupal::logger('du_landing_page_sdc')->error('Could not read config file: @file', ['@file' => $config_file]);
+      \Drupal::logger('du_landing_page')->error('Could not read config file: @file', ['@file' => $config_file]);
     }
   }
 
   // Debug: Log final count
-  \Drupal::logger('du_landing_page_sdc')->notice('Import complete. Imported @count files.', ['@count' => $imported_count]);
+  \Drupal::logger('du_landing_page')->notice('Import complete. Imported @count files.', ['@count' => $imported_count]);
 
-  return t('Imported @count configuration files for du_landing_page_sdc module.', ['@count' => $imported_count]);
+  return t('Imported @count configuration files for du_landing_page module.', ['@count' => $imported_count]);
 }
