@@ -9,8 +9,9 @@
  * Update hook to apply configuration changes.
  */
 function du_landing_page_update_8001() {
-  // Get the module path
-  $module_path = drupal_get_path('module', 'du_landing_page');
+  // Get the module path using the proper service
+  $extension_path_resolver = \Drupal::service('extension.path.resolver');
+  $module_path = $extension_path_resolver->getPath('module', 'du_landing_page');
   $config_path = $module_path . '/config/optional';
 
   // Debug: Log the paths
