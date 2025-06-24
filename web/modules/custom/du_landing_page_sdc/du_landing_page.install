@@ -37,8 +37,8 @@ function du_landing_page_update_8001() {
     // Debug: Log each file being processed
     \Drupal::logger('du_landing_page')->notice('Processing config file: @file', ['@file' => $config_name]);
 
-    // Read the configuration file
-    $config_data = \Drupal::service('file_system')->read($config_file);
+    // Read the configuration file using file_get_contents
+    $config_data = file_get_contents($config_file);
     if ($config_data) {
       try {
         $config_array = \Symfony\Component\Yaml\Yaml::parse($config_data);
