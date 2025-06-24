@@ -27,6 +27,9 @@ jobs:
         env:
           pantheon_repo: '${{ secrets.PANTHEON_REPO }}'
         run: |
+          git config --global user.email "google@du.edu"
+          git config --global user.name "DU-Automation"
+
           git remote add pantheon $pantheon_repo || git remote set-url pantheon $pantheon_repo
           git config pull.rebase false
           git pull pantheon master --allow-unrelated-histories || true
