@@ -58,4 +58,4 @@ jobs:
           git pull pantheon master --rebase
           git add .
           git diff-index --quiet HEAD || git commit -m "Merging Pantheon Automation updates into GitHub"
-          git push origin HEAD:master
+          git push origin HEAD:master --force
