@@ -13,8 +13,13 @@ function du_landing_page_sdc_update_8001() {
   $module_path = drupal_get_path('module', 'du_landing_page_sdc');
   $config_path = $module_path . '/config/optional';
 
+  // Debug: Log the paths
+  \Drupal::logger('du_landing_page_sdc')->notice('Module path: @path', ['@path' => $module_path]);
+  \Drupal::logger('du_landing_page_sdc')->notice('Config path: @path', ['@path' => $config_path]);
+
   // Check if config directory exists
   if (!is_dir($config_path)) {
+    \Drupal::logger('du_landing_page_sdc')->error('Config directory does not exist: @path', ['@path' => $config_path]);
     return t('No configuration directory found for du_landing_page_sdc module.');
   }
 
@@ -22,20 +27,44 @@ function du_landing_page_sdc_update_8001() {
   $config_files = glob($config_path . '/*.yml');
   $imported_count = 0;
 
+  // Debug: Log found files
+  \Drupal::logger('du_landing_page_sdc')->notice('Found @count config files', ['@count' => count($config_files)]);
+
   foreach ($config_files as $config_file) {
     $config_name = basename($config_file, '.yml');
+
+    // Debug: Log each file being processed
+    \Drupal::logger('du_landing_page_sdc')->notice('Processing config file: @file', ['@file' => $config_name]);
 
     // Read the configuration file
     $config_data = \Drupal::service('file_system')->read($config_file);
     if ($config_data) {
-      $config_array = \Symfony\Component\Yaml\Yaml::parse($config_data);
+      try {
+        $config_array = \Symfony\Component\Yaml\Yaml::parse($config_data);
 
-      // Import the configuration
-      $config = \Drupal::configFactory()->getEditable($config_name);
-      $config->setData($config_array)->save();
-      $imported_count++;
+        // Import the configuration
+        $config = \Drupal::configFactory()->getEditable($config_name);
+        $config->setData($config_array)->save();
+        $imported_count++;
+
+        // Debug: Log successful import
+        \Drupal::logger('du_landing_page_sdc')->notice('Successfully imported: @config', ['@config' => $config_name]);
+      }
+      catch (\Exception $e) {
+        // Debug: Log any errors
+        \Drupal::logger('du_landing_page_sdc')->error('Error importing @config: @error', [
+          '@config' => $config_name,
+          '@error' => $e->getMessage()
+        ]);
+      }
+    } else {
+      // Debug: Log if file couldn't be read
+      \Drupal::logger('du_landing_page_sdc')->error('Could not read config file: @file', ['@file' => $config_file]);
     }
   }
+
+  // Debug: Log final count
+  \Drupal::logger('du_landing_page_sdc')->notice('Import complete. Imported @count files.', ['@count' => $imported_count]);
 
   return t('Imported @count configuration files for du_landing_page_sdc module.', ['@count' => $imported_count]);
 }
