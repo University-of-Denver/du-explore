@@ -1,0 +1,41 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the du_landing_page_sdc module.
+ */
+
+/**
+ * Update hook to apply configuration changes.
+ */
+function du_landing_page_sdc_update_8001() {
+  // Get the module path
+  $module_path = drupal_get_path('module', 'du_landing_page_sdc');
+  $config_path = $module_path . '/config/optional';
+
+  // Check if config directory exists
+  if (!is_dir($config_path)) {
+    return t('No configuration directory found for du_landing_page_sdc module.');
+  }
+
+  // Get all YAML files in the config/optional directory
+  $config_files = glob($config_path . '/*.yml');
+  $imported_count = 0;
+
+  foreach ($config_files as $config_file) {
+    $config_name = basename($config_file, '.yml');
+
+    // Read the configuration file
+    $config_data = \Drupal::service('file_system')->read($config_file);
+    if ($config_data) {
+      $config_array = \Symfony\Component\Yaml\Yaml::parse($config_data);
+
+      // Import the configuration
+      $config = \Drupal::configFactory()->getEditable($config_name);
+      $config->setData($config_array)->save();
+      $imported_count++;
+    }
+  }
+
+  return t('Imported @count configuration files for du_landing_page_sdc module.', ['@count' => $imported_count]);
+}
