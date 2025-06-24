@@ -1,0 +1,61 @@
+name: Pantheon Sync
+
+on:
+  push:
+    branches:
+      - 'master'
+  schedule:
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Set up SSH key for Pantheon
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.PANTHEON_SSH_KEY }}
+          config: ${{ secrets.SSH_CONFIG }}
+          known_hosts: ${{ secrets.KNOWN_HOSTS }}
+          if_key_exists: ignore
+
+      - name: Deploy to Pantheon
+        env:
+          pantheon_repo: '${{ secrets.PANTHEON_REPO }}'
+        run: |
+          git remote add pantheon $pantheon_repo || git remote set-url pantheon $pantheon_repo
+          git push pantheon HEAD:master
+
+  mirror:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Set up SSH key for Pantheon
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.PANTHEON_SSH_KEY }}
+          config: ${{ secrets.SSH_CONFIG }}
+          known_hosts: ${{ secrets.KNOWN_HOSTS }}
+          if_key_exists: ignore
+
+
+      - name: Mirror Pantheon to GitHub
+        env:
+          pantheon_repo: '${{ secrets.PANTHEON_REPO }}'
+        run: |
+          git config --global user.email "google@du.edu"
+          git config --global user.name "DU-Automation"
+
+          git remote add pantheon $pantheon_repo || git remote set-url pantheon $pantheon_repo
+          git remote set-url origin git@github.com:${{ github.repository }}.git
+
+          git pull pantheon master --rebase
+          git add .
+          git diff-index --quiet HEAD || git commit -m "Merging Pantheon Automation updates into GitHub"
+          git push origin HEAD:master
