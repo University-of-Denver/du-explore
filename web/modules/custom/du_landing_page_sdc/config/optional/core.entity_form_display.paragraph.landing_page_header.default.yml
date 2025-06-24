@@ -1,0 +1,125 @@
+uuid: 04a19f06-43d1-4e8d-bb80-30c57f995587
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.landing_page_header.field_auto_height
+    - field.field.paragraph.landing_page_header.field_background_image
+    - field.field.paragraph.landing_page_header.field_body_text_optional
+    - field.field.paragraph.landing_page_header.field_button_style
+    - field.field.paragraph.landing_page_header.field_cta_optional
+    - field.field.paragraph.landing_page_header.field_hero_multimedia_section
+    - field.field.paragraph.landing_page_header.field_primary_title_text
+    - field.field.paragraph.landing_page_header.field_sticky_scroll
+    - field.field.paragraph.landing_page_header.field_subheading_optional
+    - field.field.paragraph.landing_page_header.field_text_color
+    - field.field.paragraph.landing_page_header.field_use_gradient
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.landing_page_header
+  module:
+    - link_attributes
+    - paragraphs
+    - svg_image
+    - text
+_core:
+  default_config_hash: R2OOv3oFG8kWa35WQpPBZPg1wrn3rImqtxo_ATh2IaY
+id: paragraph.landing_page_header.default
+targetEntityType: paragraph
+bundle: landing_page_header
+mode: default
+content:
+  field_auto_height:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_background_image:
+    type: image_image
+    weight: 0
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_body_text_optional:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_cta_optional:
+    type: link_attributes
+    weight: 7
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        id: true
+        target: true
+        rel: true
+        class: true
+        aria-label: true
+        name: false
+        accesskey: false
+        title: false
+      widget_default_open: expandIfValuesSet
+    third_party_settings: {  }
+    label: 'Call to Action Links'
+    description: 'Add up to 4 CTAs in the following order: Primary, Secondary, Optional CTA 1, Optional CTA 2'
+  field_hero_multimedia_section:
+    type: paragraphs
+    weight: 8
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_primary_title_text:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_subheading_optional:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_text_color:
+    type: options_select
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_use_gradient:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_button_style: true
+  field_sticky_scroll: true
+  status: true

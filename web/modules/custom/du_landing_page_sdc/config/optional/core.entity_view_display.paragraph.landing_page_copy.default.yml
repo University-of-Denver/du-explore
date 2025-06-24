@@ -1,0 +1,91 @@
+uuid: 79f7d590-64a2-4654-b363-bcd77dab883d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.landing_page_copy.field_body_text
+    - field.field.paragraph.landing_page_copy.field_copy_image
+    - field.field.paragraph.landing_page_copy.field_heading
+    - field.field.paragraph.landing_page_copy.field_subhead
+    - image.style.copy_image_884_x_564
+    - paragraphs.paragraphs_type.landing_page_copy
+  module:
+    - field_group
+    - svg_image
+    - text
+third_party_settings:
+  field_group:
+    group_image_section:
+      children:
+        - field_copy_image
+      label: ''
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        classes: landing-page-copy-image
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_copy_section:
+      children:
+        - field_heading
+        - field_subhead
+        - field_body_text
+      label: ''
+      parent_name: ''
+      region: content
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        classes: landing-page-copy-text
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+id: paragraph.landing_page_copy.default
+targetEntityType: paragraph
+bundle: landing_page_copy
+mode: default
+content:
+  field_body_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_copy_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: copy_image_884_x_564
+      image_loading:
+        attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_heading:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_subhead:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+hidden: {  }

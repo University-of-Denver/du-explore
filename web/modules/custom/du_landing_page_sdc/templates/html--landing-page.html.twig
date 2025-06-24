@@ -1,0 +1,53 @@
+{#
+/**
+ * @file
+ * Theme override to display a landing page.
+ *
+ * This template provides a landing page layout while inheriting
+ * the theme's structure and assets.
+ */
+#}
+<!DOCTYPE html>
+<html{{ html_attributes }}>
+  <head>
+    <head-placeholder token="{{ placeholder_token }}">
+    <title>{{ head_title|safe_join(' | ') }}</title>
+    <css-placeholder token="{{ placeholder_token }}">
+    <js-placeholder token="{{ placeholder_token }}">
+  </head>
+  <body{{ attributes.addClass('landing-page-template') }}>
+    <a href="#main-content" class="visually-hidden-focusable">
+      {{ 'Skip to main content'|t }}
+    </a>
+    {{ page_top }}
+    {{ page }}
+    {{ page_bottom }}
+    <js-bottom-placeholder token="{{ placeholder_token }}">
+  </body>
+  <footer>
+     <nav aria-labelledby="block-footermenu-menu" id="block-footermenu" data-block-plugin-id="system_menu_block:footer-menu">
+      <p class="visually-hidden" id="block-footermenu-menu">Footer Menu</p>
+      <nav class="bg-dark-gray" aria-label="footer-links">
+        <ul class="menu d-flex justify-content-center">
+          <li>
+            <a href="https://map.concept3d.com/?id=64" target="_blank" title="Interactive Map and Printable Map PDFs">Maps</a>
+          </li>
+          <li>
+            <a href="https://jobs.du.edu/en-us/listing/" target="_blank" title="Jobs at the University of Denver">Jobs</a>
+          </li>
+          <li>
+            <a href="https://www.du.edu/site-utilities/contact" target="_blank" title="Contacting the University of Denver">Contact</a>
+          </li>
+          <li>
+            <a href="https://www.du.edu/site-utilities/privacy-policy" target="_blank" title="University of Denver Privacy Policy">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="https://www.du.edu/feedback" target="_blank" title="University of Denver Feedback Form">Feedback</a>
+          </li>
+        </ul>
+      </nav>
+    </nav>
+
+    <p class="copyright">Copyright ©{{ "now"|date("Y") }} University of Denver. | All rights reserved. | The University of Denver is an equal opportunity affirmative action institution</p>
+  </footer>
+</html>

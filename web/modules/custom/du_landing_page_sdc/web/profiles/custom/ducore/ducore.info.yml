@@ -1,0 +1,140 @@
+name: 'University of Denver Core'
+type: profile
+description: 'DU Core Profile for Drupal 10'
+version: 10.13.0
+core_version_requirement: ^10
+
+# Modules to be installed on profile installation.
+install:
+  - admin_toolbar
+  - components
+  - config_filter
+  - config_ignore
+  - config_profile
+  - config_split
+  - config_update
+  - content_lock
+  - content_moderation
+  - ctools
+  - diff
+  - du_widen
+  - entity
+  - entity_block
+  - entity_browser
+  - entity_browser_block
+  - entity_clone
+  - entity_embed
+  - entity_reference_revisions
+  - environment_indicator
+  - field_group
+  - field_ui
+  - honeypot
+  - libraries
+  - link_attributes
+  - linkit
+  - metatag
+  - pantheon_advanced_page_cache
+  - pantheon_autopilot_toolbar
+  - paragraphs
+  - pathauto
+  - rabbit_hole
+  - redirect
+  - simple_sitemap
+  - svg_image
+  - twig_field_value
+  - twig_tweak
+  - url_redirect
+  - webform
+  - webform_ui
+  - simplesamlphp_auth
+  - dropzonejs
+  - ebrsww
+  - file_browser
+  - ds
+  - node_revision_delete
+  - allowed_formats
+  - du_paragraphs
+  - options
+  - key
+  - pantheon_secrets
+  - ckeditor5
+  - blazy
+  - media
+  - slick
+  - token_filter
+  - quick_node_clone
+  - views_json_source
+  - rest
+  - serialization
+  - video_embed_field
+  - editoria11y
+  - menu_block
+  - anchor_link
+
+# Required modules. These cannot be uninstalled.
+# Note that any dependencies of the modules listed here will be installed automatically.
+dependencies:
+  - block
+  - block_content
+  - datetime
+  - field
+  - file
+  - filter
+  - image
+  - menu_link_content
+  - node
+  - path
+  - system
+  - taxonomy
+  - text
+  - user
+  - views
+  - dblog
+  - admin_toolbar
+  - components
+  - ctools
+  - entity
+  - field_group
+  - honeypot
+  - libraries
+  - link_attributes
+  - linkit
+  - pantheon_advanced_page_cache
+  - pantheon_autopilot_toolbar
+  - paragraphs
+  - pathauto
+  - redirect
+  - responsive_image
+  - simple_sitemap
+  - svg_image
+  - twig_field_value
+  - url_redirect
+  - simplesamlphp_auth
+  - simplesamlphp_custom_attributes
+  - dropzonejs
+  - ebrsww
+  - file_browser
+  - options
+  - ds
+  - node_revision_delete
+  - allowed_formats
+  - role_expire
+  - ckeditor5
+  - blazy
+  - media
+  - slick
+  - token_filter
+  - quick_node_clone
+  - views_json_source
+  - rest
+  - serialization
+  - video_embed_field
+  - editoria11y
+  - menu_item_extras
+  - ckeditor_media_embed
+  - crop
+  - anchor_link
+
+themes:
+  - du_bootstrap
+  - claro

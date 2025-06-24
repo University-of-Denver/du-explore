@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: landing_page_copy
+label: 'Landing Page Copy'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

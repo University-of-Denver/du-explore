@@ -1,0 +1,45 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display the landing page menu.
+ *
+ * Available variables:
+ * - logo_path: The path to the logo image
+ * - logo_link: The URL for the logo link
+ * - node: The landing page node
+ */
+#}
+
+<nav class="landing-page-sdc-menu navbar navbar-expand-lg sticky-nav">
+  <div class="landing-page-sdc-menu__container container">
+    <div class="row w-100 align-items-center">
+      {# Logo #}
+      <div class="landing-page-sdc-menu__logo col-auto">
+        {% set logo_url = logo_link starts with 'http' ? logo_link : (logo_link starts with '/' ? logo_link : path('<front>')) %}
+        <a href="{{ logo_url }}" class="navbar-brand">
+          <img src="{{ logo_path }}" alt="{{ 'Home'|t }}" class="img-fluid" />
+        </a>
+      </div>
+
+      {# CTA Buttons #}
+      {% if node.field_landing_page_header.value %}
+        {% set header = node.field_landing_page_header.entity %}
+        {% if header.field_cta_optional.value %}
+          <div class="landing-page-sdc-menu__cta col-auto ms-auto">
+            {# Second CTA if it exists #}
+            {% if header.field_cta_optional[1] is defined %}
+              <a href="{{ header.field_cta_optional[1].uri|replace({'internal:': ''}) }}" class="landing-page-cta-secondary me-2">
+                {{ header.field_cta_optional[1].title }}
+              </a>
+            {% endif %}
+
+            {# First CTA #}
+            <a href="{{ header.field_cta_optional[0].uri|replace({'internal:': ''}) }}" class="landing-page-cta-primary">
+              {{ header.field_cta_optional[0].title }}
+            </a>
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * @file
+ * Description.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function unit_site_theme($existing, $type, $theme, $path) {
+  return [
+    'site_hierarchy' => [
+      'variables' => [
+        'links' => [],
+      ],
+      'template' => 'unit-site-hierarchy',
+    ],
+    'utility_flyout' => [
+      'variables' => [
+        'id' => '',
+        'content' => '',
+      ],
+      'template' => 'unit-utility-flyout',
+    ],
+  ];
+}

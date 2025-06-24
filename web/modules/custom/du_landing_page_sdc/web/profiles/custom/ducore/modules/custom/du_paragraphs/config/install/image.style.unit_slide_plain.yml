@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: unit_slide_plain
+label: 'Unit Slide plain'
+effects:
+  8d2c5a5c-d131-4836-ac1c-4eeb38ed7fcc:
+    uuid: 8d2c5a5c-d131-4836-ac1c-4eeb38ed7fcc
+    id: image_scale
+    weight: 1
+    data:
+      width: 1269
+      height: 560
+      upscale: true

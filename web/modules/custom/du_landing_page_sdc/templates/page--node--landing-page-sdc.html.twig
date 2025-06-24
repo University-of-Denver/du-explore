@@ -1,0 +1,43 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a landing page.
+ *
+ * Available variables:
+ * - page: The content of the page
+ */
+#}
+<div{{ attributes.addClass('landing-page-template') }}>
+  {# Menu #}
+  {% if page.menu %}
+    {% include '@du_landing_page/landing-page-menu.html.twig' with {
+      'logo_path': page.menu['#logo_path'],
+      'cta_enabled': page.menu['#cta_enabled'],
+      'cta_text': page.menu['#cta_text'],
+      'cta_url': page.menu['#cta_url']
+    } %}
+  {% endif %}
+
+    {# Only logged_in users see this #}
+    {% if logged_in %}
+      <div class="row">
+        <nav class="tabs" role="navigation" aria-label="Tabs">
+          <h2 id="primary-tabs-title" class="visually-hidden">Primary tabs</h2>
+          <nav class="position-relative" aria-labelledby="primary-tabs-title">
+            <button class="d-md-none btn btn-link tabs-trigger" type="button" data-bs-toggle="collapse" data-bs-target="#primaryTabs" aria-expanded="false" aria-controls="primaryTabs">
+              <span aria-hidden="true">•••</span>
+              <span class="visually-hidden">Primary tabs display toggle</span>
+            </button>
+            <ul class="nav nav-tabs border-0 collapse d-md-flex" id="primaryTabs">
+              {{ drupal_block('local_tasks_block') }}
+            </ul>
+          </nav>
+        </nav>
+      </div>
+    {% endif %}
+
+  {# Content #}
+  <main class="landing-page-content">
+    {{ page.content }}
+  </main>
+</div>

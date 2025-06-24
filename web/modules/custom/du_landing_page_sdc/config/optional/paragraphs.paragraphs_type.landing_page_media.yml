@@ -1,0 +1,10 @@
+uuid: e14f8359-1487-4596-a3d9-51d8e77ba621
+langcode: en
+status: true
+dependencies: {  }
+id: landing_page_media
+label: 'Landing Page Media'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

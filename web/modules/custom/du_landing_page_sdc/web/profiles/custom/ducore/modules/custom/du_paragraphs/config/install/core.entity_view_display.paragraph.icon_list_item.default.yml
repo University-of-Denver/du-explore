@@ -1,0 +1,62 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.icon_list_item.field_icon_list_description
+    - field.field.paragraph.icon_list_item.field_icon_list_heading
+    - field.field.paragraph.icon_list_item.field_icon_list_image
+    - field.field.paragraph.icon_list_item.field_icon_list_link
+    - image.style.icon_list_image
+    - paragraphs.paragraphs_type.icon_list_item
+  module:
+    - link
+    - svg_image
+    - text
+id: paragraph.icon_list_item.default
+targetEntityType: paragraph
+bundle: icon_list_item
+mode: default
+content:
+  field_icon_list_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_icon_list_heading:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_icon_list_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: icon_list_image
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_icon_list_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  scheduled_publication: true

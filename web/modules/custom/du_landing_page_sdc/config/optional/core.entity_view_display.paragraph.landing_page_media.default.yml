@@ -1,0 +1,52 @@
+uuid: 49c676cb-da91-41af-82fd-3dd81046051c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.landing_page_media.field_image_or_video
+    - field.field.paragraph.landing_page_media.field_media_image
+    - field.field.paragraph.landing_page_media.field_media_video
+    - paragraphs.paragraphs_type.landing_page_media
+  module:
+    - options
+    - svg_image
+    - video_embed_field
+id: paragraph.landing_page_media.default
+targetEntityType: paragraph
+bundle: landing_page_media
+mode: default
+content:
+  field_image_or_video:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_media_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_media_video:
+    type: video_embed_field_video
+    label: hidden
+    settings:
+      autoplay: true
+      responsive: true
+      width: 854
+      height: 480
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

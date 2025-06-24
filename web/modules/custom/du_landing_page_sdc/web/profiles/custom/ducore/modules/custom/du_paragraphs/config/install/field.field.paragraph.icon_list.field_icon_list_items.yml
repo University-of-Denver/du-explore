@@ -1,0 +1,141 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icon_list_items
+    - paragraphs.paragraphs_type.icon_list
+    - paragraphs.paragraphs_type.icon_list_item
+  module:
+    - entity_reference_revisions
+id: paragraph.icon_list.field_icon_list_items
+field_name: field_icon_list_items
+entity_type: paragraph
+bundle: icon_list
+label: Items
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      icon_list_item: icon_list_item
+    negate: 0
+    target_bundles_drag_drop:
+      admission_steps:
+        weight: 39
+        enabled: false
+      admission_steps_in_content:
+        weight: 40
+        enabled: false
+      body_copy:
+        weight: 41
+        enabled: false
+      body_text:
+        weight: 42
+        enabled: false
+      card:
+        weight: 43
+        enabled: false
+      cards:
+        weight: 44
+        enabled: false
+      carousel:
+        weight: 45
+        enabled: false
+      cta:
+        weight: 46
+        enabled: false
+      embed_code:
+        weight: 47
+        enabled: false
+      event_list:
+        weight: 48
+        enabled: false
+      event_time_place:
+        weight: 49
+        enabled: false
+      expanding_list:
+        weight: 50
+        enabled: false
+      featured_event:
+        weight: 51
+        enabled: false
+      featured_event_slide:
+        weight: 52
+        enabled: false
+      featured_video_component:
+        weight: 53
+        enabled: false
+      hero_media:
+        weight: 54
+        enabled: false
+      homepage_facts:
+        weight: 55
+        enabled: false
+      homepage_programs_search:
+        weight: 56
+        enabled: false
+      homepage_quote:
+        weight: 57
+        enabled: false
+      homepage_quotes:
+        weight: 58
+        enabled: false
+      homepage_section_copy:
+        weight: 59
+        enabled: false
+      homepage_swapping_image_feature:
+        weight: 60
+        enabled: false
+      homepage_video_carousel:
+        weight: 61
+        enabled: false
+      hvc_slide:
+        weight: 62
+        enabled: false
+      icon_list:
+        weight: 63
+        enabled: false
+      icon_list_item:
+        weight: 64
+        enabled: true
+      inset_video:
+        weight: 65
+        enabled: false
+      quick_facts:
+        weight: 66
+        enabled: false
+      quick_facts_feature_fact:
+        weight: 67
+        enabled: false
+      quick_facts_list_item_simple:
+        weight: 68
+        enabled: false
+      quick_facts_list_of_facts:
+        weight: 69
+        enabled: false
+      related_stories:
+        weight: 70
+        enabled: false
+      show_hide_toggle:
+        weight: 71
+        enabled: false
+      slide:
+        weight: 72
+        enabled: false
+      stories:
+        weight: 73
+        enabled: false
+      subhead:
+        weight: 74
+        enabled: false
+      two_col_copy:
+        weight: 75
+        enabled: false
+      two_value_text:
+        weight: 76
+        enabled: false
+field_type: entity_reference_revisions

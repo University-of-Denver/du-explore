@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_unit_hero_display
+    - paragraphs.paragraphs_type.unit_hero_media_
+  module:
+    - options
+id: paragraph.unit_hero_media_.field_unit_hero_display
+field_name: field_unit_hero_display
+entity_type: paragraph
+bundle: unit_hero_media_
+label: 'Unit Hero Display'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: default
+default_value_callback: ''
+settings: {  }
+field_type: list_string

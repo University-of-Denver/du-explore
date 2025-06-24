@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_unit_type
+    - taxonomy.vocabulary.unit
+  module:
+    - options
+id: taxonomy_term.unit.field_unit_type
+field_name: field_unit_type
+entity_type: taxonomy_term
+bundle: unit
+label: Type
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

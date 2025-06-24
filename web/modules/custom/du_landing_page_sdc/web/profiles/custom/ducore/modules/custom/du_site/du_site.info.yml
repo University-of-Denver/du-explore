@@ -1,0 +1,7 @@
+name: 'DU SITE - Placeholder'
+type: module
+description: 'SEE WRIKE'
+core_version_requirement: ^10
+package: 'DU'
+dependencies:
+

@@ -1,0 +1,28 @@
+uuid: 98cbbf2b-ec09-4cfc-bef1-9c7b52631f01
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.landing_page_sdc.field_landing_page_content
+    - field.field.node.landing_page_sdc.field_landing_page_header
+    - field.field.node.landing_page_sdc.field_site_logo
+    - field.field.node.landing_page_sdc.field_site_logo_link
+    - node.type.landing_page_sdc
+  module:
+    - user
+id: node.landing_page_sdc.teaser
+targetEntityType: node
+bundle: landing_page_sdc
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_landing_page_content: true
+  field_landing_page_header: true
+  field_site_logo: true
+  field_site_logo_link: true

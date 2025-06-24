@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_config_pr_auth_token
+  module:
+    - user
+id: user.user.field_config_pr_auth_token
+field_name: field_config_pr_auth_token
+entity_type: user
+bundle: user
+label: 'Repository Access Token'
+description: "Learn how to create access tokens and set permissions to Create Pull requests, see https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token/\r\n"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

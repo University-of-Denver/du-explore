@@ -1,0 +1,169 @@
+uuid: ba4b4105-9e56-4e14-be37-a193ffc7d348
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_landing_page_content
+    - node.type.landing_page_sdc
+    - paragraphs.paragraphs_type.cards
+    - paragraphs.paragraphs_type.cta
+    - paragraphs.paragraphs_type.cta_inline
+    - paragraphs.paragraphs_type.embed_code
+    - paragraphs.paragraphs_type.enhanced_expanding_list
+    - paragraphs.paragraphs_type.expanding_list
+    - paragraphs.paragraphs_type.icon_list
+    - paragraphs.paragraphs_type.landing_page_copy
+    - paragraphs.paragraphs_type.named_anchor
+    - paragraphs.paragraphs_type.two_col_copy
+    - paragraphs.paragraphs_type.unit_carousel
+    - paragraphs.paragraphs_type.webform
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: xO2P83UQJRk45L9nQjkuHp7R8qBYaEQ0DvaJGJ2yfTY
+id: node.landing_page_sdc.field_landing_page_content
+field_name: field_landing_page_content
+entity_type: node
+bundle: landing_page_sdc
+label: 'Landing Page Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      cards: cards
+      cta: cta
+      cta_inline: cta_inline
+      embed_code: embed_code
+      enhanced_expanding_list: enhanced_expanding_list
+      expanding_list: expanding_list
+      icon_list: icon_list
+      named_anchor: named_anchor
+      landing_page_copy: landing_page_copy
+      two_col_copy: two_col_copy
+      unit_carousel: unit_carousel
+      webform: webform
+    negate: 0
+    target_bundles_drag_drop:
+      body_copy:
+        weight: 37
+        enabled: false
+      body_text:
+        weight: 38
+        enabled: false
+      button:
+        weight: 39
+        enabled: false
+      card:
+        weight: 40
+        enabled: false
+      cards:
+        weight: 41
+        enabled: true
+      category_link:
+        weight: 42
+        enabled: false
+      category_menu:
+        weight: 43
+        enabled: false
+      cta:
+        weight: 44
+        enabled: true
+      cta_inline:
+        weight: 45
+        enabled: true
+      embed_code:
+        weight: 46
+        enabled: true
+      enhanced_expanding_list:
+        weight: 47
+        enabled: true
+      enhanced_list_item:
+        weight: 48
+        enabled: false
+      event_list:
+        weight: 49
+        enabled: false
+      event_time_place:
+        weight: 53
+        enabled: false
+      expanding_list:
+        weight: 50
+        enabled: true
+      feature_media_image:
+        weight: 51
+        enabled: false
+      hero_media:
+        weight: 52
+        enabled: false
+      icon_link:
+        weight: 53
+        enabled: false
+      icon_list:
+        weight: 54
+        enabled: true
+      icon_list_item:
+        weight: 55
+        enabled: false
+      image_with_caption:
+        weight: 56
+        enabled: false
+      inset_video:
+        weight: 57
+        enabled: false
+      landing_page_copy:
+        weight: 61
+        enabled: true
+      landing_page_header:
+        weight: 59
+        enabled: false
+      landing_page_media:
+        weight: 61
+        enabled: false
+      list_of_links:
+        weight: 58
+        enabled: false
+      named_anchor:
+        weight: 59
+        enabled: true
+      show_hide_toggle:
+        weight: 61
+        enabled: false
+      social_media_bar:
+        weight: 62
+        enabled: false
+      stories:
+        weight: 63
+        enabled: false
+      subhead:
+        weight: 64
+        enabled: false
+      temporary:
+        weight: 65
+        enabled: false
+      testimonials_spotlight:
+        weight: 66
+        enabled: false
+      two_col_copy:
+        weight: 67
+        enabled: true
+      two_value_text:
+        weight: 68
+        enabled: false
+      unit_carousel:
+        weight: 69
+        enabled: true
+      unit_hero_media_:
+        weight: 70
+        enabled: false
+      unit_slide:
+        weight: 71
+        enabled: false
+      webform:
+        weight: 72
+        enabled: true
+field_type: entity_reference_revisions

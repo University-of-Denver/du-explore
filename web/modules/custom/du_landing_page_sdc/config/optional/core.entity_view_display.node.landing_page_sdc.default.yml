@@ -1,0 +1,44 @@
+uuid: aef39039-59a3-418a-8b02-849e83e9740f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.landing_page_sdc.field_landing_page_content
+    - field.field.node.landing_page_sdc.field_landing_page_header
+    - field.field.node.landing_page_sdc.field_site_logo
+    - field.field.node.landing_page_sdc.field_site_logo_link
+    - node.type.landing_page_sdc
+  module:
+    - entity_reference_revisions
+    - user
+id: node.landing_page_sdc.default
+targetEntityType: node
+bundle: landing_page_sdc
+mode: default
+content:
+  field_landing_page_content:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_landing_page_header:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_site_logo: true
+  field_site_logo_link: true

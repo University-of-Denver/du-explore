@@ -1,0 +1,21 @@
+uuid: b051102a-a001-411e-8462-e0ea5f06fb8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - paragraphs.paragraphs_type.landing_page_copy
+_core:
+  default_config_hash: 1P7nPCL75lSiohsct-2d1JyOGDyHeZqnUdk2WYuIIJc
+id: paragraph.landing_page_copy.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: landing_page_copy
+label: 'Heading (h3)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

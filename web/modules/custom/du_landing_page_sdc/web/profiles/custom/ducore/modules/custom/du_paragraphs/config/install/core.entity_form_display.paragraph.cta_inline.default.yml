@@ -1,0 +1,58 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cta_inline.field_cta_inline_headline
+    - field.field.paragraph.cta_inline.field_link
+    - paragraphs.paragraphs_type.cta_inline
+  module:
+    - link_attributes
+id: paragraph.cta_inline.default
+targetEntityType: paragraph
+bundle: cta_inline
+mode: default
+content:
+  field_cta_inline_headline:
+    type: string_textfield
+    weight: 103
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_link:
+    type: link_attributes
+    weight: 104
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        onClick: true
+        fragment: true
+        target: true
+        rel: true
+        class: true
+        aria-label: true
+        title: false
+        data-toggle: false
+        id: false
+        name: false
+        accesskey: false
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduled_publication:
+    type: datetime_default
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

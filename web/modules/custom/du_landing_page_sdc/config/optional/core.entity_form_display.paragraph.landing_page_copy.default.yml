@@ -1,0 +1,60 @@
+uuid: a66d1a5e-37e6-476f-b921-13ffce9c2f7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.browse_files
+    - field.field.paragraph.landing_page_copy.field_body_text
+    - field.field.paragraph.landing_page_copy.field_copy_image
+    - field.field.paragraph.landing_page_copy.field_heading
+    - field.field.paragraph.landing_page_copy.field_subhead
+    - paragraphs.paragraphs_type.landing_page_copy
+  module:
+    - entity_browser
+    - text
+id: paragraph.landing_page_copy.default
+targetEntityType: paragraph
+bundle: landing_page_copy
+mode: default
+content:
+  field_body_text:
+    type: text_textarea
+    weight: 101
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_copy_image:
+    type: entity_browser_file
+    weight: 4
+    region: content
+    settings:
+      entity_browser: browse_files
+      field_widget_edit: true
+      field_widget_remove: true
+      field_widget_replace: false
+      open: false
+      selection_mode: selection_append
+      view_mode: default
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_heading:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_subhead:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

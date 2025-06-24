@@ -1,0 +1,21 @@
+uuid: c3b967b9-dd4a-4232-a900-de942a8c1686
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_button_style
+    - paragraphs.paragraphs_type.landing_page_header
+  module:
+    - options
+id: paragraph.landing_page_header.field_button_style
+field_name: field_button_style
+entity_type: paragraph
+bundle: landing_page_header
+label: 'Button Style'
+description: 'Select the button style option'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

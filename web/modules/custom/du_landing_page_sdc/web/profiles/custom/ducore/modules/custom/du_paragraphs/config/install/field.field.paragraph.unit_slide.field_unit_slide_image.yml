@@ -1,0 +1,37 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_unit_slide_image
+    - paragraphs.paragraphs_type.unit_slide
+  module:
+    - image
+id: paragraph.unit_slide.field_unit_slide_image
+field_name: field_unit_slide_image
+entity_type: paragraph
+bundle: unit_slide
+label: Image
+description: 'The image size needs to be 1279 by 560.  If it is not, it will be automatically scaled and cropped to fit that size.  If the image is too small, it probably will not be changed.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: unit-slide-image
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

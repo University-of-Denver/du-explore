@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_list_of_links_layout
+    - paragraphs.paragraphs_type.list_of_links
+  module:
+    - options
+id: paragraph.list_of_links.field_list_of_links_layout
+field_name: field_list_of_links_layout
+entity_type: paragraph
+bundle: list_of_links
+label: Layout
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: one-col
+default_value_callback: ''
+settings: {  }
+field_type: list_string

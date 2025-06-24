@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.feature_media_image.field_feature_media_image
+    - paragraphs.paragraphs_type.feature_media_image
+    - responsive_image.styles.feature_media_image
+  module:
+    - responsive_image
+id: paragraph.feature_media_image.default
+targetEntityType: paragraph
+bundle: feature_media_image
+mode: default
+content:
+  field_feature_media_image:
+    type: responsive_image
+    label: hidden
+    settings:
+      responsive_image_style: feature_media_image
+      image_link: ''
+      image_loading:
+        attribute: eager
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  scheduled_publication: true

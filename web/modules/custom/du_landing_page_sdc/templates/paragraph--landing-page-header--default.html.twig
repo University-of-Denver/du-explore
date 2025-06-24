@@ -1,0 +1,91 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a landing page header paragraph.
+ *
+ * Available variables:
+ * - paragraph: Full paragraph entity.
+ * - content: All paragraph items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ */
+#}
+{% set background_image = paragraph.field_background_image.entity.fileuri %}
+{% set background_image_url = file_url(background_image) %}
+{% set height_class = paragraph.field_auto_height.value ? 'landing-page-sdc__field--field-landing-page-header__height-auto' : 'landing-page-sdc__field--field-landing-page-header__height-full' %}
+{% set text_color_value = paragraph.field_text_color.value %}
+{% set text_color_class = text_color_value ? 'landing-page-sdc__field--field-landing-page-header__text-color-' ~ text_color_value|replace({' ': '-'})|lower : '' %}
+
+<div class="landing-page-sdc__field landing-page-sdc__field--field-landing-page-header {{ height_class }}">
+  <div class="landing-page-sdc__field--field-landing-page-header__background" style="background-image: url('{{ background_image_url }}');"></div>
+  {% if paragraph.field_use_gradient.value %}
+    <div class="landing-page-sdc__field--field-landing-page-header__overlay"></div>
+  {% endif %}
+  <div class="landing-page-sdc__field--field-landing-page-header__content {{ text_color_class }}">
+    <div class="landing-page-sdc__field--field-landing-page-header__content-left">
+      {% if content.field_subheading_optional|render %}
+        <div class="field field--name-field-subheading-optional field--type-string field--label-hidden field__item">
+          {{ content.field_subheading_optional }}
+        </div>
+      {% endif %}
+
+      {% if content.field_primary_title_text|render %}
+        <div class="field field--name-field-primary-title-text field--type-string field--label-hidden field__item">
+          {{ content.field_primary_title_text }}
+        </div>
+      {% endif %}
+
+      {% if content.field_body_text_optional|render %}
+        <div class="field field--name-field-body-text-optional field--type-text-long field--label-hidden field__item">
+          {{ content.field_body_text_optional }}
+        </div>
+      {% endif %}
+
+      {% if content.field_cta_optional|render %}
+        <div class="field field--name-field-cta-optional field--type-link field--label-hidden field__items landing-page-sdc__field--field-landing-page-header__cta">
+          {% for item in content.field_cta_optional %}
+            {% if item['#title'] is defined %}
+              <div class="field__item">
+                <a href="{{ item['#url'] }}" class="landing-page-sdc__field--field-landing-page-header__cta-link">{{ item['#title'] }}</a>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+    <div class="landing-page-sdc__field--field-landing-page-header__content-right">
+      {% if content.field_hero_multimedia_section|render %}
+        <div class="landing-page-sdc__field--field-landing-page-header__multimedia-section">
+          {% for item in content.field_hero_multimedia_section %}
+            {% if item['#paragraph'] is defined %}
+              {% set paragraph = item['#paragraph'] %}
+              {% set bundle = paragraph.bundle() %}
+
+              {% if bundle == 'landing_page_media' %}
+                {% set media_type = paragraph.field_image_or_video.value %}
+                {% if media_type == 'image' %}
+                  <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">
+                  {{ paragraph.field_media_image|view }}
+                  </div>
+                {% elseif media_type == 'video' %}
+                  <div class="field field--name-field-media-video field--type-video-embed-field field--label-hidden field__item">
+                    {{ paragraph.field_media_video|view}}
+                  </div>
+                {% endif %}
+              {% elseif bundle == 'embed_code' %}
+                <div class="field field--name-field-embed-code field--type-text-long field--label-hidden field__item">
+                  {{ paragraph.field_embed_code|view }}
+                </div>
+              {% elseif bundle == 'body_text' %}
+                <div class="field field--name-field-body-text field--type-text-long field--label-hidden field__item">
+                  {{ paragraph.field_body_text|view }}
+                </div>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

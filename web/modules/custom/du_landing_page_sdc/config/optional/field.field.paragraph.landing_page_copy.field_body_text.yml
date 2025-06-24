@@ -1,0 +1,24 @@
+uuid: d4105e9d-a620-4b2b-9771-0c76cdfa8d0d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body_text
+    - filter.format.rich_text
+    - paragraphs.paragraphs_type.landing_page_copy
+  module:
+    - text
+id: paragraph.landing_page_copy.field_body_text
+field_name: field_body_text
+entity_type: paragraph
+bundle: landing_page_copy
+label: 'Body Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - rich_text
+field_type: text_long

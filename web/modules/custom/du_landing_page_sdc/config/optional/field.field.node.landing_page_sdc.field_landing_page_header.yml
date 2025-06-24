@@ -1,0 +1,139 @@
+uuid: ef7076f2-dbf3-42cc-b0fe-8125b844c88a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_landing_page_header
+    - node.type.landing_page_sdc
+    - paragraphs.paragraphs_type.landing_page_header
+  module:
+    - entity_reference_revisions
+id: node.landing_page_sdc.field_landing_page_header
+field_name: field_landing_page_header
+entity_type: node
+bundle: landing_page_sdc
+label: 'Hero and Above the Fold Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      landing_page_header: landing_page_header
+    negate: 0
+    target_bundles_drag_drop:
+      body_copy:
+        weight: 37
+        enabled: false
+      body_text:
+        weight: 38
+        enabled: false
+      button:
+        weight: 39
+        enabled: false
+      card:
+        weight: 40
+        enabled: false
+      cards:
+        weight: 41
+        enabled: false
+      category_link:
+        weight: 42
+        enabled: false
+      category_menu:
+        weight: 43
+        enabled: false
+      cta:
+        weight: 44
+        enabled: false
+      cta_inline:
+        weight: 45
+        enabled: false
+      embed_code:
+        weight: 46
+        enabled: false
+      enhanced_expanding_list:
+        weight: 47
+        enabled: false
+      enhanced_list_item:
+        weight: 48
+        enabled: false
+      event_list:
+        weight: 49
+        enabled: false
+      expanding_list:
+        weight: 50
+        enabled: false
+      feature_media_image:
+        weight: 51
+        enabled: false
+      hero_media:
+        weight: 52
+        enabled: false
+      icon_link:
+        weight: 53
+        enabled: false
+      icon_list:
+        weight: 54
+        enabled: false
+      icon_list_item:
+        weight: 55
+        enabled: false
+      image_with_caption:
+        weight: 56
+        enabled: false
+      inset_video:
+        weight: 57
+        enabled: false
+      landing_page_header:
+        weight: 59
+        enabled: true
+      list_of_links:
+        weight: 58
+        enabled: false
+      named_anchor:
+        weight: 59
+        enabled: false
+      reusable_content:
+        weight: 60
+        enabled: false
+      show_hide_toggle:
+        weight: 61
+        enabled: false
+      social_media_bar:
+        weight: 62
+        enabled: false
+      stories:
+        weight: 63
+        enabled: false
+      subhead:
+        weight: 64
+        enabled: false
+      temporary:
+        weight: 65
+        enabled: false
+      testimonials_spotlight:
+        weight: 66
+        enabled: false
+      two_col_copy:
+        weight: 67
+        enabled: false
+      two_value_text:
+        weight: 68
+        enabled: false
+      unit_carousel:
+        weight: 69
+        enabled: false
+      unit_hero_media_:
+        weight: 70
+        enabled: false
+      unit_slide:
+        weight: 71
+        enabled: false
+      webform:
+        weight: 72
+        enabled: false
+field_type: entity_reference_revisions

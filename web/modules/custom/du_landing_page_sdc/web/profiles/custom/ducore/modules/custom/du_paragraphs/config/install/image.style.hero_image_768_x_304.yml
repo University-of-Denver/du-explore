@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: hero_image_768_x_304
+label: 'Hero Image 768 x 304'
+effects:
+  d4ab9110-e17e-4b35-8d7f-f033a123e52f:
+    uuid: d4ab9110-e17e-4b35-8d7f-f033a123e52f
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 768
+      height: 304
+      anchor: center-center

@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: featured_media_image_800_x_534
+label: 'Featured media image 800 x 534'
+effects:
+  a4632d58-314b-48fb-a821-31b55403be95:
+    uuid: a4632d58-314b-48fb-a821-31b55403be95
+    id: image_scale
+    weight: 1
+    data:
+      width: 800
+      height: null
+      upscale: true

@@ -1,0 +1,982 @@
+/* Font Declarations */
+@font-face {
+  font-family: "neue-haas-unica";
+  src: url("https://use.typekit.net/af/404934/00000000000000007735bb2a/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),
+       url("https://use.typekit.net/af/404934/00000000000000007735bb2a/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),
+       url("https://use.typekit.net/af/404934/00000000000000007735bb2a/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "neue-haas-unica";
+  src: url("https://use.typekit.net/af/98fb6b/00000000000000007735bb14/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),
+       url("https://use.typekit.net/af/98fb6b/00000000000000007735bb14/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),
+       url("https://use.typekit.net/af/98fb6b/00000000000000007735bb14/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "neue-haas-unica";
+  src: url("https://use.typekit.net/af/4a8091/00000000000000007735bb02/31/l?subset_id=2&fvd=n8&v=3") format("woff2"),
+       url("https://use.typekit.net/af/4a8091/00000000000000007735bb02/31/d?subset_id=2&fvd=n8&v=3") format("woff"),
+       url("https://use.typekit.net/af/4a8091/00000000000000007735bb02/31/a?subset_id=2&fvd=n8&v=3") format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "sole-serif-titling-variable";
+  src: url("https://use.typekit.net/af/a452b6/0000000000000000774bb358/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3") format("woff2"),
+       url("https://use.typekit.net/af/a452b6/0000000000000000774bb358/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3") format("woff"),
+       url("https://use.typekit.net/af/a452b6/0000000000000000774bb358/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3") format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 200 900;
+  font-stretch: normal;
+}
+
+/* Landing Page Base Styles */
+.landing-page-sdc {
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+.landing-page-template footer {
+  overflow-x: hidden; /* Hide horizontal overflow in footer */
+  width: 100%;
+}
+
+.landing-page-sdc__content {
+  flex: 1;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Landing Page Header */
+.landing-page-sdc__field--field-landing-page-header {
+  position: relative;
+  width: 100%;
+  align-items: center;
+}
+
+.landing-page-sdc__field--field-landing-page-header__height-auto {
+  height: auto;
+}
+
+.landing-page-sdc__field--field-landing-page-header__height-full {
+  height: 618px;
+}
+
+/* Header CTA Styles */
+.field--name-field-cta-optional.field__items.landing-page-sdc__field--field-landing-page-header__cta {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Responsive CTA Styles */
+@media (max-width: 768px) {
+  .field--name-field-cta-optional.field__items.landing-page-sdc__field--field-landing-page-header__cta {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .field--name-field-cta-optional.field__items.landing-page-sdc__field--field-landing-page-header__cta .field__item {
+    width: 100%;
+  }
+
+  .field--name-field-cta-optional.field__items.landing-page-sdc__field--field-landing-page-header__cta .landing-page-sdc__field--field-landing-page-header__cta-link {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Hide first two CTAs */
+.field--name-field-cta-optional.field__items.landing-page-sdc__field--field-landing-page-header__cta .field__item:nth-child(-n+2) {
+  display: none;
+}
+
+/* Style the third CTA (primary) */
+.field--name-field-cta-optional.field__items.landing-page-sdc__field--field-landing-page-header__cta .field__item:nth-child(3) .landing-page-sdc__field--field-landing-page-header__cta-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  background: #BA0C2F;
+  border: 1px solid #BA0C2F;
+  border-radius: 4px;
+  color: #FFFFFF !important;
+  text-decoration: none;
+  font-family: "neue-haas-unica", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* Style the fourth CTA (secondary) */
+.field--name-field-cta-optional.field__items.landing-page-sdc__field--field-landing-page-header__cta .field__item:nth-child(4) .landing-page-sdc__field--field-landing-page-header__cta-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  background: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  border-radius: 4px;
+  color: #000000 !important;
+  text-decoration: none;
+  font-family: "neue-haas-unica", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* Text Color Options */
+.landing-page-sdc__field--field-landing-page-header__text-color-black {
+  color: #000000;
+}
+
+.landing-page-sdc__field--field-landing-page-header__text-color-white {
+  color: #FFFFFF;
+}
+
+.landing-page-sdc__field--field-landing-page-header__text-color-crimson-red {
+  color: #B22222;
+}
+
+/* Hide the original background image field */
+.field--name-field-background-image {
+  display: none !important;
+}
+
+/* Background Image */
+.landing-page-sdc__field--field-landing-page-header__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+/* Overlay */
+.landing-page-sdc__field--field-landing-page-header__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%);
+  z-index: 1;
+}
+
+/* Content */
+.landing-page-sdc__field--field-landing-page-header__content {
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+  margin-top: -10px;
+  padding: 5% 10%;
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+}
+
+.landing-page-sdc__field--field-landing-page-header__content-left {
+  flex: 1;
+  max-width: 50%;
+  position: sticky;
+  top: 100px;
+  align-self: flex-start;
+  height: fit-content;
+  z-index: 10;
+  transition: top 0.3s ease;
+  background-color: transparent !important;
+}
+
+.landing-page-sdc__field--field-landing-page-header__content-right {
+  flex: 1;
+  max-width: 50%;
+}
+
+/* Header Content Styles */
+.field--name-field-subheading-optional {
+  font-family: "sole-serif-titling-variable", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 28px;
+  flex: none;
+  order: 0;
+  width: 90%;
+  align-self: stretch;
+  flex-grow: 0;
+  margin-bottom: 1rem;
+}
+
+.field--name-field-primary-title-text {
+  font-family: "neue-haas-unica", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  width: 90%;
+  font-size: 48px;
+  line-height: 120%;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  margin-bottom: 1.5rem;
+}
+
+.field--name-field-primary-title-text .field__item {
+  font-family: "neue-haas-unica", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 120%;
+}
+
+.field--name-field-body-text-optional {
+  font-family: "neue-haas-unica", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 120%;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin-bottom: 2rem;
+  width: 90%;
+}
+
+.field--name-field-body-text-optional p {
+  margin: 0;
+  padding: 0;
+}
+
+.field--name-field-body-text-optional strong {
+  font-weight: 700;
+}
+
+.field--name-field-cta-optional {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Hide the first two CTA items in the header */
+.field--name-field-cta-optional .field__item:nth-child(-n+2) {
+  display: none;
+}
+
+/* Main Content Section */
+.landing-page-sdc__field--field-landing-page-content {
+  padding: 4rem 2rem;
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .landing-page-sdc__field--field-landing-page-content {
+    padding: 1rem;
+    max-width: 95%;
+  }
+}
+
+/* Two Column Layout */
+.two-column-copy {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  .two-column-copy {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.two-column-copy h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.two-column-copy p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .landing-page-sdc__field--field-landing-page-header {
+    padding: 3rem 1rem;
+  }
+
+  .field--name-field-primary-title-text {
+    font-size: 2rem;
+  }
+
+  .field--name-field-cta-optional {
+    flex-direction: column;
+  }
+
+  .field--name-field-cta-optional a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .landing-page-sdc__field--field-landing-page-header__content {
+    flex-direction: column;
+    padding: 3rem 1rem;
+  }
+
+  .landing-page-sdc__field--field-landing-page-header__content-left,
+  .landing-page-sdc__field--field-landing-page-header__content-right {
+    max-width: 100%;
+    position: static; /* Disable sticky positioning on mobile */
+    top: auto;
+    align-self: auto;
+  }
+
+  .field--name-field-subheading-optional,
+  .field--name-field-primary-title-text,
+  .field--name-field-body-text-optional {
+    width: 100%;
+  }
+
+  .field--name-field-primary-title-text .field__item {
+    font-size: 32px;
+  }
+
+  .field--name-field-body-text-optional .field__item{
+    font-size: 16px;
+  }
+
+  .field--name-field-subheading-optional .field__item {
+    font-size: 20px;
+  }
+}
+
+/* Menu Styles */
+.navbar {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+  z-index: 1030; /* Ensure navbar stays above other content */
+}
+
+.sticky-nav {
+  position: sticky !important;
+  top: 0;
+  width: 100%;
+  background-color: #FFFFFF;
+}
+
+.navbar .container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 992px) {
+  .navbar .container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+.navbar .navbar-brand {
+  height: 65px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .navbar-brand img {
+  height: 40px;
+  width: auto;
+}
+
+/* Responsive Menu */
+@media (max-width: 768px) {
+  .navbar .container {
+    padding: 0.75rem 1rem;
+  }
+
+  .navbar .navbar-brand img {
+    height: 32px;
+  }
+}
+
+/* Form Styles */
+.field--name-field-cta-optional .fieldset__description {
+  font-size: 1.1em;
+  color: #333;
+  margin-bottom: 1.5em;
+  padding: 0.5em;
+  background-color: #f8f9fa;
+  border-left: 4px solid #007bff;
+}
+
+.field--name-field-cta-optional .form-item {
+  margin-bottom: 2em;
+  padding: 1em;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+}
+
+.field--name-field-cta-optional .form-item:hover {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.field--name-field-cta-optional .form-item__description {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 0.5em;
+  font-style: italic;
+}
+
+/* Accessibility */
+.visually-hidden {
+  position: absolute !important;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  word-wrap: normal;
+}
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  position: static !important;
+  overflow: visible;
+  clip: auto;
+  width: auto;
+  height: auto;
+}
+
+/* Menu Container */
+.landing-page-sdc-menu__container {
+  max-width: 90% !important;
+  margin: 0 auto;
+}
+
+.landing-page-sdc-menu__container .row {
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .landing-page-sdc-menu__container {
+    max-width: 100% !important;
+  }
+
+  .landing-page-sdc-menu__container .row {
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+}
+
+/* Custom CTA Button Styles */
+.landing-page-sdc-menu__cta {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+
+.landing-page-cta-primary,
+.landing-page-cta-secondary {
+  font-family: "Neue Haas Unica", sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 20px !important;
+  line-height: 100% !important;
+  letter-spacing: 0% !important;
+  vertical-align: middle !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+}
+
+.landing-page-cta-primary {
+  color: #FFFFFF !important;
+  background-color: #BA0C2F !important;
+  border: 1px solid #BA0C2F !important;
+  border-radius: 4px !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 30px 24px !important;
+  gap: 10px !important;
+  width: 162px !important;
+  height: 56px !important;
+  flex: none !important;
+  order: 1 !important;
+  flex-grow: 0 !important;
+}
+
+.landing-page-cta-secondary {
+  color: #000000 !important;
+  background-color: transparent !important;
+  border: 1px solid #000000 !important;
+  border-radius: 4px !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 30px 24px !important;
+  gap: 10px !important;
+  width: 189px !important;
+  height: 56px !important;
+  flex: none !important;
+  order: 0 !important;
+  flex-grow: 0 !important;
+}
+
+/* Hide first two CTA values in the field display */
+.field--name-field-cta-optional .field__item:nth-child(-n+2) {
+  display: none;
+}
+
+.landing-page-sdc__field--field-landing-page-header__multimedia-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  width: auto;
+  height: auto;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* Ensure images and videos fill their container */
+.landing-page-sdc__field--field-landing-page-header__multimedia-section img,
+.landing-page-sdc__field--field-landing-page-header__multimedia-section video {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .landing-page-sdc__field--field-landing-page-header__multimedia-section {
+    padding: 20px;
+  }
+}
+
+/* Video Embed Field Styling */
+.video-embed-field-provider-youtube {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  overflow: hidden;
+}
+
+.video-embed-field-provider-youtube iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Ensure video container takes full width of its parent */
+.field--name-field-media-video {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .video-embed-field-provider-youtube {
+    padding-bottom: 56.25%; /* Maintain 16:9 aspect ratio on mobile */
+  }
+}
+
+/* Landing Page Copy Styles */
+.field--name-field-heading.field--type-string {
+  font-family: "neue-haas-unica", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 160%;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.field--name-field-subhead.field--type-string {
+  font-family: "sole-serif-titling-variable", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 160%;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.field--name-field-body-text.field--type-text-long {
+  font-family: "neue-haas-unica", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: #000000;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.field--name-field-body-text .field__item p {
+  font-family: 'Neue Haas Unica';
+  font-size: 16px;
+}
+
+.field--name-field-body-text .field__item h2 {
+}
+
+.field--name-field-body-text .field__item h3 {
+  font-family: 'Neue Haas Unica';
+  font-weight: 800;
+  font-size: 36px;
+}
+
+.field--name-field-body-text .field__item h4 {
+}
+
+.field--name-field-body-text .field__item h5 {
+}
+
+.field--name-field-body-text .field__item h6 {
+}
+
+.landing-page-copy-text {
+  width: 100%;
+  margin-top: 12%;
+  margin-left: -7%;
+  z-index: 2;
+  background-color: #FFFFFF;
+  padding: 3rem 6.5rem 3rem 4rem;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .landing-page-copy-text {
+    padding: 0;
+    margin-left: 0
+  }
+}
+
+.landing-page-copy-text .field--name-field-heading {
+  position: relative;
+  padding: 1rem 6.5rem 3rem 0;
+  margin-bottom: 20px;
+}
+
+.landing-page-copy-text .field--name-field-heading:after {
+  content: "";
+  width: 8.5rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: .6rem;
+  background-color: #18171e;
+}
+
+.landing-page-copy-image {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.landing-page-copy-image img {
+  width: 100%;
+  height: auto;
+}
+
+.paragraph--type--landing-page-copy {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .paragraph--type--landing-page-copy {
+    flex-direction: column;
+  }
+
+  .landing-page-copy-text,
+  .landing-page-copy-image {
+    width: 100%;
+    padding-right: 0;
+    margin-top: 0;
+  }
+}
+
+/* Embed Code Field Styling */
+.landing-page-sdc__field--field-landing-page-header__multimedia-section .field--name-field-embed-code {
+  color: initial !important;
+  width: 100%;
+}
+
+.landing-page-sdc__field--field-landing-page-header__multimedia-section .field--name-field-embed-code .embed-title {
+  font-family: "neue-haas-unica", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: initial;
+}
+
+/* Form Input Styles */
+.landing-page-sdc__field--field-landing-page-header__multimedia-section .field--name-field-embed-code div.form_page input[type=password],
+.landing-page-sdc__field--field-landing-page-header__multimedia-section .field--name-field-embed-code div.form_page input[type=text]:not([name*="birthdate"]),
+.landing-page-sdc__field--field-landing-page-header__multimedia-section .field--name-field-embed-code div.form_page input[type=email],
+.landing-page-sdc__field--field-landing-page-header__multimedia-section .field--name-field-embed-code div.form_page input[type=tel],
+.landing-page-sdc__field--field-landing-page-header__multimedia-section .field--name-field-embed-code div.form_page input[type=time],
+.landing-page-sdc__field--field-landing-page-header__multimedia-section .field--name-field-embed-code div.form_page input:not([type]),
+.landing-page-sdc__field--field-landing-page-header__multimedia-section .field--name-field-embed-code div.form_page textarea {
+  box-sizing: border-box;
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Form Submit Button Styles */
+.landing-page-sdc__field--field-landing-page-header__multimedia-section .field--name-field-embed-code .action.form_action_submit {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.landing-page-sdc__field--field-landing-page-header__multimedia-section .field--name-field-embed-code .action.form_action_submit .form_button_submit {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 24px;
+  gap: 10px;
+  width: 100%;
+  height: 56px;
+  background: #BA0C2F;
+  border: 1px solid #BA0C2F;
+  border-radius: 4px;
+  color: #FFFFFF;
+  font-family: "neue-haas-unica", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.landing-page-sdc__field--field-landing-page-header__multimedia-section .field--name-field-embed-code .action.form_action_submit .form_button_submit:hover {
+  background: #8B0923;
+  border-color: #8B0923;
+}
+
+/* Form Label Styles */
+.landing-page-sdc__field--field-landing-page-header__multimedia-section .field--name-field-embed-code .form_label {
+  font-family: "neue-haas-unica", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #18161F;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  margin-bottom: 8px;
+  display: block;
+}
+
+fieldset .form_response label {
+  text-align: left;
+}
+
+/* Form Input Styles - Landing Page Content */
+.field--name-field-landing-page-content div.form_page input[type=password],
+.field--name-field-landing-page-content div.form_page input[type=text]:not([name*="birthdate"]),
+.field--name-field-landing-page-content div.form_page input[type=email],
+.field--name-field-landing-page-content div.form_page input[type=tel],
+.field--name-field-landing-page-content div.form_page input[type=time],
+.field--name-field-landing-page-content div.form_page input:not([type]),
+.field--name-field-landing-page-content div.form_page textarea {
+  box-sizing: border-box;
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Form Submit Button Styles - Landing Page Content */
+.field--name-field-landing-page-content .action.form_action_submit {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.field--name-field-landing-page-content .action.form_action_submit .form_button_submit {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 24px;
+  gap: 10px;
+  width: 100%;
+  height: 56px;
+  background: #BA0C2F;
+  border: 1px solid #BA0C2F;
+  border-radius: 4px;
+  color: #FFFFFF;
+  font-family: "neue-haas-unica", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.field--name-field-landing-page-content .action.form_action_submit .form_button_submit:hover {
+  background: #8B0923;
+  border-color: #8B0923;
+}
+
+/* Form Label Styles - Landing Page Content */
+.field--name-field-landing-page-content .form_label {
+  font-family: "neue-haas-unica", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #18161F;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Checkbox Styles */
+.form_response {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.form_response input[type="checkbox"] {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  margin: 0;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.form_response input[type="radio"] {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  margin: 0;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.form_response label {
+  font-family: "neue-haas-unica", sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
+  cursor: pointer;
+  flex: 1;
+}
+
+/* Center align embed code paragraphs in landing page content */
+.field--name-field-landing-page-content .paragraph--type--embed-code {
+  text-align: center;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .field--name-field-landing-page-content .paragraph--type--embed-code {
+    max-width: 100%;
+  }
+}
+
+.field--name-field-landing-page-content .paragraph--type--embed-code .embed-title {
+  text-align: center;
+  font-family: "neue-haas-unica", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: initial;
+}
+
+.remove-margin-top {
+  margin-top: 0 !important;
+}
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}

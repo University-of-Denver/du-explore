@@ -1,0 +1,32 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a landing page HTML structure.
+ *
+ * This template provides a minimal HTML structure for landing pages,
+ * excluding menus and other standard page elements.
+ */
+#}
+<!DOCTYPE html>
+<html{{ html_attributes }}>
+  <head>
+    <head-placeholder token="{{ placeholder_token }}">
+    <title>{{ head_title|safe_join(' | ') }}</title>
+    <css-placeholder token="{{ placeholder_token }}">
+    <js-placeholder token="{{ placeholder_token }}">
+  </head>
+  <body{{ attributes.addClass('landing-page') }}>
+    {# Accessibility skip link - important for keyboard navigation #}
+    <a href="#main-content" class="visually-hidden focusable">
+      {{ 'Skip to main content'|t }}
+    </a>
+
+    {# Main content wrapper #}
+    <div id="main-content" class="landing-page__content">
+      {{ page_top }}
+      {{ page }}
+    </div>
+
+    <js-bottom-placeholder token="{{ placeholder_token }}">
+  </body>
+</html>

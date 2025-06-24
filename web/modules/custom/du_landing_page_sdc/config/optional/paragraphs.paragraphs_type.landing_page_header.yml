@@ -1,0 +1,10 @@
+uuid: 49f091e8-92fb-40f8-b545-9dbae0e07471
+langcode: en
+status: true
+dependencies: {  }
+id: landing_page_header
+label: 'Landing Page Header'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icon_list_description
+    - paragraphs.paragraphs_type.icon_list_item
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    rich_text: rich_text
+    embed_code: '0'
+    inline_formatting: '0'
+    plain_text: '0'
+id: paragraph.icon_list_item.field_icon_list_description
+field_name: field_icon_list_description
+entity_type: paragraph
+bundle: icon_list_item
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

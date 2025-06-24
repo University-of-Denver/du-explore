@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_unit_division
+    - taxonomy.vocabulary.unit
+id: taxonomy_term.unit.field_unit_division
+field_name: field_unit_division
+entity_type: taxonomy_term
+bundle: unit
+label: Division
+description: 'e.g: "Division of Natural Sciences & Mathematics"'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

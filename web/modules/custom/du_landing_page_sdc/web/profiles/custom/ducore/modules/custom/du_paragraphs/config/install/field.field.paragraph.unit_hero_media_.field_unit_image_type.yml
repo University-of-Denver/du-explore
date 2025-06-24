@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_unit_image_type
+    - paragraphs.paragraphs_type.unit_hero_media_
+id: paragraph.unit_hero_media_.field_unit_image_type
+field_name: field_unit_image_type
+entity_type: paragraph
+bundle: unit_hero_media_
+label: 'Unit image type'
+description: 'Selecting the checkbox will set the hero image to a 1356 x 250.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Short image'
+  off_label: Standard
+field_type: boolean

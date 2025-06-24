@@ -1,0 +1,113 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.browse_files_modal
+    - field.field.paragraph.unit_hero_media_.field_hero_image
+    - field.field.paragraph.unit_hero_media_.field_hero_video
+    - field.field.paragraph.unit_hero_media_.field_unit_hero_caption
+    - field.field.paragraph.unit_hero_media_.field_unit_hero_display
+    - field.field.paragraph.unit_hero_media_.field_unit_hero_embed
+    - field.field.paragraph.unit_hero_media_.field_unit_hero_headline
+    - field.field.paragraph.unit_hero_media_.field_unit_hero_link
+    - field.field.paragraph.unit_hero_media_.field_unit_image_type
+    - paragraphs.paragraphs_type.unit_hero_media_
+  module:
+    - entity_browser
+    - link_attributes
+    - text
+id: paragraph.unit_hero_media_.default
+targetEntityType: paragraph
+bundle: unit_hero_media_
+mode: default
+content:
+  field_hero_image:
+    type: entity_browser_file
+    weight: 4
+    region: content
+    settings:
+      entity_browser: browse_files_modal
+      field_widget_edit: true
+      field_widget_remove: true
+      field_widget_replace: false
+      open: false
+      selection_mode: selection_append
+      view_mode: default
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_hero_video:
+    type: entity_browser_file
+    weight: 5
+    region: content
+    settings:
+      entity_browser: browse_files_modal
+      field_widget_edit: true
+      field_widget_remove: true
+      field_widget_replace: false
+      open: false
+      selection_mode: selection_append
+      view_mode: default
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_unit_hero_caption:
+    type: string_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_unit_hero_display:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_unit_hero_embed:
+    type: text_textarea
+    weight: 7
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_unit_hero_headline:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_unit_hero_link:
+    type: link_attributes
+    weight: 6
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        onClick: true
+        title: true
+        target: true
+        data-toggle: false
+        fragment: false
+        id: false
+        name: false
+        rel: false
+        class: false
+        accesskey: false
+        aria-label: false
+    third_party_settings: {  }
+  field_unit_image_type:
+    type: boolean_checkbox
+    weight: 0
+    region: content
+    settings:
+      display_label: false
+    third_party_settings: {  }
+hidden:
+  created: true
+  moderation_state: true
+  status: true
+  uid: true

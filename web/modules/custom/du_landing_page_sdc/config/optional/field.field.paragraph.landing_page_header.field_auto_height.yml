@@ -1,0 +1,25 @@
+uuid: cd73e6d5-6b00-44c9-b379-a4b3f733dfdc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_auto_height
+    - paragraphs.paragraphs_type.landing_page_header
+  module:
+    - options
+id: paragraph.landing_page_header.field_auto_height
+field_name: field_auto_height
+entity_type: paragraph
+bundle: landing_page_header
+label: 'Use Auto Height'
+description: 'When checked, the header will use auto height instead of the default 618px height.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

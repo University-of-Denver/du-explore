@@ -1,0 +1,19 @@
+uuid: 04a19f06-43d1-4e8d-bb80-30c57f995591
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_use_gradient
+field_name: field_use_gradient
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

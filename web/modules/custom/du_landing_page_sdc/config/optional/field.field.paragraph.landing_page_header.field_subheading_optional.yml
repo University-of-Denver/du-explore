@@ -1,0 +1,19 @@
+uuid: 24b742a5-3320-4b83-8b77-1c861ea4b491
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subheading_optional
+    - paragraphs.paragraphs_type.landing_page_header
+id: paragraph.landing_page_header.field_subheading_optional
+field_name: field_subheading_optional
+entity_type: paragraph
+bundle: landing_page_header
+label: 'Subheading (optional)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,24 @@
+uuid: ee5ec37f-3a73-43c0-8c82-e22ccdaf57fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body_text_optional
+    - filter.format.rich_text
+    - paragraphs.paragraphs_type.landing_page_header
+  module:
+    - text
+id: paragraph.landing_page_header.field_body_text_optional
+field_name: field_body_text_optional
+entity_type: paragraph
+bundle: landing_page_header
+label: 'Body Text (Optional)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - rich_text
+field_type: text_long

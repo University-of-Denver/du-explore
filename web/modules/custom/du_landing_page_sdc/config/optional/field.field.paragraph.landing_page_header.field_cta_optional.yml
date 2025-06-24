@@ -1,0 +1,23 @@
+uuid: da9b16f8-e305-446c-8bf5-94ab858dbf19
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta_optional
+    - paragraphs.paragraphs_type.landing_page_header
+  module:
+    - link
+id: paragraph.landing_page_header.field_cta_optional
+field_name: field_cta_optional
+entity_type: paragraph
+bundle: landing_page_header
+label: 'Call to Action Links'
+description: 'Add up to 4 CTAs in the following order: Primary, Secondary, Optional CTA 1, Optional CTA 2'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 17
+field_type: link

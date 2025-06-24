@@ -1,0 +1,23 @@
+uuid: 68c89f07-9274-4752-86c6-3ad50768cbc8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sticky_scroll
+    - paragraphs.paragraphs_type.landing_page_header
+  module:
+    - options
+id: paragraph.landing_page_header.field_sticky_scroll
+field_name: field_sticky_scroll
+entity_type: paragraph
+bundle: landing_page_header
+label: 'Enable Sticky Scroll'
+description: 'Make the column stick to the top edge when scrolling'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

@@ -1,0 +1,21 @@
+uuid: 5936aee0-db50-4791-8ce2-b298625cc630
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_primary_title_text
+field_name: field_primary_title_text
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 2
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

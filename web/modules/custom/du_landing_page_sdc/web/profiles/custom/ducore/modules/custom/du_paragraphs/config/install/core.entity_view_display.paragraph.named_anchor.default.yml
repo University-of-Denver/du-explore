@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.named_anchor.field_named_anchor_name
+    - paragraphs.paragraphs_type.named_anchor
+id: paragraph.named_anchor.default
+targetEntityType: paragraph
+bundle: named_anchor
+mode: default
+content:
+  field_named_anchor_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  scheduled_publication: true

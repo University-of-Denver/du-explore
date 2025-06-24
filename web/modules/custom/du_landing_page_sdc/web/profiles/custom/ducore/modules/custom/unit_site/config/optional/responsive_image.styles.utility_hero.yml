@@ -1,0 +1,40 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.utility_hero_image_1024_x_297
+    - image.style.utility_hero_image_1356_393
+    - image.style.utility_hero_image_450_x_300
+    - image.style.utility_hero_image_768_x_300
+  theme:
+    - du_bootstrap
+id: utility_hero
+label: 'Utility hero'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: utility_hero_image_1356_393
+    breakpoint_id: pl_drupal.xlarge
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: utility_hero_image_1024_x_297
+    breakpoint_id: pl_drupal.large
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: utility_hero_image_768_x_300
+    breakpoint_id: pl_drupal.medium
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: utility_hero_image_450_x_300
+    breakpoint_id: pl_drupal.smallplus
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: utility_hero_image_450_x_300
+    breakpoint_id: pl_drupal.small
+    multiplier: 1x
+breakpoint_group: pl_drupal
+fallback_image_style: utility_hero_image_1356_393

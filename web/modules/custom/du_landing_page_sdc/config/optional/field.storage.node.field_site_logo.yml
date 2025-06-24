@@ -1,0 +1,30 @@
+uuid: 4410a9b8-5f05-4e35-913e-edad13ca4bf8
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - node
+id: node.field_site_logo
+field_name: field_site_logo
+entity_type: node
+type: image
+settings:
+  target_type: file
+  display_field: false
+  display_default: true
+  uri_scheme: public
+  default_image:
+    uuid: 9f329081-1d65-4514-a9df-2d6100ecc1b1
+    alt: 'Site Logo'
+    title: 'Site Logo'
+    width: null
+    height: null
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,25 @@
+uuid: a87a5188-a493-47bc-9f4f-78b83b642373
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_color
+    - paragraphs.paragraphs_type.landing_page_header
+  module:
+    - options
+_core:
+  default_config_hash: cMsC3D1KqMHSpVzMf_-4HORJRnioxETkUJByP1kX-_k
+id: paragraph.landing_page_header.field_text_color
+field_name: field_text_color
+entity_type: paragraph
+bundle: landing_page_header
+label: 'Text Color'
+description: 'Select the color for the text content'
+required: false
+translatable: true
+default_value:
+  -
+    value: White
+default_value_callback: ''
+settings: {  }
+field_type: list_string

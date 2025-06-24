@@ -1,0 +1,41 @@
+uuid: b6ce932c-ea34-4497-ac73-5bee45c246f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.landing_page_media.field_image_or_video
+    - field.field.paragraph.landing_page_media.field_media_image
+    - field.field.paragraph.landing_page_media.field_media_video
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.landing_page_media
+  module:
+    - svg_image
+    - video_embed_field
+id: paragraph.landing_page_media.default
+targetEntityType: paragraph
+bundle: landing_page_media
+mode: default
+content:
+  field_image_or_video:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_media_image:
+    type: image_image
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_media_video:
+    type: video_embed_field_textfield
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

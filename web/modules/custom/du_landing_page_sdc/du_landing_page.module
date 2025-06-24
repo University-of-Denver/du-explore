@@ -1,0 +1,281 @@
+<?php
+
+/**
+ * @file
+ * Contains du_landing_page.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Extension\ExtensionPathResolver;
+use Drupal\Core\Render\Component\Exception\InvalidComponentException;
+use Drupal\Core\Template\Attribute;
+
+/**
+ * Implements hook_help().
+ */
+function du_landing_page_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.du_landing_page':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provides a Single Directory Component for Landing Pages.') . '</p>';
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function du_landing_page_theme() {
+  $path = \Drupal::service('extension.path.resolver')->getPath('module', 'du_landing_page');
+
+  return [
+    'landing_page' => [
+      'variables' => [
+        'html_attributes' => [],
+        'head_title' => [],
+        'page' => [],
+        'page_bottom' => [],
+        'placeholder_token' => '',
+      ],
+      'template' => 'landing-page',
+      'path' => $path . '/templates',
+    ],
+    'node__landing_page_sdc' => [
+      'base hook' => 'node',
+      'template' => 'node--landing-page-sdc',
+      'path' => $path . '/templates',
+      'variables' => [
+        'node' => NULL,
+        'view_mode' => 'full',
+        'content' => [],
+      ],
+    ],
+    'landing_page_menu' => [
+      'variables' => [
+        'logo_path' => '',
+        'cta_text' => '',
+        'cta_url' => '',
+        'cta_enabled' => FALSE,
+      ],
+      'template' => 'landing-page-menu',
+      'path' => $path . '/templates',
+    ],
+    'page__node__landing_page_sdc' => [
+      'base hook' => 'page',
+      'template' => 'page--node--landing-page-sdc',
+      'path' => $path . '/templates',
+      'variables' => [
+        'page' => [],
+      ],
+      'pattern' => 'page__node__landing_page_sdc',
+      'preprocess functions' => [
+        'template_preprocess',
+        'template_preprocess_page',
+        'du_landing_page_preprocess_page',
+      ],
+    ],
+    'html__landing_page' => [
+      'base hook' => 'html',
+      'template' => 'html--landing-page',
+      'path' => $path . '/templates',
+      'variables' => [
+        'html_attributes' => [],
+        'head_title' => [],
+        'page' => [],
+        'page_bottom' => [],
+        'placeholder_token' => '',
+      ],
+      'pattern' => 'html__landing_page',
+      'preprocess functions' => [
+        'template_preprocess',
+        'template_preprocess_html',
+        'du_landing_page_preprocess_html',
+      ],
+    ],
+    'paragraph__landing_page_header__default' => [
+      'base hook' => 'paragraph',
+      'template' => 'paragraph--landing-page-header--default',
+      'path' => \Drupal::service('extension.path.resolver')->getPath('module', 'du_landing_page') . '/templates',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function du_landing_page_preprocess_node(&$variables) {
+  if ($variables['node']->bundle() === 'landing_page_sdc') {
+    $variables['#attached']['library'][] = 'du_landing_page/global-styling';
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_page_alter().
+ */
+function du_landing_page_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  $route_name = \Drupal::routeMatch()->getRouteName();
+
+  if ($route_name === 'entity.node.canonical') {
+    $node = \Drupal::routeMatch()->getParameter('node');
+    if ($node && $node->bundle() === 'landing_page_sdc') {
+      array_unshift($suggestions, 'page__node__landing_page_sdc');
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function du_landing_page_preprocess_page(&$variables) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node && $node->bundle() === 'landing_page_sdc') {
+    // Set default logo path and link
+    $logo_path = '/' . \Drupal::service('extension.path.resolver')->getPath('module', 'du_landing_page') . '/images/logo.svg';
+    $logo_link = '/';
+
+    // Check for custom logo and link fields
+    if ($node->hasField('field_site_logo') && !$node->get('field_site_logo')->isEmpty()) {
+      $logo_entity = $node->get('field_site_logo')->first()->entity;
+      if ($logo_entity) {
+        $logo_path = \Drupal::service('file_url_generator')->generateAbsoluteString($logo_entity->getFileUri());
+      }
+    }
+
+    if ($node->hasField('field_site_logo_link') && !$node->get('field_site_logo_link')->isEmpty()) {
+      $logo_link = $node->get('field_site_logo_link')->first()->getUrl()->toString();
+      // Remove any 'internal:' prefix if present
+      $logo_link = str_replace('internal:', '', $logo_link);
+      // If it's an internal URL, ensure it starts with a slash
+      if (!str_starts_with($logo_link, 'http') && !str_starts_with($logo_link, '/')) {
+        $logo_link = '/' . $logo_link;
+      }
+    }
+
+    // Set variables at page level
+    $variables['logo_path'] = $logo_path;
+    $variables['logo_link'] = $logo_link;
+    $variables['node'] = $node;
+
+    // Add menu to page with variables
+    $variables['page']['menu'] = [
+      '#theme' => 'landing-page-menu',
+      '#logo_path' => $logo_path,
+      '#logo_link' => $logo_link,
+      '#node' => $node,
+      '#cache' => [
+        'max-age' => 0,
+      ],
+    ];
+
+    // Get the header paragraph if it exists
+    if ($node->hasField('field_landing_page_header') && !$node->get('field_landing_page_header')->isEmpty()) {
+      $header_paragraph = $node->get('field_landing_page_header')->first()->entity;
+      if ($header_paragraph) {
+        if ($header_paragraph->hasField('field_cta_optional') && !$header_paragraph->get('field_cta_optional')->isEmpty()) {
+          $cta = $header_paragraph->get('field_cta_optional')->first();
+          $variables['page']['menu']['#cta'] = $cta;
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function du_landing_page_preprocess_html(&$variables) {
+  // This hook is now empty as we moved the logic to preprocess_page
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for landing-page-menu.html.twig.
+ */
+function du_landing_page_preprocess_landing_page_menu(&$variables) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node && $node->bundle() === 'landing_page_sdc') {
+    // Set default logo path and link
+    $logo_path = '/' . \Drupal::service('extension.path.resolver')->getPath('module', 'du_landing_page') . '/images/logo.svg';
+    $logo_link = '/';
+
+    // Check for custom logo and link fields
+    if ($node->hasField('field_site_logo') && !$node->get('field_site_logo')->isEmpty()) {
+      $logo_entity = $node->get('field_site_logo')->first()->entity;
+      if ($logo_entity) {
+        $logo_path = \Drupal::service('file_url_generator')->generateAbsoluteString($logo_entity->getFileUri());
+      }
+    }
+
+    if ($node->hasField('field_site_logo_link') && !$node->get('field_site_logo_link')->isEmpty()) {
+      $logo_link = $node->get('field_site_logo_link')->first()->getUrl()->toString();
+      \Drupal::messenger()->addMessage('Setting logo_link to: ' . $logo_link);
+    } else {
+      \Drupal::messenger()->addMessage('Using default logo_link: ' . $logo_link);
+    }
+
+    // Set variables directly
+    $variables['logo_path'] = $logo_path;
+    $variables['logo_link'] = $logo_link;
+    $variables['node'] = $node;
+
+    // Get the header paragraph if it exists
+    if ($node->hasField('field_landing_page_header') && !$node->get('field_landing_page_header')->isEmpty()) {
+      $header_paragraph = $node->get('field_landing_page_header')->first()->entity;
+      if ($header_paragraph) {
+        if ($header_paragraph->hasField('field_cta_optional') && !$header_paragraph->get('field_cta_optional')->isEmpty()) {
+          $cta = $header_paragraph->get('field_cta_optional')->first();
+          $variables['cta'] = $cta;
+        }
+      }
+    }
+
+    // Debug output
+    \Drupal::messenger()->addMessage('Template variables: ' . print_r([
+      'logo_path' => $logo_path,
+      'logo_link' => $logo_link,
+    ], TRUE));
+  }
+}
+
+/**
+ * Implements hook_page_attachments().
+ */
+function du_landing_page_page_attachments(array &$attachments) {
+  // Check if we're on a landing page
+  $route_match = \Drupal::routeMatch();
+  if ($route_match->getRouteName() === 'entity.node.canonical' &&
+      $route_match->getParameter('node')->getType() === 'landing_page_sdc') {
+
+    // Add our custom CSS
+    $attachments['#attached']['library'][] = 'du_landing_page/landing_page';
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_html_alter().
+ */
+function du_landing_page_theme_suggestions_html_alter(array &$suggestions, array $variables) {
+  $route_name = \Drupal::routeMatch()->getRouteName();
+
+  if ($route_name === 'entity.node.canonical') {
+    $node = \Drupal::routeMatch()->getParameter('node');
+    if ($node && $node->bundle() === 'landing_page_sdc') {
+      array_unshift($suggestions, 'html__landing_page');
+    }
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_paragraph_alter().
+ */
+function du_landing_page_theme_suggestions_paragraph_alter(array &$suggestions, array $variables) {
+  /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+  $paragraph = $variables['elements']['#paragraph'];
+  $bundle = $paragraph->bundle();
+
+  // Add suggestions for landing page header.
+  if ($bundle === 'landing_page_header') {
+    // The suggestion is already registered in hook_theme()
+    // No need to add it here
+  }
+}

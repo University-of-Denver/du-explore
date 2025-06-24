@@ -1,0 +1,23 @@
+uuid: a150f1e0-2f8d-4195-9518-6b07c2f0c723
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_or_video
+    - paragraphs.paragraphs_type.landing_page_media
+  module:
+    - options
+id: paragraph.landing_page_media.field_image_or_video
+field_name: field_image_or_video
+entity_type: paragraph
+bundle: landing_page_media
+label: 'Image or Video'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: image
+default_value_callback: ''
+settings: {  }
+field_type: list_string

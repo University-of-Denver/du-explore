@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_caption_float
+    - paragraphs.paragraphs_type.image_with_caption
+id: paragraph.image_with_caption.field_image_caption_float
+field_name: field_image_caption_float
+entity_type: paragraph
+bundle: image_with_caption
+label: Float
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

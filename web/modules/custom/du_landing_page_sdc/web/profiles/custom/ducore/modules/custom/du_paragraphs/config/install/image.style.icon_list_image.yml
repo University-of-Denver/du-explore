@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: icon_list_image
+label: 'Icon List Image'
+effects:
+  af49a580-7e8d-4106-ad89-653ee57e426a:
+    uuid: af49a580-7e8d-4106-ad89-653ee57e426a
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 60
+      height: 60
+      anchor: center-center

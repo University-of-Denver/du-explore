@@ -1,0 +1,41 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a landing page node.
+ *
+ * Available variables:
+ * - node: The node entity
+ * - content: The node content
+ * - title_attributes: Title attributes
+ * - content_attributes: Content attributes
+ */
+#}
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+
+<article{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+
+  <div{{ content_attributes.addClass('node__content') }}>
+    {# Main content section #}
+    <div class="landing-page-sdc__main">
+      {# Display all other fields except title and body #}
+      {% for field_name, field in content %}
+        {% if field_name not in ['title', 'body'] and field_name|first != '#' %}
+          <div class="landing-page-sdc__field landing-page-sdc__field--{{ field_name|clean_class }}">
+            {{ field }}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</article>
