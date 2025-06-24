@@ -3,7 +3,6 @@ type: module
 description: 'Provides a Single Directory Component for Landing Pages'
 package: Custom
 core_version_requirement: ^10
-version: 1.0.0
 dependencies:
   - drupal:node
   - drupal:field

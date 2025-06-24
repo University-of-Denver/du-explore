@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-_core:
-  default_config_hash: W9RYQeBbL65p_jBLERhSF186dji6O8WByq5Idg9FRLk
-id: unit_audience_nav
-label: 'Unit Audience Nav'
-revision: 1
-description: ''

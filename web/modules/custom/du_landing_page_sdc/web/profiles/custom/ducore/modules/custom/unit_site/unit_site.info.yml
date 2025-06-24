@@ -1,5 +1,0 @@
-name: 'Unit Site'
-type: module
-description: 'Specialized components required by unit site theme'
-core_version_requirement: ^8 || ^9 || ^10
-package: 'du'

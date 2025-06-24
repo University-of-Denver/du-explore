@@ -1,4 +1,0 @@
-services:
-  widen.connector:
-    class: Drupal\du_widen\WidenService
-    arguments: []
