@@ -1,0 +1,44 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display the CTA Menu field.
+ *
+ * Available variables:
+ * - items: List of all the field items. Each item contains:
+ *   - content: The renderable content for the field item.
+ *   - attributes: A list of HTML attributes for the field item.
+ * - label: The field label.
+ * - label_hidden: Whether to show the field label or not.
+ * - title_attributes: HTML attributes for the label.
+ * - content_attributes: HTML attributes for the content.
+ * - entity_type: The entity type to which the field belongs.
+ * - bundle: The entity bundle to which the field belongs.
+ * - view_mode: The view mode.
+ * - label_display: The display settings for the label.
+ */
+#}
+
+{# CTA Menu Section - Access through header paragraph #}
+{% if items %}
+  {% for item in items %}
+    {% set node = item.content['#node'] %}
+    {% if node.field_landing_page_header.value %}
+      {% set header = node.field_landing_page_header.entity %}
+      {% if header.field_cta_menu.value %}
+        <div class="landing-page-sdc__cta-menu">
+          {# Second CTA Menu if it exists #}
+          {% if header.field_cta_menu[1] is defined %}
+            <a href="{{ header.field_cta_menu[1].uri|replace({'internal:': ''}) }}" class="landing-page-cta-menu-secondary">
+              {{ header.field_cta_menu[1].title }}
+            </a>
+          {% endif %}
+
+          {# First CTA Menu #}
+          <a href="{{ header.field_cta_menu[0].uri|replace({'internal:': ''}) }}" class="landing-page-cta-menu-primary">
+            {{ header.field_cta_menu[0].title }}
+          </a>
+        </div>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endif %}

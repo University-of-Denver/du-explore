@@ -83,38 +83,25 @@
 }
 
 /* Header CTA Styles */
-.field--name-field-cta-optional.field__items.landing-page-sdc__field--field-landing-page-header__cta {
+.field--name-field-cta-hero {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 16px;
+  gap: 1rem;
 }
 
 /* Responsive CTA Styles */
 @media (max-width: 768px) {
-  .field--name-field-cta-optional.field__items.landing-page-sdc__field--field-landing-page-header__cta {
+  .field--name-field-cta-hero {
     flex-direction: column;
-    align-items: stretch;
-    gap: 12px;
   }
 
-  .field--name-field-cta-optional.field__items.landing-page-sdc__field--field-landing-page-header__cta .field__item {
-    width: 100%;
-  }
-
-  .field--name-field-cta-optional.field__items.landing-page-sdc__field--field-landing-page-header__cta .landing-page-sdc__field--field-landing-page-header__cta-link {
+  .field--name-field-cta-hero a {
     width: 100%;
     text-align: center;
   }
 }
 
-/* Hide first two CTAs */
-.field--name-field-cta-optional.field__items.landing-page-sdc__field--field-landing-page-header__cta .field__item:nth-child(-n+2) {
-  display: none;
-}
-
-/* Style the third CTA (primary) */
-.field--name-field-cta-optional.field__items.landing-page-sdc__field--field-landing-page-header__cta .field__item:nth-child(3) .landing-page-sdc__field--field-landing-page-header__cta-link {
+/* Style the CTA Hero (primary) */
+.field--name-field-cta-hero.field__items.landing-page-sdc__field--field-landing-page-header__cta .field__item .landing-page-sdc__field--field-landing-page-header__cta-link {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -135,26 +122,9 @@
   flex-grow: 0;
 }
 
-/* Style the fourth CTA (secondary) */
-.field--name-field-cta-optional.field__items.landing-page-sdc__field--field-landing-page-header__cta .field__item:nth-child(4) .landing-page-sdc__field--field-landing-page-header__cta-link {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 24px;
-  background: #FFFFFF;
-  border: 1px solid #FFFFFF;
-  border-radius: 4px;
-  color: #000000 !important;
-  text-decoration: none;
-  font-family: "neue-haas-unica", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 20px;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
+/* Keep the old field-cta-optional styles for backward compatibility but hide them */
+.field--name-field-cta-optional.field__items.landing-page-sdc__field--field-landing-page-header__cta {
+  display: none !important;
 }
 
 /* Text Color Options */
@@ -299,8 +269,8 @@
 
 /* Main Content Section */
 .landing-page-sdc__field--field-landing-page-content {
-  padding: 4rem 2rem;
-  max-width: 70%;
+  padding: 4rem 0;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -310,6 +280,15 @@
     max-width: 95%;
   }
 }
+
+.landing-page-sdc__field--field-landing-page-content .field__item {
+  margin-top: 3%;
+}
+
+.cards-module {
+  margin: 0 auto !important;
+}
+
 
 /* Two Column Layout */
 .two-column-copy {
@@ -347,11 +326,11 @@
     font-size: 2rem;
   }
 
-  .field--name-field-cta-optional {
+  .field--name-field-cta-hero {
     flex-direction: column;
   }
 
-  .field--name-field-cta-optional a {
+  .field--name-field-cta-hero a {
     width: 100%;
     text-align: center;
   }
@@ -686,22 +665,10 @@
   font-size: 16px;
 }
 
-.field--name-field-body-text .field__item h2 {
-}
-
 .field--name-field-body-text .field__item h3 {
   font-family: 'Neue Haas Unica';
   font-weight: 800;
   font-size: 36px;
-}
-
-.field--name-field-body-text .field__item h4 {
-}
-
-.field--name-field-body-text .field__item h5 {
-}
-
-.field--name-field-body-text .field__item h6 {
 }
 
 .landing-page-copy-text {
@@ -972,6 +939,16 @@ fieldset .form_response label {
   color: initial;
 }
 
+.field--name-field-landing-page-content .field__item .two-column-copy,
+.field--name-field-landing-page-content .field__item .icon-list {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.field--name-field-landing-page-content .field__item .two-column-copy .col-md-6 {
+  width: 47% !important;
+}
+
 .remove-margin-top {
   margin-top: 0 !important;
 }
@@ -979,4 +956,31 @@ fieldset .form_response label {
 /* Smooth scrolling for the entire page */
 html {
   scroll-behavior: smooth;
+}
+
+/* Custom Embed Form styles */
+
+.form_question select {
+  width: 100%;
+}
+.form_birthdate {
+  max-width: 100%;
+}
+
+div.form_birthdate select {
+  width: 32%;
+}
+
+div.form_question select {
+  height: 4.1rem;
+  padding: 0.9rem;
+}
+
+div.form_responses {
+  white-space: pre-wrap;
+  display: flex;
+}
+
+div.form_radio .form_response {
+  margin-right: 1rem;
 }

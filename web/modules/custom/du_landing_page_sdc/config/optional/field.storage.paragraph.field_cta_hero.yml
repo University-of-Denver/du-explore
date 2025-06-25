@@ -1,0 +1,19 @@
+uuid: 8df1b4df-6c95-4df1-bfdd-dc2084999c7b
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+id: paragraph.field_cta_hero
+field_name: field_cta_hero
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

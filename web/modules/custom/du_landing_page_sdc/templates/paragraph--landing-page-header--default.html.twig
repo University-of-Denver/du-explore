@@ -42,15 +42,13 @@
         </div>
       {% endif %}
 
-      {% if content.field_cta_optional|render %}
-        <div class="field field--name-field-cta-optional field--type-link field--label-hidden field__items landing-page-sdc__field--field-landing-page-header__cta">
-          {% for item in content.field_cta_optional %}
-            {% if item['#title'] is defined %}
-              <div class="field__item">
-                <a href="{{ item['#url'] }}" class="landing-page-sdc__field--field-landing-page-header__cta-link">{{ item['#title'] }}</a>
-              </div>
-            {% endif %}
-          {% endfor %}
+      {% if paragraph.field_cta_hero.value %}
+        <div class="field field--name-field-cta-hero field--type-link field--label-hidden field__items landing-page-sdc__field--field-landing-page-header__cta">
+          <div class="field__item">
+            <a href="{{ paragraph.field_cta_hero[0].uri|replace({'internal:': ''}) }}" class="landing-page-sdc__field--field-landing-page-header__cta-link landing-page-cta-hero">
+              {{ paragraph.field_cta_hero[0].title }}
+            </a>
+          </div>
         </div>
       {% endif %}
     </div>

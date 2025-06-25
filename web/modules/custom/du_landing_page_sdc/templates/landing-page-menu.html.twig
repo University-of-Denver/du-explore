@@ -21,21 +21,21 @@
         </a>
       </div>
 
-      {# CTA Buttons #}
+      {# CTA Menu Buttons #}
       {% if node.field_landing_page_header.value %}
         {% set header = node.field_landing_page_header.entity %}
-        {% if header.field_cta_optional.value %}
+        {% if header.field_cta_menu.value %}
           <div class="landing-page-sdc-menu__cta col-auto ms-auto">
-            {# Second CTA if it exists #}
-            {% if header.field_cta_optional[1] is defined %}
-              <a href="{{ header.field_cta_optional[1].uri|replace({'internal:': ''}) }}" class="landing-page-cta-secondary me-2">
-                {{ header.field_cta_optional[1].title }}
+            {# Second CTA Menu if it exists #}
+            {% if header.field_cta_menu[1] is defined %}
+              <a href="{{ header.field_cta_menu[1].uri|replace({'internal:': ''}) }}" class="landing-page-cta-secondary me-2">
+                {{ header.field_cta_menu[1].title }}
               </a>
             {% endif %}
 
-            {# First CTA #}
-            <a href="{{ header.field_cta_optional[0].uri|replace({'internal:': ''}) }}" class="landing-page-cta-primary">
-              {{ header.field_cta_optional[0].title }}
+            {# First CTA Menu #}
+            <a href="{{ header.field_cta_menu[0].uri|replace({'internal:': ''}) }}" class="landing-page-cta-primary">
+              {{ header.field_cta_menu[0].title }}
             </a>
           </div>
         {% endif %}

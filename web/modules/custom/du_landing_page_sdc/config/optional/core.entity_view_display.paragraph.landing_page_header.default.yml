@@ -7,6 +7,8 @@ dependencies:
     - field.field.paragraph.landing_page_header.field_background_image
     - field.field.paragraph.landing_page_header.field_body_text_optional
     - field.field.paragraph.landing_page_header.field_button_style
+    - field.field.paragraph.landing_page_header.field_cta_hero
+    - field.field.paragraph.landing_page_header.field_cta_menu
     - field.field.paragraph.landing_page_header.field_cta_optional
     - field.field.paragraph.landing_page_header.field_hero_multimedia_section
     - field.field.paragraph.landing_page_header.field_primary_title_text
@@ -16,11 +18,14 @@ dependencies:
     - field.field.paragraph.landing_page_header.field_use_gradient
     - paragraphs.paragraphs_type.landing_page_header
   module:
+    - blazy
     - entity_reference_revisions
     - link
     - options
     - svg_image
     - text
+_core:
+  default_config_hash: X-I2nNcPQ-oUhOcHKzgPtI7cIB3eC3hm9OJAW2t5ScE
 id: paragraph.landing_page_header.default
 targetEntityType: paragraph
 bundle: landing_page_header
@@ -28,13 +33,13 @@ mode: default
 content:
   field_auto_height:
     type: boolean
-    label: visible
+    label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 5
+    weight: 4
     region: content
   field_background_image:
     type: image
@@ -42,6 +47,12 @@ content:
     settings:
       image_link: ''
       image_style: ''
+      image_loading:
+        attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
     third_party_settings: {  }
     weight: 0
     region: content
@@ -57,11 +68,11 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 6
+    weight: 5
     region: content
-  field_cta_optional:
+  field_cta_hero:
     type: link
-    label: hidden
+    label: above
     settings:
       trim_length: 80
       url_only: false
@@ -69,7 +80,19 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 4
+    weight: 11
+    region: content
+  field_cta_menu:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 10
     region: content
   field_hero_multimedia_section:
     type: entity_reference_revisions_entity_view
@@ -78,12 +101,16 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 10
+    weight: 9
     region: content
   field_primary_title_text:
-    type: text_default
+    type: blazy_title
     label: hidden
-    settings: {  }
+    settings:
+      delimiter: '|'
+      tag: small
+      break: false
+      link_to_entity: false
     third_party_settings: {  }
     weight: 1
     region: content
@@ -95,12 +122,16 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 9
+    weight: 8
     region: content
   field_subheading_optional:
-    type: text_default
+    type: blazy_title
     label: hidden
-    settings: {  }
+    settings:
+      delimiter: '|'
+      tag: small
+      break: false
+      link_to_entity: false
     third_party_settings: {  }
     weight: 2
     region: content
@@ -109,7 +140,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 7
+    weight: 6
     region: content
   field_use_gradient:
     type: boolean
@@ -119,8 +150,9 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 8
+    weight: 7
     region: content
 hidden:
   created: true
+  field_cta_optional: true
   status: true

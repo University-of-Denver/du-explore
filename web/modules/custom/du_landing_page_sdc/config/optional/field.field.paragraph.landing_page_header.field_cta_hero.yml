@@ -1,0 +1,23 @@
+uuid: 15fbe6a4-65f0-41ab-ba6d-abe889eb1c18
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta_hero
+    - paragraphs.paragraphs_type.landing_page_header
+  module:
+    - link
+id: paragraph.landing_page_header.field_cta_hero
+field_name: field_cta_hero
+entity_type: paragraph
+bundle: landing_page_header
+label: 'CTA Hero'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link
