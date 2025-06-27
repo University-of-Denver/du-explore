@@ -69,3 +69,52 @@ function du_landing_page_update_8001() {
 
   return t('Imported @count configuration files for du_landing_page module.', ['@count' => $imported_count]);
 }
+
+/**
+ * Update hook to force creation of database tables for imported fields.
+ */
+function du_landing_page_update_8002() {
+  // Clear all caches first
+  drupal_flush_all_caches();
+
+  // Force update the database schema
+  $update_manager = \Drupal::service('update.manager');
+  $update_manager->updateData();
+
+  // Force field storage tables to be created
+  $field_storages = [
+    'paragraph.field_cta_hero',
+    'paragraph.field_cta_menu',
+  ];
+
+  $created_count = 0;
+
+  foreach ($field_storages as $field_storage_id) {
+    $field_storage = \Drupal::entityTypeManager()->getStorage('field_storage_config')->load($field_storage_id);
+    if ($field_storage) {
+      try {
+        // Force the field storage to create its database schema
+        $field_storage->getSchema();
+
+        // Try to save it again to ensure tables are created
+        $field_storage->save();
+
+        \Drupal::logger('du_landing_page')->notice('Forced schema creation for: @field', ['@field' => $field_storage_id]);
+        $created_count++;
+      }
+      catch (\Exception $e) {
+        \Drupal::logger('du_landing_page')->error('Error creating schema for @field: @error', [
+          '@field' => $field_storage_id,
+          '@error' => $e->getMessage()
+        ]);
+      }
+    } else {
+      \Drupal::logger('du_landing_page')->error('Field storage not found: @field', ['@field' => $field_storage_id]);
+    }
+  }
+
+  // Clear caches again after schema creation
+  drupal_flush_all_caches();
+
+  return t('Forced database table creation for @count field storages.', ['@count' => $created_count]);
+}
