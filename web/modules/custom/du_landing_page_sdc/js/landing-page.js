@@ -3,19 +3,19 @@
 
   Drupal.behaviors.landingPage = {
     attach: function (context, settings) {
-      console.log('Landing Page JS loaded');
-
       // Handle copy sections without images
       once('landingPageCopy', '.paragraph--type--landing-page-copy', context).forEach(function (element) {
-        console.log('Found copy section:', element);
         const $copySection = $(element);
         const hasImage = $copySection.find('.field--name-field-copy-image').length > 0;
-        console.log('Has image:', hasImage);
 
         if (!hasImage) {
-          console.log('Adding remove-margin-top class');
-          $copySection.find('.landing-page-copy-text').addClass('remove-margin-top');
+          $copySection.find('.landing-page-copy-text').addClass('remove-margin-lp');
         }
+      });
+
+      // Fit text to CTA buttons
+      once('landingPageButtonFit', '.landing-page-cta-primary, .landing-page-cta-secondary', context).forEach(function (element) {
+        fitTextToButton(element);
       });
 
       // Enhanced sticky behavior for landing page header content
@@ -26,8 +26,6 @@
 
         // Only apply enhanced behavior on desktop
         if (window.innerWidth > 768) {
-          console.log('Enhanced sticky behavior initialized');
-
           // Add scroll event listener for fine-tuned control
           $(window).on('scroll.landingPageSticky', function() {
             const scrollTop = $(window).scrollTop();
@@ -67,4 +65,52 @@
       });
     }
   };
+
+  // Function to fit text to button
+  function fitTextToButton(button) {
+    const $button = $(button);
+    const $text = $button.contents().filter(function() {
+      return this.nodeType === 3; // Text nodes only
+    }).first();
+
+    if ($text.length === 0) return;
+
+    const maxWidth = $button.outerWidth() - 48; // Account for padding (24px each side)
+    const maxHeight = $button.outerHeight() - 16; // Account for padding (8px each side)
+
+    // Create a temporary span to measure text
+    const $tempSpan = $('<span>').text($text.text()).css({
+      position: 'absolute',
+      visibility: 'hidden',
+      whiteSpace: 'nowrap',
+      fontSize: $button.css('font-size')
+    });
+
+    $('body').append($tempSpan);
+
+    let fontSize = parseInt($button.css('font-size'));
+    const minFontSize = 10; // Minimum font size in pixels
+
+    $tempSpan.css('fontSize', fontSize + 'px');
+
+    // Reduce font size until text fits
+    while (($tempSpan.outerWidth() > maxWidth || $tempSpan.outerHeight() > maxHeight) && fontSize > minFontSize) {
+      fontSize--;
+      $tempSpan.css('fontSize', fontSize + 'px');
+    }
+
+    // Apply the calculated font size to the button
+    $button.css('font-size', fontSize + 'px');
+
+    // Clean up
+    $tempSpan.remove();
+  }
+
+  // Handle window resize for button text fitting
+  $(window).on('resize.landingPageButtonFit', function() {
+    $('.landing-page-cta-primary, .landing-page-cta-secondary').each(function() {
+      fitTextToButton(this);
+    });
+  });
+
 })(jQuery, Drupal);
